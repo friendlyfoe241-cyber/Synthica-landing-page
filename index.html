@@ -21,7 +21,7 @@
             line-height: 1.5;
         }
 
-        /* Navigation */
+        /* Navigation - Two Glass Boxes */
         .nav {
             position: fixed;
             top: 0;
@@ -32,15 +32,20 @@
             justify-content: space-between;
             align-items: center;
             padding: 55px 869px 55px 34px;
-            background: #BDBDBD;
         }
 
-        .nav-logo {
+        .nav-logo-box {
+            width: 210px;
+            height: 70px;
+            background: rgba(189, 189, 189, 0.10);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
             display: flex;
             align-items: center;
-            gap: 0;
-            background: #BDBDBD;
-            padding: 0;
+            padding: 0 17px;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .nav-logo-image {
@@ -51,16 +56,24 @@
 
         .nav-logo-text {
             font-family: 'Inter', sans-serif;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             color: #000000;
-            margin-left: 10px;
         }
 
-        .nav-links {
+        .nav-links-box {
+            width: 537px;
+            height: 70px;
+            background: rgba(189, 189, 189, 0.10);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
             display: flex;
-            gap: 16px;
             align-items: center;
+            justify-content: center;
+            gap: 28px;
+            padding: 0 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .nav-link {
@@ -68,15 +81,11 @@
             color: #4A4A4A;
             text-decoration: none;
             padding: 8px 16px;
+            transition: color 0.2s;
         }
 
         .nav-link:hover {
             color: #000000;
-        }
-
-        .nav-box {
-            background: #BDBDBD;
-            padding: 10px 20px;
         }
 
         /* Hero Section */
@@ -238,6 +247,102 @@
             height: 16px;
         }
 
+        /* 4 Steps Section */
+        .steps {
+            padding: 60px 0;
+        }
+
+        .steps-header {
+            padding: 0 67px;
+            margin-bottom: 30px;
+        }
+
+        .steps-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 50px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .steps-subtitle {
+            font-size: 20px;
+            color: #535353;
+            max-width: 600px;
+        }
+
+        .steps-content {
+            display: flex;
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        .steps-timeline {
+            width: 50px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .steps-timeline-line {
+            position: absolute;
+            left: 30px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% - 50px);
+            background: #D9D9D9;
+        }
+
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #D9E4F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Instrument Serif', serif;
+            font-size: 20px;
+            color: #244A73;
+            position: relative;
+            z-index: 1;
+        }
+
+        .steps-cards {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .step-card {
+            display: flex;
+            gap: 28px;
+            padding: 0 78px;
+            margin-bottom: 20px;
+        }
+
+        .step-spacer {
+            width: 50px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+            max-width: 705px;
+        }
+
+        .step-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 18px;
+            color: #535353;
+            line-height: 1.6;
+        }
+
         /* Features Section */
         .features {
             padding: 60px 67px;
@@ -340,9 +445,7 @@
         .faq-toggle {
             width: 24px;
             height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
         }
 
         .faq-toggle::before,
@@ -355,11 +458,15 @@
         .faq-toggle::before {
             width: 14px;
             height: 2px;
+            top: 11px;
+            left: 5px;
         }
 
         .faq-toggle::after {
             width: 2px;
             height: 14px;
+            top: 5px;
+            left: 11px;
         }
 
         /* Footer */
@@ -409,6 +516,14 @@
             .faq-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .nav {
+                padding: 20px;
+            }
+            
+            .nav-links-box {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -416,7 +531,7 @@
                 padding: 20px;
             }
             
-            .nav-links {
+            .nav-links-box {
                 display: none;
             }
             
@@ -442,17 +557,21 @@
                 gap: 20px;
                 text-align: center;
             }
+            
+            .step-card {
+                padding: 0 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation - Two Glass Boxes -->
     <nav class="nav">
-        <div class="nav-logo">
+        <div class="nav-logo-box">
             <img src="images/logo-placeholder.png" alt="Synthica Logo" class="nav-logo-image" onerror="this.style.display='none'">
             <span class="nav-logo-text">Synthica</span>
         </div>
-        <div class="nav-links">
+        <div class="nav-links-box">
             <a href="#" class="nav-link">Home</a>
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Journal</a>
@@ -511,6 +630,55 @@
                 <span class="stats-tag">Mathematics</span>
                 <span class="stats-tag">Research</span>
                 <span class="stats-tag">Competition</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Steps Section -->
+    <section class="steps">
+        <div class="steps-header">
+            <h2 class="steps-title">Learn how we work in 4 simple steps.</h2>
+            <p class="steps-subtitle">Learn how Synthica works and become a part of us.</p>
+        </div>
+        
+        <div class="steps-content">
+            <div class="steps-timeline">
+                <div class="step-circle">1</div>
+                <div class="steps-timeline-line"></div>
+            </div>
+            
+            <div class="steps-cards">
+                <div class="step-card">
+                    <div class="step-spacer"></div>
+                    <div class="step-content">
+                        <h3 class="step-number">Learn from our Expert Curriculum</h3>
+                        <p class="step-description">Access our high-quality research curriculum and learn the foundations of academic research at your own pace.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-spacer"></div>
+                    <div class="step-content">
+                        <h3 class="step-number">Learn from our Expert Curriculum</h3>
+                        <p class="step-description">Apply what you've learned to create your own original research project, with guidance from our community resources.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-spacer"></div>
+                    <div class="step-content">
+                        <h3 class="step-number">Learn from our Expert Curriculum</h3>
+                        <p class="step-description">Submit your research to our Global Research Challenge and compete with students worldwide.</p>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-spacer"></div>
+                    <div class="step-content">
+                        <h3 class="step-number">Earn Recognition and Build Your Profile</h3>
+                        <p class="step-description">Get published in our journal and build a portfolio that stands out for college applications.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -580,7 +748,7 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span class="faq-question-text">More faq</span>
+                        <span class="faq-question-text">What is the Global Research Challenge?</span>
                         <span class="faq-toggle"></span>
                     </div>
                 </div>
@@ -594,7 +762,7 @@
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span class="faq-question-text">more faq</span>
+                        <span class="faq-question-text">How do I get started?</span>
                         <span class="faq-toggle"></span>
                     </div>
                 </div>

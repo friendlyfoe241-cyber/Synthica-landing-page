@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synthica</title>
+    <title>Synthica - Research made approachable for you</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,580 +14,600 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-dark: #0A0D1A;
-            --card-bg: rgba(17, 21, 42, 0.7);
-            --input-bg: rgba(255, 255, 255, 0.05);
-            --input-border: rgba(255, 255, 255, 0.1);
-            --text-primary: #FFFFFF;
-            --text-secondary: rgba(255, 255, 255, 0.7);
-            --text-muted: rgba(255, 255, 255, 0.5);
-            --accent-purple: #7C3AED;
-            --accent-cyan: #06B6D4;
-            --accent-pink: #EC4899;
-            --accent-blue: #3B82F6;
-        }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-dark);
-            min-height: 100vh;
+            background: #FFFFFF;
+            color: #000000;
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 55px 869px 55px 34px;
+            background: #BDBDBD;
+        }
+
+        .nav-logo {
             display: flex;
             align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            gap: 0;
+            background: #BDBDBD;
+            padding: 0;
+        }
+
+        .nav-logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .nav-logo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: #4A4A4A;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .nav-link:hover {
+            color: #000000;
+        }
+
+        .nav-box {
+            background: #BDBDBD;
+            padding: 10px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
             position: relative;
+            min-height: 100vh;
+            padding-top: 216px;
         }
 
-        /* Animated Background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-
-        .orb {
+        .hero-header-gradient {
             position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .orb-1 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, transparent 70%);
-            top: -200px;
-            left: -200px;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, transparent 70%);
-            bottom: -150px;
-            right: -150px;
-            animation-delay: -5s;
-        }
-
-        .orb-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -10s;
-        }
-
-        .orb-4 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
-            bottom: 20%;
-            left: 10%;
-            animation-delay: -15s;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-            }
-            25% {
-                transform: translate(30px, -30px) scale(1.05);
-            }
-            50% {
-                transform: translate(-20px, 20px) scale(0.95);
-            }
-            75% {
-                transform: translate(20px, 30px) scale(1.02);
-            }
-        }
-
-        /* Grid Pattern */
-        .grid-pattern {
-            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
+            height: 216px;
+            object-fit: cover;
             z-index: 1;
         }
 
-        /* Main Container */
-        .container {
-            position: relative;
-            z-index: 10;
+        .hero-bg {
+            position: absolute;
+            top: 125px;
+            left: 0;
             width: 100%;
-            max-width: 420px;
-            padding: 0 20px;
+            height: calc(100% - 125px);
+            object-fit: cover;
+            z-index: 0;
         }
 
-        /* Logo */
-        .logo-section {
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 42px;
+            margin-top: 178px;
+        }
+
+        .hero-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 90px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .hero-title-italic {
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            color: #535353;
+            max-width: 1077px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 40px;
+            background: #B0DBFF;
+            border: none;
+            border-radius: 30px;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #244A73;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #8BC9FF;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #F5F5F7;
+            padding: 53px 67px;
+            margin: 53px;
+            border-radius: 20px;
+        }
+
+        .stats-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 50px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .stats-subtitle {
+            font-size: 20px;
+            color: #535353;
+            margin-bottom: 43px;
+        }
+
+        .stats-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .stats-card-top {
+            display: flex;
+            gap: 20px;
+            padding: 43px 47px;
+            background: linear-gradient(180deg, #EBF2FF 0%, #FFFFFF 100%);
+        }
+
+        .stats-image {
+            width: 705px;
+            height: 248px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .stats-highlight {
+            padding: 80px 47px 43px;
+        }
+
+        .stats-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 100px;
+            color: #000000;
+            line-height: 1;
+        }
+
+        .stats-label {
+            font-size: 18px;
+            color: #000000;
+            margin-top: 5px;
+        }
+
+        .stats-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px 47px;
+        }
+
+        .stats-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #D9E4F2;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #244A73;
+        }
+
+        .stats-tag-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 67px;
+        }
+
+        .features-header {
             text-align: center;
             margin-bottom: 40px;
         }
 
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
-            background: linear-gradient(135deg, #7C3AED 0%, #06B6D4 50%, #EC4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -1px;
-            text-shadow: 0 0 60px rgba(124, 58, 237, 0.5);
-            animation: glow 3s ease-in-out infinite alternate;
+        .features-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 36px;
+            color: #4A4A4A;
         }
 
-        @keyframes glow {
-            from {
-                filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.3));
-            }
-            to {
-                filter: drop-shadow(0 0 40px rgba(6, 182, 212, 0.4));
-            }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1305px;
+            margin: 0 auto;
         }
 
-        .tagline {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-top: 8px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .feature-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E7;
+            border-radius: 16px;
+            padding: 20px;
         }
 
-        /* Login Card */
-        .login-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 40px 32px;
-            box-shadow: 
-                0 25px 50px -12px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
-        }
-
-        .card-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .card-subtitle {
-            font-size: 14px;
-            color: var(--text-secondary);
-            text-align: center;
-            margin-bottom: 32px;
-        }
-
-        .card-subtitle a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .card-subtitle a:hover {
-            color: var(--accent-purple);
-        }
-
-        /* Form */
-        .form-group {
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: #D9E4F2;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
-        .input-wrapper {
-            position: relative;
-        }
-
-        .input-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
+        .feature-icon svg {
             width: 20px;
             height: 20px;
-            color: var(--text-muted);
-            pointer-events: none;
-            transition: color 0.2s;
+            fill: #FFFFFF;
         }
 
-        .form-input {
-            width: 100%;
-            padding: 16px 16px 16px 48px;
-            background: var(--input-bg);
-            border: 1px solid var(--input-border);
+        .feature-text {
+            font-size: 16px;
+            color: #121212;
+            font-weight: 500;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #FFFFFF;
+            padding: 60px 0;
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 120px;
+        }
+
+        .faq-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E7;
             border-radius: 12px;
-            font-size: 15px;
-            font-family: 'Inter', sans-serif;
-            color: var(--text-primary);
-            transition: all 0.3s ease;
-            outline: none;
+            padding: 20px 24px;
         }
 
-        .form-input::placeholder {
-            color: var(--text-muted);
-        }
-
-        .form-input:focus {
-            border-color: var(--accent-purple);
-            background: rgba(124, 58, 237, 0.1);
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
-        }
-
-        .form-input:focus + .input-icon,
-        .form-input:focus ~ .input-icon {
-            color: var(--accent-purple);
-        }
-
-        /* Checkbox Row */
-        .checkbox-row {
+        .faq-question {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-bottom: 24px;
-        }
-
-        .checkbox-wrapper {
-            display: flex;
             align-items: center;
-            gap: 10px;
-            cursor: pointer;
         }
 
-        .checkbox-wrapper input[type="checkbox"] {
-            display: none;
+        .faq-question-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1F1F1F;
         }
 
-        .custom-checkbox {
-            width: 18px;
-            height: 18px;
-            border: 1.5px solid var(--input-border);
-            border-radius: 4px;
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
-            background: var(--input-bg);
         }
 
-        .custom-checkbox svg {
-            width: 12px;
-            height: 12px;
-            opacity: 0;
-            transform: scale(0.5);
-            transition: all 0.2s;
-            color: white;
-        }
-
-        .checkbox-wrapper input:checked + .custom-checkbox {
-            background: var(--accent-purple);
-            border-color: var(--accent-purple);
-        }
-
-        .checkbox-wrapper input:checked + .custom-checkbox svg {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .checkbox-label {
-            font-size: 13px;
-            color: var(--text-secondary);
-            user-select: none;
-        }
-
-        .forgot-link {
-            font-size: 13px;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .forgot-link:hover {
-            color: var(--accent-purple);
-        }
-
-        /* Sign In Button */
-        .signin-btn {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%);
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .signin-btn::before {
+        .faq-toggle::before,
+        .faq-toggle::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
-            opacity: 0;
-            transition: opacity 0.3s;
+            background: #121212;
         }
 
-        .signin-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.4);
+        .faq-toggle::before {
+            width: 14px;
+            height: 2px;
         }
 
-        .signin-btn:hover::before {
-            opacity: 1;
+        .faq-toggle::after {
+            width: 2px;
+            height: 14px;
         }
 
-        .signin-btn span {
-            position: relative;
-            z-index: 1;
+        /* Footer */
+        .footer {
+            background: #F5F5F7;
+            padding: 57px 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Divider */
-        .divider {
+        .footer-text {
+            font-size: 14px;
+            color: #000000;
             display: flex;
             align-items: center;
-            margin: 24px 0;
-            gap: 16px;
+            gap: 5px;
         }
 
-        .divider-line {
-            flex: 1;
-            height: 1px;
-            background: var(--input-border);
+        .footer-heart {
+            color: #FF383D;
         }
 
-        .divider-text {
-            font-size: 12px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Google Button */
-        .google-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--input-bg);
-            border: 1px solid var(--input-border);
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 500;
-            font-family: 'Inter', sans-serif;
-            color: var(--text-primary);
+        .footer-btn {
+            padding: 15px 32px;
+            background: #244A73;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
             transition: all 0.3s ease;
         }
 
-        .google-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-        }
-
-        .google-icon {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* Footer Note */
-        .footer-note {
-            text-align: center;
-            margin-top: 24px;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        .footer-note a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-        }
-
-        .footer-note a:hover {
-            text-decoration: underline;
+        .footer-btn:hover {
+            background: #1A3557;
+            transform: translateY(-2px);
         }
 
         /* Responsive */
-        @media (max-width: 480px) {
-            .login-card {
-                padding: 32px 24px;
+        @media (max-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            .logo {
-                font-size: 40px;
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
             }
+        }
 
-            .checkbox-row {
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .hero-content {
+                padding: 0 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                margin: 20px;
+                padding: 30px;
+            }
+            
+            .footer {
                 flex-direction: column;
-                gap: 12px;
-                align-items: flex-start;
+                gap: 20px;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="background">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-        <div class="orb orb-4"></div>
-    </div>
-    <div class="grid-pattern"></div>
-
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Logo -->
-        <div class="logo-section">
-            <h1 class="logo">Synthica</h1>
-            <p class="tagline">AI Agents for Everyone</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <img src="images/logo-placeholder.png" alt="Synthica Logo" class="nav-logo-image" onerror="this.style.display='none'">
+            <span class="nav-logo-text">Synthica</span>
         </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Journal</a>
+            <a href="#" class="nav-link">Program</a>
+            <a href="#" class="nav-link">Work with us</a>
+        </div>
+    </nav>
 
-        <!-- Login Card -->
-        <div class="login-card">
-            <h2 class="card-title">Welcome back</h2>
-            <p class="card-subtitle">
-                Don't have an account? <a href="#">Get started</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/header-gradient.png" alt="" class="hero-header-gradient">
+        <img src="images/hero-bg.jpg" alt="" class="hero-bg">
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Research made approachable for <span class="hero-title-italic">you</span>
+            </h1>
+            <p class="hero-description">
+                Synthica creates a playground for high school students to conduct research and participate in competitions regardless of their levels.
             </p>
+            <button class="hero-btn">Join us now</button>
+        </div>
+    </section>
 
-            <form id="loginForm">
-                <!-- Email Input -->
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Email address"
-                            required
-                        >
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                    </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2 class="stats-title">At Synthica, we kickstart your Research Career.</h2>
+        <p class="stats-subtitle">Learn how we work in 4 simple steps.</p>
+        
+        <div class="stats-card">
+            <div class="stats-card-top">
+                <img src="images/stats-image.jpg" alt="Researchers" class="stats-image" onerror="this.parentElement.style.display='none'">
+                <div class="stats-highlight">
+                    <div class="stats-number">1600+</div>
+                    <div class="stats-label">Researchers as members of Synthica worldwide</div>
                 </div>
-
-                <!-- Password Input -->
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input 
-                            type="password" 
-                            class="form-input" 
-                            placeholder="Password"
-                            required
-                        >
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Checkbox Row -->
-                <div class="checkbox-row">
-                    <label class="checkbox-wrapper">
-                        <input type="checkbox">
-                        <span class="custom-checkbox">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </span>
-                        <span class="checkbox-label">Remember me</span>
-                    </label>
-                    <a href="#" class="forgot-link">Forgot password?</a>
-                </div>
-
-                <!-- Sign In Button -->
-                <button type="submit" class="signin-btn">
-                    <span>Sign in</span>
-                </button>
-            </form>
-
-            <!-- Divider -->
-            <div class="divider">
-                <span class="divider-line"></span>
-                <span class="divider-text">or continue with</span>
-                <span class="divider-line"></span>
             </div>
-
-            <!-- Google Button -->
-            <button type="button" class="google-btn">
-                <svg class="google-icon" viewBox="0 0 24 24">
-                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                Continue with Google
-            </button>
-
-            <!-- Footer Note -->
-            <p class="footer-note">
-                By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-            </p>
+            
+            <div class="stats-tags">
+                <span class="stats-tag">
+                    <svg class="stats-tag-icon" viewBox="0 0 24 24" fill="#244A73">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    Community
+                </span>
+                <span class="stats-tag">
+                    <svg class="stats-tag-icon" viewBox="0 0 24 24" fill="#244A73">
+                        <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                    </svg>
+                    Opportunities
+                </span>
+                <span class="stats-tag">Science</span>
+                <span class="stats-tag">Technology</span>
+                <span class="stats-tag">Engineering</span>
+                <span class="stats-tag">Arts</span>
+                <span class="stats-tag">Mathematics</span>
+                <span class="stats-tag">Research</span>
+                <span class="stats-tag">Competition</span>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        // Form submission handler
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add your login logic here
-            console.log('Login form submitted');
-        });
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-header">
+            <h2 class="features-title">Zero cost. Non-selective Program.</h2>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <p class="feature-text">Zero money spent</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                <p class="feature-text">Open to all high school students</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <p class="feature-text">Research Leadership Opportunity</p>
+            </div>
+        </div>
+    </section>
 
-        // Add subtle parallax effect to orbs on mouse move
-        document.addEventListener('mousemove', function(e) {
-            const orbs = document.querySelectorAll('.orb');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">What is Synthica?</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Do I need prior research experience?</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How much does it cost to join Synthica?</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">More faq</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How can I join the community?</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">more faq</span>
+                        <span class="faq-toggle"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 10;
-                const x = (mouseX - 0.5) * speed;
-                const y = (mouseY - 0.5) * speed;
-                orb.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        });
-
-        // Add focus effects to inputs
-        const inputs = document.querySelectorAll('.form-input');
-        inputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            input.addEventListener('blur', function() {
-                this.parentElement.classList.remove('focused');
-            });
-        });
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            © 2026 Synthica. All rights reserved. Platform developed with <span class="footer-heart">❤</span>
+        </div>
+        <button class="footer-btn">Join us now</button>
+    </footer>
 </body>
 </html>

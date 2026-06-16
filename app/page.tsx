@@ -17,7 +17,7 @@ export default function Home() {
           <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
             Research made approachable for <i>you</i>
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-full h-[69px] absolute left-0 top-[118px] text-center">
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] absolute left-[116px] top-[119px] text-center">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>

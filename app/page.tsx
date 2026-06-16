@@ -22,7 +22,7 @@ export default function Home() {
             research and participate in competitions regardless of their levels.
           </p>
           <div className="rounded-[50px] bg-[#B1DBFE] w-[148px] h-[51px] absolute left-[491px] top-[193px]"></div>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[107px] h-[26px] absolute left-[512px] top-[206px] text-center">
+          <p className="text-[#244A73] font-googleSansFlex text-xl w-[134px] h-[26px] absolute left-[498px] top-[205px] text-center">
             Join us now
           </p>
         </div>
@@ -744,9 +744,9 @@ export default function Home() {
       <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[242px] top-[3494px] text-center">
         Zero cost. Non-selective Program.
       </p>
-      <div className="inline-flex pt-[42px] pr-[151px] pb-[42px] pl-[89px] items-center bg-[#FFF] w-full h-[716px] absolute left-0.5 top-[3792px] overflow-hidden">
-        <div className="w-[958px] h-[632px] absolute left-[89px] top-[42px]">
-          <button className="cursor-pointer text-nowrap flex pt-6 pr-[142px] pb-6 pl-[142px] justify-center items-center w-[958px] h-28 absolute left-12 top-0">
+      <div className="inline-flex pt-[42px] pr-[151px] pb-[42px] pl-[89px] items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3792px] overflow-hidden">
+        <div className="w-[960px] h-[632px] absolute left-[89px] top-[42px]">
+          <button className="cursor-pointer text-nowrap flex pt-6 pr-[143px] pb-6 pl-[143px] justify-center items-center w-[960px] h-28 absolute left-12 top-0">
             <p className="flex flex-col justify-center shrink-0 text-[#000] font-googleSansFlex text-[49px] font-medium leading-[62.4px] w-[674px] h-16 text-center">
               Frequently Asked Questions
             </p>

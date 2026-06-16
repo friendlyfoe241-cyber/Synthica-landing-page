@@ -15,7 +15,7 @@ export default function Home() {
       <div className="w-full h-[255px] absolute left-0 top-[153px]">
         <div className="w-full h-[255px] absolute left-0 top-0">
           <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
-            Research made approachable for you
+            Research made approachable for <i>you</i>
           </p>
           <p className="text-[#535353] font-googleSansFlex text-[25px] w-[954px] h-[68px] absolute left-[123px] top-[105px] text-center">
             Synthica creates a playground for high school students to conduct

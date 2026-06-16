@@ -17,7 +17,7 @@ export default function Home() {
           <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
             Research made approachable for <i>you</i>
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[954px] h-[68px] absolute left-[123px] top-[105px] text-center">
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-full h-[69px] absolute left-0 top-[118px] text-center">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
@@ -560,12 +560,12 @@ export default function Home() {
         <div className="flex pt-px pr-14 pb-px pl-[54px] flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full absolute left-0.5 top-0">
           <div className="border-r border-r-[#000] border-l border-l-[#000] w-full h-[55px]"></div>
         </div>
-        <div className="flex py-px px-14 flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full absolute left-0 top-14">
-          <div className="flex pr-px flex-col items-start border-r border-r-[#000] border-l border-l-[#000] w-full h-[600px]">
+        <div className="flex py-px px-14 flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full h-[601px] absolute left-0 top-[57px]">
+          <div className="flex pr-px flex-col items-start shrink-0 border-r border-r-[#000] border-l border-l-[#000] w-full h-[600px]">
             <div className="flex flex-col justify-center items-start w-full">
               <img
                 src="/Backgroundborder.png"
-                className="border border-[#000] w-full h-[602px] overflow-hidden max-w-none"
+                className="border border-[#000] w-[1088px] h-[602px] overflow-hidden max-w-none"
                 alt="Background+Border"
               />
             </div>

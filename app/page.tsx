@@ -3,11 +3,14 @@ export default function Home() {
     <div className="bg-[#FFF] min-h-screen w-full relative overflow-x-hidden flex flex-col items-center pb-12">
       {/* Background Decorative Images */}
       <div className="absolute top-0 left-0 w-full h-[766px] bg-[#FFF] -z-10" />
+      
+      {/* FIXED: Changed extension from .png to .jpg to match your file */}
       <img
-        src="/ChatgptImageJun12202608_40_28Pm1.png"
+        src="/ChatgptImageJun12202608_40_28Pm1.jpg"
         className="w-full h-[675px] absolute left-0 top-[138px] object-cover opacity-60 -z-10"
         alt="Background Pattern 1"
       />
+      
       <img
         src="/ChatgptImageJun12202609_19_24Pmphotoroom1.png"
         className="w-full h-[180px] absolute left-0 top-0 object-cover opacity-30 -z-10"
@@ -17,6 +20,7 @@ export default function Home() {
       {/* Navigation Bar */}
       <nav className="w-full max-w-7xl mx-auto px-6 py-8 flex justify-between items-center z-10">
         <div className="flex items-center gap-3 bg-[rgba(188,188,188,0.10)] px-5 py-2.5 rounded-[20px] backdrop-blur-sm">
+          {/* Logo is referenced correctly here, just needs to be in the public folder */}
           <img
             src="/Image2.png"
             className="rounded-[20px] w-[42px] h-[42px] object-cover"
@@ -36,6 +40,7 @@ export default function Home() {
         </div>
       </nav>
 
+// ... rest of the code remains exactly the same ...
       {/* Hero Section */}
       <header className="w-full max-w-5xl mx-auto px-4 pt-12 pb-32 flex flex-col items-center justify-center text-center z-10">
         <h1 className="text-[#000] font-instrumentSerif text-[60px] md:text-[80px] leading-tight">

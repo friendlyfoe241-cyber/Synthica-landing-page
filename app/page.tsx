@@ -565,7 +565,7 @@ export default function Home() {
             <div className="flex flex-col justify-center items-start w-full">
               <img
                 src="/Backgroundborder.png"
-                className="border border-[#000] w-full h-[602px] overflow-hidden max-w-none"
+                className="border border-[#000] w-[1088px] h-[602px] overflow-hidden max-w-none"
                 alt="Background+Border"
               />
             </div>

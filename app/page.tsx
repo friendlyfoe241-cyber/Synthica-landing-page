@@ -75,18 +75,18 @@ export default function Home() {
       <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
         At Synthica, we kickstart your Research Career.
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[184px] top-[1589px]">
+      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
         Learn how we work in 4 simple steps.
       </p>
-      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[184px] top-[908px]"></div>
-      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[223px] top-[944px]"></div>
-      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[638px] top-[1169px]"></div>
+      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[67px] top-[908px]"></div>
+      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[106px] top-[944px]"></div>
+      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[521px] top-[1169px]"></div>
       <img
         src="/Rectangle9.png"
-        className="rounded-[25px] w-[580px] h-[204px] absolute left-[638px] top-[944px] max-w-none"
+        className="rounded-[25px] w-[580px] h-[204px] absolute left-[521px] top-[944px] max-w-none"
         alt="Rectangle 9"
       />
-      <div className="w-[424px] h-[72px] absolute left-[716px] top-[1010px]">
+      <div className="w-[424px] h-[72px] absolute left-[599px] top-[1010px]">
         <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[150px] top-0">
           16000+
         </p>
@@ -94,7 +94,7 @@ export default function Home() {
           Researchers as members of Synthica worldwide
         </p>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[639px] top-[1201px]">
+      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1201px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[86px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[201px] top-0"></div>
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[35px] h-[33px] absolute left-[543px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[638px] top-[1342px]">
+      <div className="w-[579px] h-[33px] absolute left-[521px] top-[1342px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[53px] h-[33px] absolute -left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[131px] h-[33px] absolute left-[61px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[70px] h-[33px] absolute left-[201px] top-0"></div>
@@ -110,7 +110,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[65px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-[501px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[639px] top-[1389px]">
+      <div className="w-[579px] h-[33px] absolute left-[522px] top-[1389px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[110px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-[115px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[141px] h-[33px] absolute left-[201px] top-0"></div>
@@ -124,18 +124,18 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[111px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-8 h-[33px] absolute left-[547px] top-0"></div>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[639px] top-[1295px]">
+      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1295px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-0 -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[87px] -top-0"></div>
         <div className="rounded-[50px] bg-[#D2E4F8] w-[152px] h-[33px] absolute left-[228px] -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[124px] h-[33px] absolute left-[394px] -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-11 h-[33px] absolute left-[534px] -top-0"></div>
       </div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[639px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[780px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[923px] top-[1248px]"></div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1077px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[798px] top-[1255px]">
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[522px] top-[1248px]"></div>
+      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[663px] top-[1248px]"></div>
+      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[806px] top-[1248px]"></div>
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[960px] top-[1248px]"></div>
+      <div className="w-[98px] h-[19px] absolute left-[681px] top-[1255px]">
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
@@ -188,7 +188,7 @@ export default function Home() {
           Community
         </p>
       </div>
-      <div className="w-[114px] h-[19px] absolute left-[938px] top-[1255px]">
+      <div className="w-[114px] h-[19px] absolute left-[821px] top-[1255px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[97px] h-[19px] absolute left-[17px] top-0">
           Opportunities
         </p>

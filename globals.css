@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-googleSansFlex: var(--font-google-sans-flex);
+}

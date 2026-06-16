@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="bg-[#FFF] min-w-screen min-h-screen overflow-hidden">
+    <div className="bg-[#FFF] min-w-screen min-h-screen">
       <div className="bg-[#FFF] w-full h-[894px] absolute left-0 top-0"></div>
       <img
         src="/ChatgptImageJun12202608_40_28Pm1.png"
@@ -38,7 +38,6 @@ export default function Home() {
           alt="image 2"
         />
       </div>
-     
       <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[537px] h-[70px] absolute left-[869px] top-[55px]"></div>
       <div className="w-[437px] h-[25px] absolute left-[919px] top-[77px]">
         <p className="text-[#4B4B4B] font-googleSansFlex text-xl w-[55px] h-[25px] absolute left-0 top-0">
@@ -281,7 +280,6 @@ export default function Home() {
           4
         </p>
       </div>
-      <div className="bg-[#D9D9D9] w-[11px] h-[5px] absolute left-[1582px] top-[1603px]"></div>
       <div className="w-[705px] h-[511px] absolute left-[667px] top-[1856px]">
         <svg
           width="705"

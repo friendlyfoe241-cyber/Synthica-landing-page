@@ -52,7 +52,7 @@ export default function Home() {
           alt="image 2"
         />
       </div>
-      <div className="w-[457px] h-[60px] absolute left-[715px] top-[47px]">
+      <div className="w-[457px] h-[60px] absolute left-[941px] top-[47px]">
         <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-0 top-0"></div>
         <div className="w-[416px] h-[25px] absolute left-[25px] top-[19px]">
           <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">

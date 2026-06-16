@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["--font-inter"],
+        googleSansFlex: ["var(--font-dm-sans)"],
+        instrumentSerif: ["var(--font-instrument-serif)"],
       },
     },
   },

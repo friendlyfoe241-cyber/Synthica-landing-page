@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
+import { Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const googleSansFlex = Google_Sans_Flex({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-inter",
+  weight: ["500"],
+  variable: "--font-google-sans-flex",
 });
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${googleSansFlex.variable}`}>
       <body>{children}</body>
     </html>
   );

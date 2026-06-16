@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         inter: ["--font-inter"],
+        googleSansFlex: ["--font-google-sans-flex"],
       },
     },
   },

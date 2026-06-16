@@ -1,864 +1,264 @@
 export default function Home() {
   return (
-    <div className="bg-[#FFF] min-w-screen min-h-screen">
-      <div className="bg-[#FFF] w-full h-[766px] absolute left-0 top-0"></div>
+    <div className="bg-[#FFF] min-h-screen w-full relative overflow-x-hidden flex flex-col items-center pb-24">
+      {/* Background Decorative Images */}
+      <div className="absolute top-0 left-0 w-full h-[766px] bg-[#FFF] -z-10" />
       <img
         src="/ChatgptImageJun12202608_40_28Pm1.png"
-        className="w-full h-[675px] absolute left-0 top-[138px] max-w-none"
-        alt="ChatGPT Image Jun 12, 2026, 08_40_28 PM 1"
+        className="w-full h-[675px] absolute left-0 top-[138px] max-w-none opacity-40 object-cover -z-10"
+        alt="Background Pattern 1"
       />
       <img
         src="/ChatgptImageJun12202609_19_24Pmphotoroom1.png"
-        className="w-full h-[180px] absolute left-0 top-px max-w-none"
-        alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
+        className="w-full h-[180px] absolute left-0 top-0 max-w-none opacity-20 object-cover -z-10"
+        alt="Background Pattern 2"
       />
-      <div className="w-full h-[264px] absolute left-0 top-[148px] flex flex-col items-center justify-center">
-          <p className="text-[#000] font-instrumentSerif text-[80px] h-[105px] text-center">
-            Research made approachable for <i>you</i>
+
+      {/* Navigation Bar */}
+      <nav className="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center z-10">
+        {/* Brand Logo */}
+        <div className="flex items-center gap-3 bg-[rgba(188,188,188,0.10)] px-5 py-2.5 rounded-[20px] backdrop-blur-sm border border-neutral-200/30">
+          <img
+            src="/Image2.png"
+            className="rounded-[20px] w-[42px] h-[42px] object-cover"
+            alt="Synthica Logo"
+          />
+          <p className="text-[#000] font-googleSansFlex text-xl font-medium tracking-tight">
+            Synthica
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] text-center mt-8">
-            Synthica creates a playground for high school students to conduct
-            research and participate in competitions regardless of their levels.
+        </div>
+
+        {/* Menu Links */}
+        <div className="flex items-center gap-6 bg-[rgba(188,188,188,0.10)] px-6 py-3 rounded-[20px] backdrop-blur-sm border border-neutral-200/30 text-[#4B4B4B] font-googleSansFlex text-base md:text-lg">
+          <a href="#" className="hover:text-black transition-colors">Home</a>
+          <a href="#" className="hover:text-black transition-colors">About</a>
+          <a href="#" className="hover:text-black transition-colors">Journal</a>
+          <a href="#" className="hover:text-black transition-colors">Program</a>
+          <a href="#" className="hover:text-black transition-colors">Work with us</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="w-full max-w-5xl mx-auto px-4 pt-16 pb-24 flex flex-col items-center justify-center text-center z-10">
+        <h1 className="text-[#000] font-instrumentSerif text-5xl md:text-[80px] leading-tight text-center">
+          Research made approachable for <i>you</i>
+        </h1>
+        <p className="text-[#535353] font-googleSansFlex text-lg md:text-[25px] max-w-4xl text-center mt-8 leading-relaxed">
+          Synthica creates a playground for high school students to conduct
+          research and participate in competitions regardless of their levels.
+        </p>
+        <div className="relative mt-10 cursor-pointer hover:scale-105 transition-transform">
+          <svg
+            width="157"
+            height="54"
+            viewBox="0 0 157 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[157px] h-[54px]"
+          >
+            <rect
+              width="156.753"
+              height="53.7859"
+              rx="26.8929"
+              fill="#B1DBFE"
+            />
+          </svg>
+          <p className="text-[#244A73] font-googleSansFlex text-xl font-semibold absolute inset-0 flex items-center justify-center">
+            Join us now
           </p>
-          <div className="relative mt-8">
-            <svg
-              width="157"
-              height="54"
-              viewBox="0 0 157 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-[157px] h-[54px]"
-            >
-              <rect
-                width="156.753"
-                height="53.7859"
-                rx="26.8929"
-                fill="#B1DBFE"
-              />
-            </svg>
-            <p className="text-[#244A73] font-googleSansFlex text-xl absolute inset-0 flex items-center justify-center">
-              Join us now
+        </div>
+      </header>
+
+      {/* Sub-banner Highlight Section */}
+      <section className="w-full bg-gradient-to-r from-[#B0DBFD]/10 to-[#0070C8]/10 py-8 mb-16 text-center">
+        <p className="text-[#4B4B4B] font-googleSansFlex text-2xl md:text-[40px] px-4 font-medium">
+          At Synthica, we kickstart your Research Career.
+        </p>
+      </section>
+
+      {/* Stats & Interactive Badges Dashboard Block */}
+      <main className="w-full max-w-6xl mx-auto px-6 mb-24">
+        <div className="rounded-[50px] bg-[#F4F5F7] p-8 md:p-12 flex flex-col lg:flex-row gap-8 items-stretch shadow-sm">
+          {/* Dashboard Left Side Component */}
+          <div className="rounded-[25px] bg-[#FFF] flex-1 min-h-[300px] border border-neutral-100 shadow-inner p-6 flex flex-col justify-between">
+            <p className="text-[#4B4B4B] font-googleSansFlex text-xl md:text-2xl leading-snug">
+              Learn how Synthica works and become a part of us.
             </p>
-          </div>
-        </div>
-      <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]"></div>
-      <div className="w-[140px] h-[42px] absolute left-[42px] top-14">
-        <p className="text-[#000] font-googleSansFlex text-xl w-[89px] h-[30px] absolute left-[51px] top-[9px]">
-          Synthica
-        </p>
-        <img
-          src="/Image2.png"
-          className="rounded-[20px] w-[42px] h-[42px] absolute -left-0 -top-0 max-w-none"
-          alt="image 2"
-        />
-      </div>
-      <div className="w-[457px] h-[60px] absolute right-7 top-[47px]">
-        <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-0 top-0"></div>
-        <div className="w-[416px] h-[25px] absolute left-[25px] top-[19px]">
-          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">
-            Home
-          </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[53px] h-[25px] absolute left-[68px] top-0">
-            About
-          </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[65px] h-[25px] absolute left-[136px] top-0">
-            Journal
-          </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[74px] h-[25px] absolute left-[216px] top-0">
-            Program
-          </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[110px] h-[25px] absolute left-[306px] top-0">
-            Work with us
-          </p>
-        </div>
-      </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
-        At Synthica, we kickstart your Research Career.
-      </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
-        Learn how we work in 4 simple steps.
-      </p>
-      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[67px] top-[908px]"></div>
-      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[106px] top-[944px]"></div>
-      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[521px] top-[1169px]"></div>
-      <img
-        src="/Rectangle9.png"
-        className="rounded-[25px] w-[580px] h-[204px] absolute left-[521px] top-[944px] max-w-none"
-        alt="Rectangle 9"
-      />
-      <div className="w-[424px] h-[72px] absolute left-[599px] top-[1010px]">
-        <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[150px] top-0">
-          16000+
-        </p>
-        <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-0 top-12">
-          Researchers as members of Synthica worldwide
-        </p>
-      </div>
-      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1201px]">
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-0 top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[86px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[201px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[315px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[429px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[35px] h-[33px] absolute left-[543px] top-0"></div>
-      </div>
-      <div className="w-[579px] h-[33px] absolute left-[521px] top-[1342px]">
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[53px] h-[33px] absolute -left-0 top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[131px] h-[33px] absolute left-[61px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[70px] h-[33px] absolute left-[201px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[145px] h-[33px] absolute left-[280px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[65px] h-[33px] absolute left-[429px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-[501px] top-0"></div>
-      </div>
-      <div className="w-[579px] h-[33px] absolute left-[522px] top-[1389px]">
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[110px] h-[33px] absolute left-0 top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-[115px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[141px] h-[33px] absolute left-[201px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[75px] h-[33px] absolute left-[349px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[111px] h-[33px] absolute left-[429px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-8 h-[33px] absolute left-[547px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[110px] h-[33px] absolute left-0 top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-[115px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[141px] h-[33px] absolute left-[201px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[75px] h-[33px] absolute left-[349px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[111px] h-[33px] absolute left-[429px] top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-8 h-[33px] absolute left-[547px] top-0"></div>
-      </div>
-      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1295px]">
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-0 -top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[87px] -top-0"></div>
-        <div className="rounded-[50px] bg-[#D2E4F8] w-[152px] h-[33px] absolute left-[228px] -top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-[124px] h-[33px] absolute left-[394px] -top-0"></div>
-        <div className="rounded-[50px] bg-[#DCEBFA] w-11 h-[33px] absolute left-[534px] -top-0"></div>
-      </div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[522px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[663px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[806px] top-[1248px]"></div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[960px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[681px] top-[1255px]">
-        <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
-          <div className="w-[13px] h-[13px] absolute left-0 top-0">
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2 top-2.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-2.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-3"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-2.5 top-0"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[3px] top-2.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[7px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-2"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-2.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-3"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-0.5"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[3px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[5px]"></div>
-            <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[7px]"></div>
-          </div>
-        </div>
-        <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[81px] h-[19px] absolute left-[17px] top-0">
-          Community
-        </p>
-      </div>
-      <div className="w-[114px] h-[19px] absolute left-[821px] top-[1255px]">
-        <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[97px] h-[19px] absolute left-[17px] top-0">
-          Opportunities
-        </p>
-        <div className="w-[13px] h-[13px] absolute -left-0 top-[3px]">
-          <div className="w-[13px] h-[13px] absolute left-0 top-0">
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-[3px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-0.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-0"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-3"></div>
-          </div>
-        </div>
-      </div>
-      <div className="w-[111px] h-[19px] absolute left-[768px] top-[1301px]">
-        <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[94px] h-[19px] absolute left-[17px] -top-0">
-          Competitions
-        </p>
-        <div className="w-[13px] h-[13px] absolute -left-0 top-[3px]">
-          <div className="w-[13px] h-[13px] absolute left-0 top-0">
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0.5 top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0.5 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0.5 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0.5 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-0.5 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[3px] top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-0"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-0.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-[3px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[5px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-0"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-[7px] top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-2.5 top-3"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-[5px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-[7px]"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-2"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-2.5"></div>
-            <div className="bg-[#000] w-0.5 h-0.5 absolute left-3 top-3"></div>
-          </div>
-        </div>
-      </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[72px] top-[1694px]">
-        Learn how Synthica works and become a part of us.
-      </p>
-      <div className="w-10 h-10 absolute left-[497px] top-[1589px]">
-        <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex text-2xl w-[7px] h-6 absolute left-4 top-2">
-          1
-        </p>
-      </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2047px]">
-        <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
-          2
-        </p>
-      </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2506px]">
-        <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
-          3
-        </p>
-      </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2965px]">
-        <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex text-2xl w-3 h-6 absolute left-3.5 top-2 text-center">
-          4
-        </p>
-      </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[1589px]">
-        <svg
-          width="567"
-          height="411"
-          viewBox="0 0 567 411"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[566px] h-[410px] absolute -left-0 top-0 "
-        >
-          <path
-            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
-            fill="#F4F5F7"
-          />
-        </svg>
-        <img
-          src="/Rectangle25.png"
-          className="rounded-[20px] w-[413px] h-[234px] absolute left-[77px] top-[97px] max-w-none"
-          alt="Rectangle 25"
-        />
-        <p className="text-[#000] font-googleSansFlex text-[17px] w-[506px] h-10 absolute left-[31px] top-[26px] text-center">
-          Become part of our global network of student researchers by joining
-          our Discord server and connecting with peers.
-        </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[359px] h-[31px] absolute left-[104px] top-[328px]">
-          <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
-            <div className="w-6 h-6 absolute left-0 top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
+            <div className="w-full h-px bg-neutral-100 my-4" />
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#244A73]" />
+                <span className="text-neutral-600 text-sm">Global Student Forums</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#B1DBFE]" />
+                <span className="text-neutral-600 text-sm">International Mentorship Grid</span>
+              </div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[326px] h-[31px] absolute left-[33px] -top-0 text-center">
-            Join our Research Community
-          </p>
-        </div>
-      </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2043px]">
-        <svg
-          width="567"
-          height="411"
-          viewBox="0 0 567 411"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[566px] h-[410px] absolute -left-0 top-0 "
-        >
-          <path
-            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
-            fill="#F4F5F7"
-          />
-        </svg>
-        <img
-          src="/Rectangle25(1).png"
-          className="rounded-[20px] w-[413px] h-[234px] absolute left-[77px] top-[97px] max-w-none"
-          alt="Rectangle 25"
-        />
-        <p className="text-[#000] font-googleSansFlex text-[17px] w-[506px] h-10 absolute left-[31px] top-[25px] text-center">
-          Access our high-quality research curriculum and learn the foundations
-          of academic research at your own pace.
-        </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[398px] h-[31px] absolute left-[84px] top-[328px]">
-          <div className="w-6 h-6 absolute -left-0 top-[3px] overflow-hidden">
-            <div className="w-6 h-6 absolute left-0 top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[18px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
-            </div>
-          </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[365px] h-[31px] absolute left-[33px] -top-0">
-            Learn from our Expert Curriculum
-          </p>
-        </div>
-      </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2499px]">
-        <svg
-          width="567"
-          height="411"
-          viewBox="0 0 567 411"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[566px] h-[410px] absolute -left-0 top-0 "
-        >
-          <path
-            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
-            fill="#F4F5F7"
-          />
-        </svg>
-        <img
-          src="/Rectangle25(2).png"
-          className="rounded-[20px] w-[413px] h-[234px] absolute left-[77px] top-[97px] max-w-none"
-          alt="Rectangle 25"
-        />
-        <p className="text-[#000] font-googleSansFlex text-[17px] w-[506px] h-10 absolute left-[33px] top-8 text-center">
-          Apply what you've learned to create your own original research
-          project, with guidance from our community resources.
-        </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[365px] h-[31px] absolute left-[101px] top-[328px]">
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[337px] h-[31px] absolute left-[27px] top-0">
-            Develop your Research Project
-          </p>
-          <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
-            <div className="w-[18px] h-6 absolute left-[3px] top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-[566px] h-[410px] absolute left-[574px] top-[2956px]">
-        <svg
-          width="567"
-          height="411"
-          viewBox="0 0 567 411"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[566px] h-[410px] absolute -left-0 -top-0 "
-        >
-          <path
-            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
-            fill="#F4F5F7"
-          />
-        </svg>
-        <img
-          src="/Rectangle25(3).png"
-          className="rounded-[20px] w-[413px] h-[234px] absolute left-[77px] top-[97px] max-w-none"
-          alt="Rectangle 25"
-        />
-        <p className="text-[#000] font-googleSansFlex text-[17px] w-[506px] h-10 absolute left-[31px] top-[26px] text-center">
-          Showcase your findings at our international research competitions and
-          earn recognition for your work.
-        </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-      </div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[516px] top-[1631px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[516px] top-[2092px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[516px] top-[2553px]"></div>
-      <div className="w-[325px] h-[31px] absolute left-[688px] top-[3285px]">
-        <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
-          <div className="w-6 h-6 absolute -left-0 top-[3px]">
-            <div className="w-6 h-6 absolute left-0 top-0">
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[18px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-1.5"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[18px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
-              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
-            </div>
-          </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[295px] h-[31px] absolute left-[31px] -top-0">
-            Participate in Competitions
-          </p>
-        </div>
-      </div>
-      <div className="w-full h-[714px] absolute left-0 top-[4541px]">
-        <div className="flex pt-px pr-14 pb-px pl-[54px] flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full absolute left-0.5 top-0">
-          <div className="border-r border-r-[#000] border-l border-l-[#000] w-full h-[55px]"></div>
-        </div>
-        <div className="flex py-px px-14 flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full h-[601px] absolute left-0 top-[57px]">
-          <div className="flex pr-px flex-col items-start shrink-0 border-r border-r-[#000] border-l border-l-[#000] w-full h-[600px]">
-            <div className="flex flex-col justify-center items-start w-full">
+
+          {/* Dashboard Right Side Component */}
+          <div className="flex-1 flex flex-col gap-6">
+            {/* Stats Graphic Box */}
+            <div className="relative rounded-[25px] overflow-hidden group min-h-[200px] bg-neutral-200">
               <img
-                src="/Backgroundborder.png"
-                className="border border-[#000] w-[1088px] h-[602px] overflow-hidden max-w-none"
-                alt="Background+Border"
+                src="/Rectangle9.png"
+                className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                alt="Global Network Graphic"
+              />
+              <div className="absolute inset-0 bg-white/80 backdrop-blur-[2px] p-6 flex flex-col justify-center items-center text-center">
+                <h3 className="text-[#000] font-googleSansFlex text-4xl md:text-[40px] font-bold">
+                  16000+
+                </h3>
+                <p className="text-[#000] font-googleSansFlex text-base md:text-[19px] mt-2 max-w-sm">
+                  Researchers as members of Synthica worldwide
+                </p>
+              </div>
+            </div>
+
+            {/* Badges Container Grid */}
+            <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] p-6 flex flex-wrap gap-2.5 content-start">
+              {/* Core Interest Badges */}
+              <div className="rounded-[50px] bg-[#D2E4F8] border border-[#DCEBFA] px-4 py-2 flex items-center gap-2 text-[#244A73] font-medium text-sm shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-blue-500" />
+                Community
+              </div>
+              <div className="rounded-[50px] bg-[#D2E4F8] border border-[#DCEBFA] px-4 py-2 flex items-center gap-2 text-[#244A73] font-medium text-sm shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Opportunities
+              </div>
+              <div className="rounded-[50px] bg-[#D2E4F8] border border-[#DCEBFA] px-4 py-2 flex items-center gap-2 text-[#244A73] font-medium text-sm shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-purple-500" />
+                Competitions
+              </div>
+
+              {/* Auxiliary Pill Blocks for visual depth */}
+              <div className="rounded-[50px] bg-[#DCEBFA] h-[33px] w-[77px]" />
+              <div className="rounded-[50px] bg-[#DCEBFA] h-[33px] w-[105px]" />
+              <div className="rounded-[50px] bg-[#DCEBFA] h-[33px] w-[65px]" />
+              <div className="rounded-[50px] bg-[#DCEBFA] h-[33px] w-[131px]" />
+              <div className="rounded-[50px] bg-[#DCEBFA] h-[33px] w-[78px]" />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Workflow 4 Steps Section */}
+      <section className="w-full max-w-4xl mx-auto px-6">
+        <div className="mb-12 text-center md:text-left">
+          <h2 className="text-[#000] font-googleSansFlex text-3xl md:text-[40px] font-medium mb-3">
+            Learn how we work in 4 simple steps.
+          </h2>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg">
+            Follow our structured pathway to streamline your high school research.
+          </p>
+        </div>
+
+        {/* Vertical Flow of Connected Adaptive Blocks */}
+        <div className="flex flex-col gap-8">
+          {/* Step 1 */}
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-[#F4F5F7] p-6 md:p-8 rounded-[30px] border border-neutral-100 shadow-sm">
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="rounded-full bg-[#244A73] w-10 h-10 flex items-center justify-center text-[#FFF] font-bold text-xl shadow-sm">
+                  1
+                </div>
+                <h4 className="text-[#000] font-bold text-lg md:text-xl">Global Integration</h4>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-[16px] md:text-[17px] leading-relaxed text-neutral-600 mb-6 max-w-md">
+                Become part of our global network of student researchers by joining
+                our Discord server and connecting with peers.
+              </p>
+              <div className="rounded-[30px] bg-[#FFF] border border-neutral-200/60 shadow-sm px-6 py-3 cursor-pointer hover:bg-neutral-50 transition-colors">
+                <span className="text-[#000] font-googleSansFlex text-sm font-medium">
+                  Join our Research Community
+                </span>
+              </div>
+            </div>
+            <div className="flex-1 w-full max-w-sm">
+              <img
+                src="/Rectangle25.png"
+                className="rounded-[20px] w-full h-auto object-cover border border-neutral-200/50"
+                alt="Step 1 Illustration"
               />
             </div>
           </div>
-        </div>
-        <div className="flex pt-px pr-14 pb-px pl-[54px] flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full absolute left-0.5 top-[657px]">
-          <div className="flex pt-0 pr-[468px] pb-0 pl-[18px] items-center gap-0.5 border-r border-r-[#000] border-l border-l-[#000] w-full h-[55px]">
-            <p className="text-[#000] font-googleSansFlex text-[21px] font-medium leading-[62.4px] w-[586px] h-[63px]">
-              © 2026 Synthica. All rights reserved. Platform developed with{" "}
-            </p>
-            <div className="w-3.5 h-3.5 relative">
-              <div className="w-3.5 h-3.5 absolute left-0 top-0">
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[11px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-3"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-0"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[11px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[7px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[9px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[11px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-3"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-0.5"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-1"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[5px]"></div>
-                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[7px]"></div>
+
+          {/* Step 2 */}
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-[#F4F5F7] p-6 md:p-8 rounded-[30px] border border-neutral-100 shadow-sm">
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="rounded-full bg-[#244A73] w-10 h-10 flex items-center justify-center text-[#FFF] font-bold text-xl shadow-sm">
+                  2
+                </div>
+                <h4 className="text-[#000] font-bold text-lg md:text-xl">Foundation Training</h4>
               </div>
+              <p className="text-[#000] font-googleSansFlex text-[16px] md:text-[17px] leading-relaxed text-neutral-600 mb-6 max-w-md">
+                Access our high-quality research curriculum and learn the foundations
+                of academic research at your own pace.
+              </p>
+              <div className="rounded-[30px] bg-[#FFF] border border-neutral-200/60 shadow-sm px-6 py-3 cursor-pointer hover:bg-neutral-50 transition-colors">
+                <span className="text-[#000] font-googleSansFlex text-sm font-medium">
+                  Explore Learning Portal
+                </span>
+              </div>
+            </div>
+            <div className="flex-1 w-full max-w-sm">
+              <img
+                src="/Rectangle25(1).png"
+                className="rounded-[20px] w-full h-auto object-cover border border-neutral-200/50"
+                alt="Step 2 Illustration"
+              />
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-[#F4F5F7] p-6 md:p-8 rounded-[30px] border border-neutral-100 shadow-sm">
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="rounded-full bg-[#244A73] w-10 h-10 flex items-center justify-center text-[#FFF] font-bold text-xl shadow-sm">
+                  3
+                </div>
+                <h4 className="text-[#000] font-bold text-lg md:text-xl">Guided Iteration</h4>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-[16px] md:text-[17px] leading-relaxed text-neutral-600 mb-6 max-w-md">
+                Develop experimental methodologies and collect data alongside peer review boards configured dynamically for your subject matter.
+              </p>
+              <div className="rounded-[30px] bg-[#FFF] border border-neutral-200/60 shadow-sm px-6 py-3 cursor-pointer hover:bg-neutral-50 transition-colors">
+                <span className="text-[#000] font-googleSansFlex text-sm font-medium">
+                  Find a Mentor Panel
+                </span>
+              </div>
+            </div>
+            <div className="flex-1 w-full bg-neutral-200/40 rounded-[20px] min-h-[180px] flex items-center justify-center text-neutral-400 font-medium">
+              Mentorship Platform Preview
+            </div>
+          </div>
+
+          {/* Step 4 */}
+          <div className="flex flex-col md:flex-row gap-6 items-center bg-[#F4F5F7] p-6 md:p-8 rounded-[30px] border border-neutral-100 shadow-sm">
+            <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="rounded-full bg-[#244A73] w-10 h-10 flex items-center justify-center text-[#FFF] font-bold text-xl shadow-sm">
+                  4
+                </div>
+                <h4 className="text-[#000] font-bold text-lg md:text-xl">Publication & Exhibit</h4>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-[16px] md:text-[17px] leading-relaxed text-neutral-600 mb-6 max-w-md">
+                Submit completed works to global science conferences, international journals, and highly vetted student symposium networks.
+              </p>
+              <div className="rounded-[30px] bg-[#FFF] border border-neutral-200/60 shadow-sm px-6 py-3 cursor-pointer hover:bg-neutral-50 transition-colors">
+                <span className="text-[#000] font-googleSansFlex text-sm font-medium">
+                  View Success Stories
+                </span>
+              </div>
+            </div>
+            <div className="flex-1 w-full bg-neutral-200/40 rounded-[20px] min-h-[180px] flex items-center justify-center text-neutral-400 font-medium">
+              Competition Portal Preview
             </div>
           </div>
         </div>
-      </div>
-      <div className="inline-flex items-start gap-10 h-[124px] absolute left-7 top-[3580px]">
-        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] absolute left-0 top-0 overflow-hidden">
-          <div className="flex flex-col items-start gap-5 shrink-0 w-[339px] h-[72px]">
-            <div className="flex flex-col items-start gap-5 w-fit">
-              <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-                <div className="flex py-[5px] px-[3px] justify-center items-center shrink-0 w-5 h-5 overflow-hidden">
-                  <div className="flex justify-center items-center shrink-0 w-3.5 h-2.5 overflow-hidden">
-                    <svg
-                      width="14"
-                      height="10"
-                      viewBox="0 0 14 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="shrink-0 w-3.5 h-2.5 overflow-hidden relative "
-                    >
-                      <g clipPath="url(#clip0_152_687)">
-                        <path
-                          d="M1 5.23529L4.84 9L13 1"
-                          stroke="#244A73"
-                          strokeWidth="1.5"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_152_687">
-                          <rect width="14" height="10" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="flex pt-0 pr-[175px] pb-0.5 pl-0 items-center w-[339px] h-5">
-                <p className="text-[#131313] font-googleSansFlex text-xl leading-5 w-[164px] h-5">
-                  Zero money spent
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] h-[124px] absolute left-96 top-0 overflow-hidden">
-          <div className="flex flex-col items-start gap-5 w-[290px]">
-            <div className="flex flex-col items-start gap-5 w-full">
-              <div className="flex pt-1.5 pr-1.5 pb-1.5 pl-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-                <div className="flex py-[5px] px-[3px] justify-center items-center shrink-0 w-5 h-5 overflow-hidden">
-                  <div className="flex justify-center items-center shrink-0 w-3.5 h-2.5 overflow-hidden">
-                    <svg
-                      width="14"
-                      height="10"
-                      viewBox="0 0 14 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="shrink-0 w-3.5 h-2.5 overflow-hidden relative "
-                    >
-                      <g clipPath="url(#clip0_152_698)">
-                        <path
-                          d="M1 5.23529L4.84 9L13 1"
-                          stroke="#244A73"
-                          strokeWidth="1.5"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_152_698">
-                          <rect width="14" height="10" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <button className="cursor-pointer text-nowrap flex pb-0.5 justify-center items-center w-full h-5">
-                <p className="text-[#131313] font-googleSansFlex text-xl leading-5 w-[290px] h-5">
-                  Open to all high school students
-                </p>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] absolute left-[784px] top-0 overflow-hidden">
-          <div className="flex flex-col items-start gap-5 w-[304px] h-[72px]">
-            <div className="flex flex-col items-start gap-5 w-fit">
-              <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-                <div className="flex py-[5px] px-[3px] justify-center items-center shrink-0 w-5 h-5 overflow-hidden">
-                  <div className="flex justify-center items-center shrink-0 w-3.5 h-2.5 overflow-hidden">
-                    <svg
-                      width="14"
-                      height="10"
-                      viewBox="0 0 14 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="shrink-0 w-3.5 h-2.5 overflow-hidden relative "
-                    >
-                      <g clipPath="url(#clip0_152_709)">
-                        <path
-                          d="M1 5.23529L4.84 9L13 1"
-                          stroke="#244A73"
-                          strokeWidth="1.5"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_152_709">
-                          <rect width="14" height="10" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="flex pt-0 pr-[35px] pb-0.5 pl-0 items-center w-[339px] h-5">
-                <p className="text-[#131313] font-googleSansFlex text-xl leading-5 w-[304px] h-5">
-                  Research Leadership Opportunity
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[242px] top-[3494px] text-center">
-        Zero cost. Non-selective Program.
-      </p>
-      <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">
-        <div className="shrink-0 w-full h-[632px] relative">
-          <button className="cursor-pointer text-nowrap flex pt-6 pr-[263px] pb-6 pl-[263px] justify-center items-center w-full h-28 absolute left-0 top-0">
-            <p className="flex flex-col justify-center shrink-0 text-[#000] font-googleSansFlex text-[49px] font-medium leading-[62.4px] w-[674px] h-16 text-center">
-              Frequently Asked Questions
-            </p>
-          </button>
-          <div className="w-[1070px] h-[529px] absolute left-[88px] top-28">
-            <div className="flex pt-3 flex-col justify-end items-end gap-4 w-[489px] h-[484px] absolute left-0 top-[15px]">
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
-                <div className="inline-flex pt-0 pr-[41px] pb-0 pl-[23px] items-center gap-[191px] w-[485px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[206px] h-[30px] absolute left-[23px] top-0">
-                    What is Synthica?
-                  </p>
-                  <div className="w-6 h-6 absolute left-[420px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
-              </div>
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[485px] h-[110px] relative">
-                <div className="inline-flex pt-0 pr-[39px] pb-0 pl-[17px] items-center gap-[7px] w-[481px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[394px] h-[30px] absolute left-[17px] top-0">
-                    How much does it cost to join Synthica?
-                  </p>
-                  <div className="w-6 h-6 absolute left-[418px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[485px] h-[122px] absolute left-0 -top-3"></div>
-              </div>
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
-                <div className="inline-flex pt-0 pr-[38px] pb-0 pl-5 items-center gap-[65px] w-[485px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[338px] h-[30px] absolute left-5 top-0">
-                    How can I join the community?
-                  </p>
-                  <div className="w-6 h-6 absolute left-[423px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
-              </div>
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
-                <div className="inline-flex pt-0 pr-[39px] pb-0 pl-[17px] items-center gap-8 w-[485px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[373px] h-[30px] absolute left-[17px] top-0">
-                    What is the Global Research Challenge?
-                  </p>
-                  <div className="w-6 h-6 absolute left-[422px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
-              </div>
-            </div>
-            <div className="inline-flex pl-px flex-col items-end gap-4 w-[488px] h-[324px] absolute left-[536px] top-[60px]">
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[488px] h-[110px] absolute left-[5px] -top-[34px]">
-                <div className="inline-flex pt-0 pr-[50px] pb-0 pl-[26px] items-center gap-[47px] w-[484px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[336px] h-[30px] absolute left-[26px] top-0">
-                    Do I need prior research experience?
-                  </p>
-                  <div className="w-6 h-6 absolute left-[410px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[488px] h-[122px] absolute -left-[13px] -top-3"></div>
-              </div>
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[488px] h-[110px] absolute left-[5px] top-[92px]">
-                <div className="inline-flex pt-0 pr-[50px] pb-0 pl-[27px] items-center gap-[79px] w-[484px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[303px] h-[30px] absolute left-[27px] top-0">
-                    More faq
-                  </p>
-                  <div className="w-6 h-6 absolute left-[410px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[488px] h-[119px] absolute left-0 -top-[9px]"></div>
-              </div>
-              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[492px] h-[110px] absolute left-px top-[218px]">
-                <div className="inline-flex pt-0 pr-[47px] pb-0 pl-8 items-center gap-[189px] w-[488px] h-[30px] absolute left-1 top-10">
-                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[195px] h-[30px] absolute left-8 top-0">
-                    more faq
-                  </p>
-                  <div className="w-6 h-6 absolute left-[417px] top-[3px] overflow-hidden">
-                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
-                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
-                  </div>
-                </div>
-                <div className="border-t border-t-[#F4F5F7] w-[492px] h-[121px] absolute left-0 -top-[11px]"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

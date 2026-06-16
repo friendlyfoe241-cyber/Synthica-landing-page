@@ -38,23 +38,25 @@ export default function Home() {
           alt="image 2"
         />
       </div>
-      <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-[715px] top-[47px]"></div>
-      <div className="w-[416px] h-[25px] absolute left-[740px] top-[66px]">
-        <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">
-          Home
-        </p>
-        <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[53px] h-[25px] absolute left-[68px] top-0">
-          About
-        </p>
-        <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[65px] h-[25px] absolute left-[136px] top-0">
-          Journal
-        </p>
-        <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[74px] h-[25px] absolute left-[216px] top-0">
-          Program
-        </p>
-        <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[110px] h-[25px] absolute left-[306px] top-0">
-          Work with us
-        </p>
+      <div className="w-[457px] h-[60px] absolute left-[715px] top-[47px]">
+        <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-0 top-0"></div>
+        <div className="w-[416px] h-[25px] absolute left-[25px] top-[19px]">
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">
+            Home
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[53px] h-[25px] absolute left-[68px] top-0">
+            About
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[65px] h-[25px] absolute left-[136px] top-0">
+            Journal
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[74px] h-[25px] absolute left-[216px] top-0">
+            Program
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[110px] h-[25px] absolute left-[306px] top-0">
+            Work with us
+          </p>
+        </div>
       </div>
       <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center">
         At Synthica, we kickstart your Research Career.
@@ -744,9 +746,9 @@ export default function Home() {
       <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[242px] top-[3494px] text-center">
         Zero cost. Non-selective Program.
       </p>
-      <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3792px] overflow-hidden">
+      <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">
         <div className="shrink-0 w-full h-[632px] relative">
-          <button className="cursor-pointer text-nowrap flex pt-6 pr-[263px] pb-6 pl-[263px] justify-center items-center w-full h-28 absolute left-12 top-0">
+          <button className="cursor-pointer text-nowrap flex pt-6 pr-[263px] pb-6 pl-[263px] justify-center items-center w-full h-28 absolute left-0 top-0">
             <p className="flex flex-col justify-center shrink-0 text-[#000] font-googleSansFlex text-[49px] font-medium leading-[62.4px] w-[674px] h-16 text-center">
               Frequently Asked Questions
             </p>

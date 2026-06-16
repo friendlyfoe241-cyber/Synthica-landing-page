@@ -4,7 +4,7 @@ export default function Home() {
       <div className="bg-[#FFF] w-full h-[766px] absolute left-0 top-0"></div>
       <img
         src="/ChatgptImageJun12202608_40_28Pm1.png"
-        className="w-full h-[675px] absolute left-0 top-[127px] max-w-none"
+        className="w-full h-[675px] absolute left-0 top-[138px] max-w-none"
         alt="ChatGPT Image Jun 12, 2026, 08_40_28 PM 1"
       />
       <img
@@ -12,17 +12,17 @@ export default function Home() {
         className="w-full h-[180px] absolute left-0 top-px max-w-none"
         alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
       />
-      <div className="w-[1129px] h-[244px] absolute left-[35px] top-[153px]">
-        <div className="w-[1129px] h-[244px] absolute -left-0 -top-0">
-          <p className="text-[#000] font-instrumentSerif text-[80px] w-[1129px] h-[100px] absolute left-0 top-0 text-center">
+      <div className="w-full h-[255px] absolute left-0 top-[153px]">
+        <div className="w-full h-[255px] absolute left-0 top-0">
+          <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
             Research made approachable for you
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[898px] h-[65px] absolute left-[116px] top-[100px] text-center">
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[954px] h-[68px] absolute left-[123px] top-[105px] text-center">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
-          <div className="rounded-[50px] bg-[#B1DBFE] w-[148px] h-[51px] absolute left-[491px] top-[193px]"></div>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[134px] h-[26px] absolute left-[498px] top-[205px] text-center">
+          <div className="rounded-[50px] bg-[#B1DBFE] w-[157px] h-[54px] absolute left-[522px] top-[202px]"></div>
+          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[529px] top-[215px] text-center">
             Join us now
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
           Work with us
         </p>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-[859px] h-[52px] absolute left-[184px] top-[813px]">
+      <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center">
         At Synthica, we kickstart your Research Career.
       </p>
       <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
@@ -520,9 +520,9 @@ export default function Home() {
         </p>
         <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
       </div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[430px] absolute left-[516px] top-[1623px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[430px] absolute left-[516px] top-[2082px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[429px] absolute left-[516px] top-[2541px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[516px] top-[1631px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[516px] top-[2092px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[516px] top-[2553px]"></div>
       <div className="w-[325px] h-[31px] absolute left-[688px] top-[3285px]">
         <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
           <div className="w-6 h-6 absolute -left-0 top-[3px]">
@@ -625,8 +625,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex items-start gap-10 w-[1151px] h-[124px] absolute left-[26px] top-[3580px]">
-        <div className="flex p-7 flex-col items-start gap-2.5 shrink-0 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] overflow-hidden">
+      <div className="inline-flex items-start gap-10 h-[124px] absolute left-7 top-[3580px]">
+        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] absolute left-0 top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 shrink-0 w-[339px] h-[72px]">
             <div className="flex flex-col items-start gap-5 w-fit">
               <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
@@ -664,7 +664,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex p-7 flex-col items-start gap-2.5 shrink-0 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] h-[124px] overflow-hidden">
+        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] h-[124px] absolute left-96 top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 w-[290px]">
             <div className="flex flex-col items-start gap-5 w-full">
               <div className="flex pt-1.5 pr-1.5 pb-1.5 pl-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
@@ -702,7 +702,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex p-7 flex-col items-start gap-2.5 shrink-0 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] overflow-hidden">
+        <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[360px] absolute left-[784px] top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 w-[304px] h-[72px]">
             <div className="flex flex-col items-start gap-5 w-fit">
               <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
@@ -744,14 +744,14 @@ export default function Home() {
       <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[242px] top-[3494px] text-center">
         Zero cost. Non-selective Program.
       </p>
-      <div className="inline-flex pt-[42px] pr-[151px] pb-[42px] pl-[89px] items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3792px] overflow-hidden">
-        <div className="w-[960px] h-[632px] absolute left-[89px] top-[42px]">
-          <button className="cursor-pointer text-nowrap flex pt-6 pr-[143px] pb-6 pl-[143px] justify-center items-center w-[960px] h-28 absolute left-12 top-0">
+      <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3792px] overflow-hidden">
+        <div className="shrink-0 w-full h-[632px] relative">
+          <button className="cursor-pointer text-nowrap flex pt-6 pr-[263px] pb-6 pl-[263px] justify-center items-center w-full h-28 absolute left-12 top-0">
             <p className="flex flex-col justify-center shrink-0 text-[#000] font-googleSansFlex text-[49px] font-medium leading-[62.4px] w-[674px] h-16 text-center">
               Frequently Asked Questions
             </p>
           </button>
-          <div className="w-[1070px] h-[529px] absolute left-0 top-32">
+          <div className="w-[1070px] h-[529px] absolute left-[88px] top-28">
             <div className="flex pt-3 flex-col justify-end items-end gap-4 w-[489px] h-[484px] absolute left-0 top-[15px]">
               <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
                 <div className="inline-flex pt-0 pr-[41px] pb-0 pl-[23px] items-center gap-[191px] w-[485px] h-[30px] absolute left-1 top-10">

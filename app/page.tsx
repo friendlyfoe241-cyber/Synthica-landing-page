@@ -12,8 +12,8 @@ export default function Home() {
         className="w-full h-[180px] absolute left-0 top-px max-w-none"
         alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
       />
-      <div className="w-full h-[255px] absolute left-0 top-[153px]">
-        <div className="w-full h-[255px] absolute left-0 top-0">
+      <div className="w-full h-[264px] absolute left-0 top-[148px]">
+        <div className="w-full h-[264px] absolute left-0 top-0">
           <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
             Research made approachable for <i>you</i>
           </p>
@@ -21,8 +21,22 @@ export default function Home() {
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
-          <div className="rounded-[50px] bg-[#B1DBFE] w-[157px] h-[54px] absolute left-[522px] top-[202px]"></div>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[529px] top-[215px] text-center">
+          <svg
+            width="157"
+            height="54"
+            viewBox="0 0 157 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[157px] h-[54px] absolute left-[522px] top-[210px] "
+          >
+            <rect
+              width="156.753"
+              height="53.7859"
+              rx="26.8929"
+              fill="#B1DBFE"
+            />
+          </svg>
+          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[529px] top-[223px] text-center">
             Join us now
           </p>
         </div>

@@ -17,7 +17,7 @@ export default function Home() {
           <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
             Research made approachable for <i>you</i>
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] absolute left-[116px] top-[119px] text-center">
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] absolute left-[228px] top-[119px] text-center">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
@@ -27,7 +27,7 @@ export default function Home() {
             viewBox="0 0 157 54"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[157px] h-[54px] absolute left-[522px] top-[210px] "
+            className="w-[157px] h-[54px] absolute left-[642px] top-[210px] "
           >
             <rect
               width="156.753"
@@ -36,7 +36,7 @@ export default function Home() {
               fill="#B1DBFE"
             />
           </svg>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[529px] top-[223px] text-center">
+          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[649px] top-[223px] text-center">
             Join us now
           </p>
         </div>

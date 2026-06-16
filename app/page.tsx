@@ -12,12 +12,11 @@ export default function Home() {
         className="w-full h-[180px] absolute left-0 top-px max-w-none"
         alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
       />
-      <div className="w-full h-[264px] absolute left-0 top-[148px]">
-        <div className="w-full h-[264px] absolute left-0 top-0">
-          <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
+      <div className="w-full h-[264px] absolute left-0 top-[148px] flex flex-col items-center justify-center">
+          <p className="text-[#000] font-instrumentSerif text-[80px] h-[105px] text-center">
             Research made approachable for <i>you</i>
           </p>
-          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] absolute left-[228px] top-[119px] text-center">
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] text-center mt-8">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
@@ -27,7 +26,7 @@ export default function Home() {
             viewBox="0 0 157 54"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[157px] h-[54px] absolute left-[642px] top-[210px] "
+            className="w-[157px] h-[54px] mt-8"
           >
             <rect
               width="156.753"
@@ -36,11 +35,10 @@ export default function Home() {
               fill="#B1DBFE"
             />
           </svg>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] absolute left-[649px] top-[223px] text-center">
+          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] text-center mt-3">
             Join us now
           </p>
         </div>
-      </div>
       <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]"></div>
       <div className="w-[140px] h-[42px] absolute left-[42px] top-14">
         <p className="text-[#000] font-googleSansFlex text-xl w-[89px] h-[30px] absolute left-[51px] top-[9px]">

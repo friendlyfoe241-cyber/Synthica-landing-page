@@ -20,24 +20,26 @@ export default function Home() {
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
-          <svg
-            width="157"
-            height="54"
-            viewBox="0 0 157 54"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[157px] h-[54px] mt-8"
-          >
-            <rect
-              width="156.753"
-              height="53.7859"
-              rx="26.8929"
-              fill="#B1DBFE"
-            />
-          </svg>
-          <p className="text-[#244A73] font-googleSansFlex text-xl w-[142px] h-[27px] text-center mt-3">
-            Join us now
-          </p>
+          <div className="relative mt-8">
+            <svg
+              width="157"
+              height="54"
+              viewBox="0 0 157 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-[157px] h-[54px]"
+            >
+              <rect
+                width="156.753"
+                height="53.7859"
+                rx="26.8929"
+                fill="#B1DBFE"
+              />
+            </svg>
+            <p className="text-[#244A73] font-googleSansFlex text-xl absolute inset-0 flex items-center justify-center">
+              Join us now
+            </p>
+          </div>
         </div>
       <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]"></div>
       <div className="w-[140px] h-[42px] absolute left-[42px] top-14">

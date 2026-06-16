@@ -38,11 +38,6 @@ export default function Home() {
           alt="image 2"
         />
       </div>
-      <img
-        src="/Image1.png"
-        className="w-[756px] h-[1000px] absolute left-[2098px] top-[257px] max-w-none"
-        alt="image 1"
-      />
       <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[537px] h-[70px] absolute left-[869px] top-[55px]"></div>
       <div className="w-[437px] h-[25px] absolute left-[919px] top-[77px]">
         <p className="text-[#4B4B4B] font-inter text-xl w-[55px] h-[25px] absolute left-0 top-0">

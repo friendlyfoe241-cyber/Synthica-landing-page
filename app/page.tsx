@@ -130,26 +130,26 @@ export default function Home() {
       <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
         At Synthica, we kickstart your Research Career.
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
+      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[87px] top-[1579px]">
         Learn how we work in 4 simple steps.
       </p>
-      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[67px] top-[908px]"></div>
-      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[106px] top-[944px]"></div>
-      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[521px] top-[1169px]"></div>
+      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
+      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[236px] top-[944px]"></div>
+      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[651px] top-[1169px]"></div>
       <img
         src="/Rectangle9.png"
-        className="rounded-[25px] w-[580px] h-[204px] absolute left-[521px] top-[944px] max-w-none"
+        className="rounded-[25px] w-[580px] h-[204px] absolute left-[651px] top-[944px] max-w-none"
         alt="Rectangle 9"
       />
-      <div className="w-[424px] h-[72px] absolute left-[599px] top-[1010px]">
-        <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[150px] top-0">
+      <div className="w-[424px] h-[72px] absolute left-[729px] top-[1010px]">
+        <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[140px] top-0">
           16000+
         </p>
         <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-0 top-12">
           Researchers as members of Synthica worldwide
         </p>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1201px]">
+      <div className="w-[578px] h-[33px] absolute left-[652px] top-[1201px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[86px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[201px] top-0"></div>
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[35px] h-[33px] absolute left-[543px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[521px] top-[1342px]">
+      <div className="w-[579px] h-[33px] absolute left-[651px] top-[1342px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[53px] h-[33px] absolute -left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[131px] h-[33px] absolute left-[61px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[70px] h-[33px] absolute left-[201px] top-0"></div>
@@ -165,7 +165,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[65px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-[501px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[522px] top-[1389px]">
+      <div className="w-[579px] h-[33px] absolute left-[651px] top-[1389px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[110px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-[115px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[141px] h-[33px] absolute left-[201px] top-0"></div>
@@ -179,18 +179,18 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[111px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-8 h-[33px] absolute left-[547px] top-0"></div>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[522px] top-[1295px]">
+      <div className="w-[578px] h-[33px] absolute left-[652px] top-[1295px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-0 -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[87px] -top-0"></div>
         <div className="rounded-[50px] bg-[#D2E4F8] w-[152px] h-[33px] absolute left-[228px] -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[124px] h-[33px] absolute left-[394px] -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-11 h-[33px] absolute left-[534px] -top-0"></div>
       </div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[522px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[663px] top-[1248px]"></div>
-      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[806px] top-[1248px]"></div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[960px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[681px] top-[1255px]">
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[652px] top-[1248px]"></div>
+      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[793px] top-[1248px]"></div>
+      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[936px] top-[1248px]"></div>
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1090px] top-[1248px]"></div>
+      <div className="w-[98px] h-[19px] absolute left-[811px] top-[1255px]">
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
@@ -243,7 +243,7 @@ export default function Home() {
           Community
         </p>
       </div>
-      <div className="w-[114px] h-[19px] absolute left-[821px] top-[1255px]">
+      <div className="w-[114px] h-[19px] absolute left-[954px] top-[1255px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[97px] h-[19px] absolute left-[17px] top-0">
           Opportunities
         </p>
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[111px] h-[19px] absolute left-[768px] top-[1301px]">
+      <div className="w-[111px] h-[19px] absolute left-[903px] top-[1301px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[94px] h-[19px] absolute left-[17px] -top-0">
           Competitions
         </p>
@@ -324,34 +324,34 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[72px] top-[1694px]">
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[92px] top-[1694px]">
         Learn how Synthica works and become a part of us.
       </p>
-      <div className="w-10 h-10 absolute left-[497px] top-[1589px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[1589px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-[7px] h-6 absolute left-4 top-2">
           1
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2047px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2047px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           2
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2506px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2506px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           3
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2965px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2965px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-3 h-6 absolute left-3.5 top-2 text-center">
           4
         </p>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[1589px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[1589px]">
         <svg
           width="567"
           height="411"
@@ -427,7 +427,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2043px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[2043px]">
         <svg
           width="567"
           height="411"
@@ -505,7 +505,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2499px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[2499px]">
         <svg
           width="567"
           height="411"
@@ -566,7 +566,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[574px] top-[2956px]">
+      <div className="w-[566px] h-[410px] absolute left-[724px] top-[2956px]">
         <svg
           width="567"
           height="411"
@@ -591,10 +591,10 @@ export default function Home() {
         </p>
         <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
       </div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[516px] top-[1631px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[516px] top-[2092px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[516px] top-[2553px]"></div>
-      <div className="w-[325px] h-[31px] absolute left-[688px] top-[3285px]">
+      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[666px] top-[1631px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[666px] top-[2092px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[666px] top-[2553px]"></div>
+      <div className="w-[325px] h-[31px] absolute left-[818px] top-[3285px]">
         <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
           <div className="w-6 h-6 absolute -left-0 top-[3px]">
             <div className="w-6 h-6 absolute left-0 top-0">
@@ -696,7 +696,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="inline-flex items-start gap-10 h-[124px] absolute left-7 top-[3580px]">
+      <div className="inline-flex items-start gap-10 h-[124px] absolute left-[157px] top-[3580px]">
         <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] absolute left-0 top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 shrink-0 w-[339px] h-[72px]">
             <div className="flex flex-col items-start gap-5 w-fit">
@@ -812,7 +812,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[242px] top-[3494px] text-center">
+      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[420px] top-[3494px] text-center">
         Zero cost. Non-selective Program.
       </p>
       <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">

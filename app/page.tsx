@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </div>
       <p className="text-[#000] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
-        At &nbsp;
+        At 
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',

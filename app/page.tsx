@@ -696,7 +696,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="inline-flex items-start gap-10 h-[124px] absolute left-7 top-[3580px]">
+      <div className="inline-flex items-start gap-10 h-[124px] absolute left-15 top-[3580px]">
         <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] absolute left-0 top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 shrink-0 w-[339px] h-[72px]">
             <div className="flex flex-col items-start gap-5 w-fit">

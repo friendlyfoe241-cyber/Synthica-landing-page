@@ -145,7 +145,7 @@ export default function Home() {
         <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[280px] top-0">
           16000+
         </p>
-        <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-0 top-12">
+        <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-13 top-12">
           Researchers as members of Synthica worldwide
         </p>
       </div>
@@ -190,7 +190,7 @@ export default function Home() {
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[813px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[956px] top-[1248px]"></div>
       <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1110px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[681px] top-[1255px]">
+      <div className="w-[98px] h-[19px] absolute left-[671px] top-[1255px]">
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>

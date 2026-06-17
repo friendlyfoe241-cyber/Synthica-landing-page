@@ -130,7 +130,7 @@ export default function Home() {
       <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
         At Synthica, we kickstart your Research Career.
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1579px]">
+      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[87px] top-[1579px]">
         Learn how we work in 4 simple steps.
       </p>
       <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
@@ -324,34 +324,34 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[72px] top-[1694px]">
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[92px] top-[1694px]">
         Learn how Synthica works and become a part of us.
       </p>
-      <div className="w-10 h-10 absolute left-[597px] top-[1589px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[1589px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-[7px] h-6 absolute left-4 top-2">
           1
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[597px] top-[2047px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2047px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           2
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[597px] top-[2506px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2506px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           3
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[597px] top-[2965px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2965px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-3 h-6 absolute left-3.5 top-2 text-center">
           4
         </p>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[667px] top-[1589px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[1589px]">
         <svg
           width="567"
           height="411"
@@ -427,7 +427,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[667px] top-[2043px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[2043px]">
         <svg
           width="567"
           height="411"
@@ -505,7 +505,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[667px] top-[2499px]">
+      <div className="w-[566px] h-[410px] absolute left-[717px] top-[2499px]">
         <svg
           width="567"
           height="411"
@@ -566,7 +566,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[674px] top-[2956px]">
+      <div className="w-[566px] h-[410px] absolute left-[724px] top-[2956px]">
         <svg
           width="567"
           height="411"
@@ -591,10 +591,10 @@ export default function Home() {
         </p>
         <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
       </div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[616px] top-[1631px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[616px] top-[2092px]"></div>
-      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[616px] top-[2553px]"></div>
-      <div className="w-[325px] h-[31px] absolute left-[788px] top-[3285px]">
+      <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[666px] top-[1631px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[666px] top-[2092px]"></div>
+      <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[666px] top-[2553px]"></div>
+      <div className="w-[325px] h-[31px] absolute left-[818px] top-[3285px]">
         <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
           <div className="w-6 h-6 absolute -left-0 top-[3px]">
             <div className="w-6 h-6 absolute left-0 top-0">

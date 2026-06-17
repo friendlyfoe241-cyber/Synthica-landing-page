@@ -1,6 +1,61 @@
+"use client";
+
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+
+// Design canvas width this layout was built for (every absolute px value
+// inside is authored against this exact frame width, confirmed against the
+// Figma file). Instead of stretching the canvas to fill whatever viewport
+// width the visitor has (which breaks every absolute left/top/right value),
+// we keep the canvas at its native size and uniformly scale the whole thing
+// to match the current window width — the same idea as Figma's own "Scale"
+// resize constraint. No element inside this file needs to change.
+const DESIGN_WIDTH = 1440;
+
 export default function Home() {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useLayoutEffect(() => {
+    function updateScale() {
+      if (typeof window === "undefined") return;
+      const nextScale = window.innerWidth / DESIGN_WIDTH;
+      setScale(nextScale);
+      if (contentRef.current) {
+        setContentHeight(contentRef.current.scrollHeight);
+      }
+    }
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
+  // Re-measure if the content's natural height changes after fonts/images load.
+  useEffect(() => {
+    if (!contentRef.current || typeof ResizeObserver === "undefined") return;
+    const node = contentRef.current;
+    const observer = new ResizeObserver(() => {
+      setContentHeight(node.scrollHeight);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="bg-[#FFF] min-w-screen min-h-screen">
+    <div
+      className="bg-[#FFF] w-full relative overflow-hidden"
+      style={{ height: contentHeight ? contentHeight * scale : undefined }}
+    >
+      <div
+        ref={contentRef}
+        className="bg-[#FFF] relative"
+        style={{
+          width: DESIGN_WIDTH,
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
+        }}
+      >
       <div className="bg-[#FFF] w-full h-[766px] absolute left-0 top-0"></div>
       <img
         src="/ChatgptImageJun12202608_40_28Pm1.png"
@@ -858,6 +913,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

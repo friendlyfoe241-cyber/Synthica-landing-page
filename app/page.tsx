@@ -186,7 +186,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[124px] h-[33px] absolute left-[394px] -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-11 h-[33px] absolute left-[534px] -top-0"></div>
       </div>
-      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[672px] top-[1248px]"></div>
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[652px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[813px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[956px] top-[1248px]"></div>
       <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1110px] top-[1248px]"></div>

@@ -119,67 +119,121 @@ export default function Home() {
 
       {/* How It Works Section */}
       <section className="py-8 px-4 md:px-8 lg:px-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-googleSansFlex font-medium text-[#000] mb-8 lg:mb-12">
             Learn how we work in 4 simple steps.
           </h2>
 
-          {/* Step Cards Container */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* Steps Card */}
-            <div className="rounded-[25px] bg-[#FFF] shadow-lg p-6 lg:p-8 order-2 lg:order-1">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#B1DBFE] flex items-center justify-center text-[#244A73] font-googleSansFlex font-bold shrink-0">1</div>
+          {/* Container with gray background */}
+          <div className="rounded-[50px] bg-[#F4F5F7] p-6 lg:p-8">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+              {/* Steps Card - Left Side */}
+              <div className="rounded-[25px] bg-[#FFF] p-6 lg:p-8 w-full lg:w-[390px] shrink-0">
+                {/* Step 1 */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#244A73] flex items-center justify-center shrink-0">
+                    <span className="text-[#FFF] font-googleSansFlex font-bold">1</span>
+                  </div>
                   <div>
                     <h3 className="font-googleSansFlex font-medium text-[#000] mb-1">Sign Up</h3>
                     <p className="text-[#535353] text-sm">Create your free account and join our community</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#B1DBFE] flex items-center justify-center text-[#244A73] font-googleSansFlex font-bold shrink-0">2</div>
+                {/* Step 2 */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#244A73] flex items-center justify-center shrink-0">
+                    <span className="text-[#FFF] font-googleSansFlex font-bold">2</span>
+                  </div>
                   <div>
                     <h3 className="font-googleSansFlex font-medium text-[#000] mb-1">Choose Program</h3>
                     <p className="text-[#535353] text-sm">Select from our range of research programs</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#B1DBFE] flex items-center justify-center text-[#244A73] font-googleSansFlex font-bold shrink-0">3</div>
+                {/* Step 3 */}
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#244A73] flex items-center justify-center shrink-0">
+                    <span className="text-[#FFF] font-googleSansFlex font-bold">3</span>
+                  </div>
                   <div>
                     <h3 className="font-googleSansFlex font-medium text-[#000] mb-1">Start Learning</h3>
                     <p className="text-[#535353] text-sm">Access resources and begin your research journey</p>
                   </div>
                 </div>
+                {/* Step 4 */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#B1DBFE] flex items-center justify-center text-[#244A73] font-googleSansFlex font-bold shrink-0">4</div>
+                  <div className="w-10 h-10 rounded-full bg-[#244A73] flex items-center justify-center shrink-0">
+                    <span className="text-[#FFF] font-googleSansFlex font-bold">4</span>
+                  </div>
                   <div>
                     <h3 className="font-googleSansFlex font-medium text-[#000] mb-1">Publish & Compete</h3>
                     <p className="text-[#535353] text-sm">Share your work and participate in competitions</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Image and Stats */}
-            <div className="lg:col-span-2 order-1 lg:order-2 space-y-6">
-              {/* Image Card */}
-              <div className="rounded-[25px] overflow-hidden shadow-lg">
-                <img src="/Rectangle9.png" alt="Research" className="w-full h-48 sm:h-64 md:h-80 object-cover" />
-              </div>
-
-              {/* Stats Card */}
-              <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] p-6 lg:p-8">
-                <div className="text-center mb-6">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-googleSansFlex font-medium text-[#000]">16000+</span>
-                  <p className="text-[#535353] font-googleSansFlex mt-2">Researchers as members of Synthica worldwide</p>
+              {/* Image and Stats - Right Side */}
+              <div className="flex-1 space-y-6">
+                {/* Image Card */}
+                <div className="rounded-[25px] overflow-hidden shadow-lg">
+                  <img src="/Rectangle9.png" alt="Research" className="w-full h-48 sm:h-64 md:h-80 lg:h-[204px] object-cover" />
                 </div>
 
-                {/* Progress Bars */}
-                <div className="space-y-3">
-                  <div className="flex flex-wrap gap-2">
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Community</div>
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Opportunities</div>
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Competitions</div>
+                {/* Stats Card */}
+                <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] p-6 lg:p-8">
+                  <div className="text-center mb-6">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-googleSansFlex font-medium text-[#000]">16000+</span>
+                    <p className="text-[#535353] font-googleSansFlex mt-2 text-sm sm:text-base">Researchers as members of Synthica worldwide</p>
+                  </div>
+
+                  {/* Progress Bars - Original Style */}
+                  <div className="space-y-2">
+                    {/* Community Progress */}
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <div className="flex gap-1 flex-wrap">
+                        {[...Array(6)].map((_, i) => (
+                          <div key={`comm-${i}`} className={`h-6 lg:h-[33px] rounded-[50px] ${i < 3 ? 'bg-[#D2E4F8]' : 'bg-[#DCEBFA]'} px-2 lg:px-3 flex items-center`}>
+                            {i === 0 && (
+                              <div className="flex items-center gap-1">
+                                <div className="w-3 h-3 bg-[#FFF] rounded-full flex items-center justify-center">
+                                  <span className="text-[8px] text-[#000]">✓</span>
+                                </div>
+                                <span className="text-[10px] lg:text-xs text-[#244A73] font-googleSansFlex font-medium whitespace-nowrap">Community</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Opportunities Progress */}
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <div className="flex gap-1 flex-wrap">
+                        {[...Array(6)].map((_, i) => (
+                          <div key={`opp-${i}`} className={`h-6 lg:h-[33px] rounded-[50px] ${i < 4 ? 'bg-[#D2E4F8]' : 'bg-[#DCEBFA]'} px-2 lg:px-3 flex items-center`}>
+                            {i === 0 && (
+                              <div className="flex items-center gap-1">
+                                <div className="w-3 h-3 bg-[#000] rounded-full"></div>
+                                <span className="text-[10px] lg:text-xs text-[#244A73] font-googleSansFlex font-medium whitespace-nowrap">Opportunities</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Competitions Progress */}
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <div className="flex gap-1 flex-wrap">
+                        {[...Array(6)].map((_, i) => (
+                          <div key={`comp-${i}`} className={`h-6 lg:h-[33px] rounded-[50px] ${i < 5 ? 'bg-[#D2E4F8]' : 'bg-[#DCEBFA]'} px-2 lg:px-3 flex items-center`}>
+                            {i === 0 && (
+                              <div className="flex items-center gap-1">
+                                <div className="w-3 h-3 bg-[#000] rounded"></div>
+                                <span className="text-[10px] lg:text-xs text-[#244A73] font-googleSansFlex font-medium whitespace-nowrap">Competitions</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

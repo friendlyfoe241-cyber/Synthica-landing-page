@@ -127,20 +127,34 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p
-        className="text-[#4B4B4B] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8"
-        style={{
-          background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
-          WebkitBackgroundClip: 'text',
-          backgroundClip: 'text',
-          color: 'transparent',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
-        At Synthica, we kickstart your Research Career.
+      <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
+        At 
+        <span
+          style={{
+            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
+          <u>Synthica</u>
+        </span>
+        , we kickstart your 
+        <span
+          style={{
+            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            WebkitTextFillColor: 'transparent',
+          }}
+        >
+          Research Career.
+        </span>
       </p>
       <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
-        Learn how we work in 
+        Learn how we work in <br>
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',

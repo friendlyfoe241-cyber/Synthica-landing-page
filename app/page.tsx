@@ -140,7 +140,7 @@ export default function Home() {
         At Synthica, we kickstart your Research Career.
       </p>
       <p
-        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[101px] absolute left-[197px] top-[1579px]"
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]"
         style={{
           background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
           WebkitBackgroundClip: 'text',

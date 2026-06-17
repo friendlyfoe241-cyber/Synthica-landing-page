@@ -155,7 +155,7 @@ export default function Home() {
         .
       </p>
       <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
-        Learn how we work in <br>
+        Learn how we work in <br />
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',

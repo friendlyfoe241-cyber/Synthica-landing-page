@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </div>
       <p className="text-[#000] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
-        At 
+        At &nbsp
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -140,7 +140,7 @@ export default function Home() {
         >
           <u>Synthica</u>
         </span>
-        , we kickstart your 
+        , we kickstart your &nbsp
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',

@@ -130,7 +130,7 @@ export default function Home() {
       <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
         At Synthica, we kickstart your Research Career.
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[107px] top-[1579px]">
+      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[137px] top-[1579px]">
         Learn how we work in 4 simple steps.
       </p>
       <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
@@ -324,7 +324,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[102px] top-[1694px]">
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[132px] top-[1694px]">
         Learn how Synthica works and become a part of us.
       </p>
       <div className="w-10 h-10 absolute left-[647px] top-[1589px]">

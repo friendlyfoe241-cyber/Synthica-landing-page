@@ -861,9 +861,9 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          Zero 
+          Zero &nbsp;
         </span>
-        &nbsp; cost. &nbsp;
+        cost. 
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -874,9 +874,9 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          Non-selective
+          Non-selective &nbsp; 
         </span> 
-        &nbsp; Program.
+        Program.
       </p>
       <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">
         <div className="shrink-0 w-full h-[632px] relative">

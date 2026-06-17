@@ -190,7 +190,7 @@ export default function Home() {
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[793px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[936px] top-[1248px]"></div>
       <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1090px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[801px] top-[1255px]">
+      <div className="w-[98px] h-[19px] absolute left-[811px] top-[1255px]">
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
@@ -243,7 +243,7 @@ export default function Home() {
           Community
         </p>
       </div>
-      <div className="w-[114px] h-[19px] absolute left-[821px] top-[1255px]">
+      <div className="w-[114px] h-[19px] absolute left-[951px] top-[1255px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[97px] h-[19px] absolute left-[17px] top-0">
           Opportunities
         </p>

@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </div>
       <p className="text-[#000] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
-        At &nbsp
+        At &nbsp;
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -140,7 +140,7 @@ export default function Home() {
         >
           <u>Synthica</u>
         </span>
-        , we kickstart your &nbsp
+        , we kickstart your &nbsp;
         <span
           style={{
             background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -850,16 +850,33 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[420px] top-[3494px] text-center"
-      style={{
-          background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
-          WebkitBackgroundClip: 'text',
-          backgroundClip: 'text',
-          color: 'transparent',
-          WebkitTextFillColor: 'transparent',
-        }}
+      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[420px] top-[3494px] text-center">
+      <span
+          style={{
+            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block',
+          }}
         >
-        Zero cost. Non-selective Program.
+          Zero 
+        </span>
+        &nbsp; cost. &nbsp;
+        <span
+          style={{
+            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block',
+          }}
+        >
+          Non-selective
+        </span> 
+        &nbsp; Program.
       </p>
       <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">
         <div className="shrink-0 w-full h-[632px] relative">

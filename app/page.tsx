@@ -861,7 +861,7 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          Zero &nbsp;
+          Zero
         </span>
         cost. 
         <span
@@ -874,7 +874,7 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          Non-selective &nbsp; 
+          Non-selective 
         </span> 
         Program.
       </p>

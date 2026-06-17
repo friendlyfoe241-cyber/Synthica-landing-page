@@ -243,7 +243,7 @@ export default function Home() {
           Community
         </p>
       </div>
-      <div className="w-[114px] h-[19px] absolute left-[951px] top-[1255px]">
+      <div className="w-[114px] h-[19px] absolute left-[956px] top-[1255px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[97px] h-[19px] absolute left-[17px] top-0">
           Opportunities
         </p>
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[111px] h-[19px] absolute left-[768px] top-[1301px]">
+      <div className="w-[111px] h-[19px] absolute left-[903px] top-[1301px]">
         <p className="text-[#244A73] font-googleSansFlex text-sm font-medium w-[94px] h-[19px] absolute left-[17px] -top-0">
           Competitions
         </p>

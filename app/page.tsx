@@ -376,7 +376,7 @@ export default function Home() {
         </p>
         <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
         <div className="w-[359px] h-[31px] absolute left-[104px] top-[328px]">
-          <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
+          <div className="w-6 h-6 absolute left-0 top-[3px]">
             <div className="w-6 h-6 absolute left-0 top-0">
               <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
               <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-0"></div>

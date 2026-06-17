@@ -133,23 +133,23 @@ export default function Home() {
       <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
         Learn how we work in 4 simple steps.
       </p>
-      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[217px] top-[908px]"></div>
-      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[256px] top-[944px]"></div>
-      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[671px] top-[1169px]"></div>
+      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
+      <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[236px] top-[944px]"></div>
+      <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[651px] top-[1169px]"></div>
       <img
         src="/Rectangle9.png"
-        className="rounded-[25px] w-[580px] h-[204px] absolute left-[671px] top-[944px] max-w-none"
+        className="rounded-[25px] w-[580px] h-[204px] absolute left-[651px] top-[944px] max-w-none"
         alt="Rectangle 9"
       />
-      <div className="w-[424px] h-[72px] absolute left-[649px] top-[1010px]">
-        <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[150px] top-0">
+      <div className="w-[424px] h-[72px] absolute left-[629px] top-[1010px]">
+        <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[280px] top-0">
           16000+
         </p>
         <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-0 top-12">
           Researchers as members of Synthica worldwide
         </p>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[672px] top-[1201px]">
+      <div className="w-[578px] h-[33px] absolute left-[652px] top-[1201px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[86px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[201px] top-0"></div>
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[105px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[35px] h-[33px] absolute left-[543px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[671px] top-[1342px]">
+      <div className="w-[579px] h-[33px] absolute left-[651px] top-[1342px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[53px] h-[33px] absolute -left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[131px] h-[33px] absolute left-[61px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[70px] h-[33px] absolute left-[201px] top-0"></div>
@@ -165,7 +165,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[65px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-[501px] top-0"></div>
       </div>
-      <div className="w-[579px] h-[33px] absolute left-[671px] top-[1389px]">
+      <div className="w-[579px] h-[33px] absolute left-[651px] top-[1389px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[110px] h-[33px] absolute left-0 top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[77px] h-[33px] absolute left-[115px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[141px] h-[33px] absolute left-[201px] top-0"></div>
@@ -179,7 +179,7 @@ export default function Home() {
         <div className="rounded-[50px] bg-[#DCEBFA] w-[111px] h-[33px] absolute left-[429px] top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-8 h-[33px] absolute left-[547px] top-0"></div>
       </div>
-      <div className="w-[578px] h-[33px] absolute left-[672px] top-[1295px]">
+      <div className="w-[578px] h-[33px] absolute left-[652px] top-[1295px]">
         <div className="rounded-[50px] bg-[#DCEBFA] w-[78px] h-[33px] absolute left-0 -top-0"></div>
         <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[87px] -top-0"></div>
         <div className="rounded-[50px] bg-[#D2E4F8] w-[152px] h-[33px] absolute left-[228px] -top-0"></div>
@@ -188,8 +188,8 @@ export default function Home() {
       </div>
       <div className="rounded-[50px] bg-[#DCEBFA] w-[132px] h-[33px] absolute left-[672px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[813px] top-[1248px]"></div>
-      <div className="rounded_[50px] border border_[#DCEBFA] bg_[#D2E4F8] w_[145px] h_[33px] absolute left_[956px} top_[1248px}"></div>
-      <div className="rounded_[50px} bg_[#DCEBFA} w_[140px} h_[33px} absolute left_[1110 px} top_[1248 px}"></div>
+      <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[956px] top-[1248px]"></div>
+      <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1110px] top-[1248px]"></div>
       <div className="w-[98px] h-[19px] absolute left-[681px] top-[1255px]">
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">

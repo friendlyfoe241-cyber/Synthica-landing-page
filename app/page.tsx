@@ -327,31 +327,31 @@ export default function Home() {
       <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[72px] top-[1694px]">
         Learn how Synthica works and become a part of us.
       </p>
-      <div className="w-10 h-10 absolute left-[497px] top-[1589px]">
+      <div className="w-10 h-10 absolute left-[697px] top-[1589px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-[7px] h-6 absolute left-4 top-2">
           1
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2047px]">
+      <div className="w-10 h-10 absolute left-[697px] top-[2047px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           2
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2506px]">
+      <div className="w-10 h-10 absolute left-[697px] top-[2506px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-3.5 top-2 text-center">
           3
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[497px] top-[2965px]">
+      <div className="w-10 h-10 absolute left-[697px] top-[2965px]">
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
         <p className="text-[#FFF] font-googleSansFlex text-2xl w-3 h-6 absolute left-3.5 top-2 text-center">
           4
         </p>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[1589px]">
+      <div className="w-[566px] h-[410px] absolute left-[767px] top-[1589px]">
         <svg
           width="567"
           height="411"
@@ -427,7 +427,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2043px]">
+      <div className="w-[566px] h-[410px] absolute left-[767px] top-[2043px]">
         <svg
           width="567"
           height="411"
@@ -505,7 +505,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[567px] top-[2499px]">
+      <div className="w-[566px] h-[410px] absolute left-[767px] top-[2499px]">
         <svg
           width="567"
           height="411"
@@ -566,7 +566,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="w-[566px] h-[410px] absolute left-[574px] top-[2956px]">
+      <div className="w-[566px] h-[410px] absolute left-[774px] top-[2956px]">
         <svg
           width="567"
           height="411"

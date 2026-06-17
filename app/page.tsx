@@ -696,7 +696,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="inline-flex items-start gap-10 h-[124px] absolute left-[187px] top-[3580px]">
+      <div className="inline-flex items-start gap-10 h-[124px] absolute left-[157px] top-[3580px]">
         <div className="flex p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] w-[344px] h-[124px] absolute left-0 top-0 overflow-hidden">
           <div className="flex flex-col items-start gap-5 shrink-0 w-[339px] h-[72px]">
             <div className="flex flex-col items-start gap-5 w-fit">
@@ -812,7 +812,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[442px] top-[3494px] text-center">
+      <p className="flex flex-col justify-center font-googleSansFlex text-[42px] leading-[57.6px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] text-[#4B4B4B] w-[724px] h-[58px] absolute left-[420px] top-[3494px] text-center">
         Zero cost. Non-selective Program.
       </p>
       <div className="flex py-[42px] px-0 justify-center items-center bg-[#FFF] w-full h-[716px] absolute left-0 top-[3765px] overflow-hidden">

@@ -133,7 +133,7 @@ export default function Home() {
       <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[67px] top-[1589px]">
         Learn how we work in 4 simple steps.
       </p>
-      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[67px] top-[908px]"></div>
+      <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[100px] top-[908px]"></div>
       <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[106px] top-[944px]"></div>
       <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[521px] top-[1169px]"></div>
       <img

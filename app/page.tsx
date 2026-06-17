@@ -139,17 +139,22 @@ export default function Home() {
       >
         At Synthica, we kickstart your Research Career.
       </p>
-      <p
-        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]"
-        style={{
-          background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
-          WebkitBackgroundClip: 'text',
-          backgroundClip: 'text',
-          color: 'transparent',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
-        Learn how we work in 4 simple steps.
+      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
+        Learn how we work in 
+        <span
+          style={{
+            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block',
+          }}
+        >
+          4
+        </span>
+        {' '}
+        simple steps.
       </p>
       <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
       <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[236px] top-[944px]"></div>

@@ -127,10 +127,28 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8">
+      <p
+        className="text-[#4B4B4B] font-googleSansFlex text-[40px] w-full h-[53px] absolute left-0 top-[813px] text-center pl-8"
+        style={{
+          background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+          WebkitTextFillColor: 'transparent',
+        }}
+      >
         At Synthica, we kickstart your Research Career.
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium bg-linear-[90deg,#B0DBFD0%,#0070C84.81%] w-[450px] h-[101px] absolute left-[197px] top-[1579px]">
+      <p
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[101px] absolute left-[197px] top-[1579px]"
+        style={{
+          background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+          WebkitBackgroundClip: 'text',
+          backgroundClip: 'text',
+          color: 'transparent',
+          WebkitTextFillColor: 'transparent',
+        }}
+      >
         Learn how we work in 4 simple steps.
       </p>
       <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>

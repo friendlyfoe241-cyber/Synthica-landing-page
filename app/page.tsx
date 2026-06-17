@@ -141,7 +141,7 @@ export default function Home() {
         className="rounded-[25px] w-[580px] h-[204px] absolute left-[651px] top-[944px] max-w-none"
         alt="Rectangle 9"
       />
-      <div className="w-[424px] h-[72px] absolute left-[689px] top-[1010px]">
+      <div className="w-[424px] h-[72px] absolute left-[709px] top-[1010px]">
         <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[142px] h-[52px] absolute left-[140px] top-0">
           16000+
         </p>

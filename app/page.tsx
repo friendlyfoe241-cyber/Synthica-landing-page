@@ -154,7 +154,7 @@ export default function Home() {
         </span>
         .
       </p>
-      <p className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
+      <p id="lockable-box" className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
         Learn how we work in <br />
         <span
           style={{
@@ -416,51 +416,51 @@ export default function Home() {
         <div className="w-[359px] h-[31px] absolute left-[104px] top-[328px]">
           <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
             <div className="w-6 h-6 absolute left-0 top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left_[3px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[326px] h-[31px] absolute left-[33px] -top-0 text-center">
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[526px] h-[31px] absolute left-[33px] -top-0">
             Join our Research Community
           </p>
         </div>
@@ -492,53 +492,53 @@ export default function Home() {
         <div className="w-[398px] h-[31px] absolute left-[84px] top-[328px]">
           <div className="w-6 h-6 absolute -left-0 top-[3px] overflow-hidden">
             <div className="w-6 h-6 absolute left-0 top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[18px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[18px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[365px] h-[31px] absolute left-[33px] -top-0">
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[565px] h-[31px] absolute left-[33px] -top-0">
             Learn from our Expert Curriculum
           </p>
         </div>
@@ -567,41 +567,41 @@ export default function Home() {
           project, with guidance from our community resources.
         </p>
         <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[365px] h-[31px] absolute left-[101px] top-[328px]">
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[337px] h-[31px] absolute left-[27px] top-0">
-            Develop your Research Project
-          </p>
+        <div className="w-[565px] h-[31px] absolute left-[93px] top-[328px]">
           <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
             <div className="w-[18px] h-6 absolute left-[3px] top-0">
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[3px]"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-1.5"></div>
-              <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[3px]"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-1.5"></div>
+              <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
             </div>
           </div>
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[526px] h-[31px] absolute left-[33px] top-0">
+            Develop your Research Project
+          </p>
         </div>
       </div>
       <div className="w-[566px] h-[410px] absolute left-[724px] top-[2956px]">
@@ -632,7 +632,7 @@ export default function Home() {
       <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[666px] top-[1631px]"></div>
       <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[666px] top-[2092px]"></div>
       <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[666px] top-[2553px]"></div>
-      <div className="w-[325px] h-[31px] absolute left-[818px] top-[3285px]">
+      <div className="w-[325px] h-[31px] absolute left-[845px] top-[3285px]">
         <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
           <div className="w-6 h-6 absolute -left-0 top-[3px]">
             <div className="w-6 h-6 absolute left-0 top-0">
@@ -658,7 +658,7 @@ export default function Home() {
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex text-2xl w-[295px] h-[31px] absolute left-[31px] -top-0">
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[495px] h-[31px] absolute left-[31px] -top-0">
             Participate in Competitions
           </p>
         </div>

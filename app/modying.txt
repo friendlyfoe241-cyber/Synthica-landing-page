@@ -1,0 +1,918 @@
+"use client";
+
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+
+// Design canvas width this layout was built for (every absolute px value
+// inside is authored against this exact frame width, confirmed against the
+// Figma file). Instead of stretching the canvas to fill whatever viewport
+// width the visitor has (which breaks every absolute left/top/right value),
+// we keep the canvas at its native size and uniformly scale the whole thing
+// to match the current window width — the same idea as Figma's own "Scale"
+// resize constraint. No element inside this file needs to change.
+const DESIGN_WIDTH = 1440;
+
+export default function Home() {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useLayoutEffect(() => {
+    function updateScale() {
+      if (typeof window === "undefined") return;
+      const nextScale = window.innerWidth / DESIGN_WIDTH;
+      setScale(nextScale);
+      if (contentRef.current) {
+        setContentHeight(contentRef.current.scrollHeight);
+      }
+    }
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
+  // Re-measure if the content's natural height changes after fonts/images load.
+  useEffect(() => {
+    if (!contentRef.current || typeof ResizeObserver === "undefined") return;
+    const node = contentRef.current;
+    const observer = new ResizeObserver(() => {
+      setContentHeight(node.scrollHeight);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      style={{backgroundColor: "#FFF", overflow: "hidden", position: "relative", width: "100%", height: contentHeight ? contentHeight * scale : undefined}}
+    >
+      <div
+        ref={contentRef}
+        style={{backgroundColor: "#FFF", position: "relative"}}
+        style={{
+          width: DESIGN_WIDTH,
+          transform: `scale(${scale})`,
+          transformOrigin: "top left"}}
+      >
+      <div style={{backgroundColor: "#FFF", height: "766px", position: "absolute", width: "100%"}}></div>
+      <img
+        src="/ChatgptImageJun12202608_40_28Pm1.png"
+        style={{height: "675px", maxWidth: "none", position: "absolute", width: "100%"}}
+        alt="ChatGPT Image Jun 12, 2026, 08_40_28 PM 1"
+      />
+      <img
+        src="/ChatgptImageJun12202609_19_24Pmphotoroom1.png"
+        style={{height: "180px", maxWidth: "none", position: "absolute", width: "100%"}}
+        alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
+      />
+      <div style={{alignItems: "center", display: "flex", flexDirection: "column", height: "264px", justifyContent: "center", position: "absolute", width: "100%"}}>
+          <p style={{fontSize: "80px", height: "105px", textAlign: "center"}}>
+            Research made approachable for <i>you</i>
+          </p>
+          <p style={{fontSize: "25px", height: "67px", marginTop: "2rem", textAlign: "center", width: "985px"}}>
+            Synthica creates a playground for high school students to conduct
+            research and participate in competitions regardless of their levels.
+          </p>
+          <div style={{marginTop: "2rem", position: "relative"}}>
+            <svg
+              width="157"
+              height="54"
+              viewBox="0 0 157 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{height: "54px", width: "157px"}}
+            >
+              <rect
+                width="156.753"
+                height="53.7859"
+                rx="26.8929"
+                fill="#B1DBFE"
+              />
+            </svg>
+            <p style={{alignItems: "center", display: "flex", fontSize: "1.25rem", justifyContent: "center", position: "absolute"}}>
+              Join us now
+            </p>
+          </div>
+        </div>
+      <div style={{backgroundColor: "rgba(188,188,188,0.10)", borderRadius: "20px", height: "60px", position: "absolute", width: "175px"}}></div>
+      <div style={{height: "42px", position: "absolute", width: "140px"}}>
+        <p style={{fontSize: "1.25rem", height: "30px", position: "absolute", width: "89px"}}>
+          Synthica
+        </p>
+        <img
+          src="/Image2.png"
+          style={{borderRadius: "20px", height: "42px", maxWidth: "none", position: "absolute", width: "42px"}}
+          alt="image 2"
+        />
+      </div>
+      <div style={{height: "60px", position: "absolute", width: "457px"}}>
+        <div style={{backgroundColor: "rgba(188,188,188,0.10)", borderRadius: "20px", height: "60px", position: "absolute", width: "457px"}}></div>
+        <div style={{height: "25px", position: "absolute", width: "416px"}}>
+          <p style={{fontSize: "1.125rem", height: "25px", position: "absolute", width: "52px"}}>
+            Home
+          </p>
+          <p style={{fontSize: "1.125rem", height: "25px", position: "absolute", width: "53px"}}>
+            About
+          </p>
+          <p style={{fontSize: "1.125rem", height: "25px", position: "absolute", width: "65px"}}>
+            Journal
+          </p>
+          <p style={{fontSize: "1.125rem", height: "25px", position: "absolute", width: "74px"}}>
+            Program
+          </p>
+          <p style={{fontSize: "1.125rem", height: "25px", position: "absolute", width: "110px"}}>
+            Work with us
+          </p>
+        </div>
+      </div>
+      <p style={{background: "linear-gradient(90deg,#B0DBFD0%,#0070C8100%)", fontSize: "40px", height: "53px", paddingLeft: "2rem", position: "absolute", textAlign: "center", width: "100%"}}>
+        At Synthica, we kickstart your Research Career.
+      </p>
+      <p style={{background: "linear-gradient(90deg,#B0DBFD0%,#0070C84.81%)", fontSize: "40px", fontWeight: 500, height: "101px", position: "absolute", width: "450px"}}>
+        Learn how we work in 4 simple steps.
+      </p>
+      <div style={{backgroundColor: "#F4F5F7", borderRadius: "50px", height: "581px", position: "absolute", width: "1073px"}}></div>
+      <div style={{backgroundColor: "#FFF", borderRadius: "25px", height: "509px", position: "absolute", width: "390px"}}></div>
+      <div style={{backgroundColor: "#EAF4FF", borderColor: "#DCEBFA", borderRadius: "25px", borderStyle: "solid", borderWidth: "1px", height: "284px", position: "absolute", width: "580px"}}></div>
+      <img
+        src="/Rectangle9.png"
+        style={{borderRadius: "25px", height: "204px", maxWidth: "none", position: "absolute", width: "580px"}}
+        alt="Rectangle 9"
+      />
+      <div style={{height: "72px", position: "absolute", width: "424px"}}>
+        <p style={{fontSize: "40px", fontWeight: 500, height: "52px", position: "absolute", width: "142px"}}>
+          16000+
+        </p>
+        <p style={{fontSize: "19px", height: "25px", position: "absolute", width: "424px"}}>
+          Researchers as members of Synthica worldwide
+        </p>
+      </div>
+      <div style={{height: "33px", position: "absolute", width: "578px"}}>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "77px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "105px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "105px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "105px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "105px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "35px"}}></div>
+      </div>
+      <div style={{height: "33px", position: "absolute", width: "579px"}}>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "53px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "131px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "70px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "145px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "65px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "78px"}}></div>
+      </div>
+      <div style={{height: "33px", position: "absolute", width: "579px"}}>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "110px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "77px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "141px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "75px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "111px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "2rem"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "110px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "77px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "141px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "75px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "111px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "2rem"}}></div>
+      </div>
+      <div style={{height: "33px", position: "absolute", width: "578px"}}>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "78px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "132px"}}></div>
+        <div style={{backgroundColor: "#D2E4F8", borderRadius: "50px", height: "33px", position: "absolute", width: "152px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "124px"}}></div>
+        <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "2.75rem"}}></div>
+      </div>
+      <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "132px"}}></div>
+      <div style={{backgroundColor: "#D2E4F8", borderColor: "#DCEBFA", borderRadius: "50px", borderStyle: "solid", borderWidth: "1px", height: "33px", position: "absolute", width: "134px"}}></div>
+      <div style={{backgroundColor: "#D2E4F8", borderColor: "#DCEBFA", borderRadius: "50px", borderStyle: "solid", borderWidth: "1px", height: "33px", position: "absolute", width: "145px"}}></div>
+      <div style={{backgroundColor: "#DCEBFA", borderRadius: "50px", height: "33px", position: "absolute", width: "140px"}}></div>
+      <div style={{height: "19px", position: "absolute", width: "98px"}}>
+        <div style={{height: "13px", position: "absolute", width: "13px"}}>
+          <div style={{height: "13px", position: "absolute", width: "13px"}}>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+          </div>
+        </div>
+        <p style={{fontSize: "0.875rem", fontWeight: 500, height: "19px", position: "absolute", width: "81px"}}>
+          Community
+        </p>
+      </div>
+      <div style={{height: "19px", position: "absolute", width: "114px"}}>
+        <p style={{fontSize: "0.875rem", fontWeight: 500, height: "19px", position: "absolute", width: "97px"}}>
+          Opportunities
+        </p>
+        <div style={{height: "13px", position: "absolute", width: "13px"}}>
+          <div style={{height: "13px", position: "absolute", width: "13px"}}>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+          </div>
+        </div>
+      </div>
+      <div style={{height: "19px", position: "absolute", width: "111px"}}>
+        <p style={{fontSize: "0.875rem", fontWeight: 500, height: "19px", position: "absolute", width: "94px"}}>
+          Competitions
+        </p>
+        <div style={{height: "13px", position: "absolute", width: "13px"}}>
+          <div style={{height: "13px", position: "absolute", width: "13px"}}>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+            <div style={{backgroundColor: "#000", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+          </div>
+        </div>
+      </div>
+      <p style={{fontSize: "1.5rem", height: "3rem", position: "absolute", width: "398px"}}>
+        Learn how Synthica works and become a part of us.
+      </p>
+      <div style={{height: "2.5rem", position: "absolute", width: "2.5rem"}}>
+        <div style={{backgroundColor: "#244A73", borderRadius: "50px", height: "2.5rem", position: "absolute", width: "2.5rem"}}></div>
+        <p style={{fontSize: "1.5rem", height: "1.5rem", position: "absolute", width: "7px"}}>
+          1
+        </p>
+      </div>
+      <div style={{height: "2.5rem", position: "absolute", width: "2.5rem"}}>
+        <div style={{backgroundColor: "#244A73", borderRadius: "50px", height: "2.5rem", position: "absolute", width: "2.5rem"}}></div>
+        <p style={{fontSize: "1.5rem", height: "1.5rem", position: "absolute", textAlign: "center", width: "0.625rem"}}>
+          2
+        </p>
+      </div>
+      <div style={{height: "2.5rem", position: "absolute", width: "2.5rem"}}>
+        <div style={{backgroundColor: "#244A73", borderRadius: "50px", height: "2.5rem", position: "absolute", width: "2.5rem"}}></div>
+        <p style={{fontSize: "1.5rem", height: "1.5rem", position: "absolute", textAlign: "center", width: "0.625rem"}}>
+          3
+        </p>
+      </div>
+      <div style={{height: "2.5rem", position: "absolute", width: "2.5rem"}}>
+        <div style={{backgroundColor: "#244A73", borderRadius: "50px", height: "2.5rem", position: "absolute", width: "2.5rem"}}></div>
+        <p style={{fontSize: "1.5rem", height: "1.5rem", position: "absolute", textAlign: "center", width: "0.75rem"}}>
+          4
+        </p>
+      </div>
+      <div style={{height: "410px", position: "absolute", width: "566px"}}>
+        <svg
+          width="567"
+          height="411"
+          viewBox="0 0 567 411"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{height: "410px", position: "absolute", width: "566px"}}
+        >
+          <path
+            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
+            fill="#F4F5F7"
+          />
+        </svg>
+        <img
+          src="/Rectangle25.png"
+          style={{borderRadius: "20px", height: "234px", maxWidth: "none", position: "absolute", width: "413px"}}
+          alt="Rectangle 25"
+        />
+        <p style={{fontSize: "17px", height: "2.5rem", position: "absolute", textAlign: "center", width: "506px"}}>
+          Become part of our global network of student researchers by joining
+          our Discord server and connecting with peers.
+        </p>
+        <div style={{backgroundColor: "#FFF", borderRadius: "30px", boxShadow: "02px 2px 0rgba(0,0,0,0.25)", height: "72px", position: "absolute", width: "482px"}}></div>
+        <div style={{height: "31px", position: "absolute", width: "359px"}}>
+          <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+            <div style={{height: "1.5rem", position: "absolute", width: "1.5rem"}}>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+            </div>
+          </div>
+          <p style={{fontSize: "1.5rem", height: "31px", position: "absolute", textAlign: "center", width: "326px"}}>
+            Join our Research Community
+          </p>
+        </div>
+      </div>
+      <div style={{height: "410px", position: "absolute", width: "566px"}}>
+        <svg
+          width="567"
+          height="411"
+          viewBox="0 0 567 411"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{height: "410px", position: "absolute", width: "566px"}}
+        >
+          <path
+            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
+            fill="#F4F5F7"
+          />
+        </svg>
+        <img
+          src="/Rectangle25(1).png"
+          style={{borderRadius: "20px", height: "234px", maxWidth: "none", position: "absolute", width: "413px"}}
+          alt="Rectangle 25"
+        />
+        <p style={{fontSize: "17px", height: "2.5rem", position: "absolute", textAlign: "center", width: "506px"}}>
+          Access our high-quality research curriculum and learn the foundations
+          of academic research at your own pace.
+        </p>
+        <div style={{backgroundColor: "#FFF", borderRadius: "30px", boxShadow: "02px 2px 0rgba(0,0,0,0.25)", height: "72px", position: "absolute", width: "482px"}}></div>
+        <div style={{height: "31px", position: "absolute", width: "398px"}}>
+          <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+            <div style={{height: "1.5rem", position: "absolute", width: "1.5rem"}}>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+            </div>
+          </div>
+          <p style={{fontSize: "1.5rem", height: "31px", position: "absolute", width: "365px"}}>
+            Learn from our Expert Curriculum
+          </p>
+        </div>
+      </div>
+      <div style={{height: "410px", position: "absolute", width: "566px"}}>
+        <svg
+          width="567"
+          height="411"
+          viewBox="0 0 567 411"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{height: "410px", position: "absolute", width: "566px"}}
+        >
+          <path
+            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
+            fill="#F4F5F7"
+          />
+        </svg>
+        <img
+          src="/Rectangle25(2).png"
+          style={{borderRadius: "20px", height: "234px", maxWidth: "none", position: "absolute", width: "413px"}}
+          alt="Rectangle 25"
+        />
+        <p style={{fontSize: "17px", height: "2.5rem", position: "absolute", textAlign: "center", width: "506px"}}>
+          Apply what you've learned to create your own original research
+          project, with guidance from our community resources.
+        </p>
+        <div style={{backgroundColor: "#FFF", borderRadius: "30px", boxShadow: "02px 2px 0rgba(0,0,0,0.25)", height: "72px", position: "absolute", width: "482px"}}></div>
+        <div style={{height: "31px", position: "absolute", width: "365px"}}>
+          <p style={{fontSize: "1.5rem", height: "31px", position: "absolute", width: "337px"}}>
+            Develop your Research Project
+          </p>
+          <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+            <div style={{height: "1.5rem", position: "absolute", width: "18px"}}>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#FFF", height: "3px", position: "absolute", width: "3px"}}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{height: "410px", position: "absolute", width: "566px"}}>
+        <svg
+          width="567"
+          height="411"
+          viewBox="0 0 567 411"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{height: "410px", position: "absolute", width: "566px"}}
+        >
+          <path
+            d="M0 20C0 8.9543 8.95431 0 20 0H546.106C557.151 0 566.106 8.9543 566.106 20V390.326C566.106 401.372 557.151 410.326 546.106 410.326H20C8.95431 410.326 0 401.372 0 390.326V20Z"
+            fill="#F4F5F7"
+          />
+        </svg>
+        <img
+          src="/Rectangle25(3).png"
+          style={{borderRadius: "20px", height: "234px", maxWidth: "none", position: "absolute", width: "413px"}}
+          alt="Rectangle 25"
+        />
+        <p style={{fontSize: "17px", height: "2.5rem", position: "absolute", textAlign: "center", width: "506px"}}>
+          Showcase your findings at our international research competitions and
+          earn recognition for your work.
+        </p>
+        <div style={{backgroundColor: "#FFF", borderRadius: "30px", boxShadow: "02px 2px 0rgba(0,0,0,0.25)", height: "72px", position: "absolute", width: "482px"}}></div>
+      </div>
+      <div style={{backgroundColor: "#D9D9D9", height: "412px", position: "absolute", width: "0.125rem"}}></div>
+      <div style={{backgroundColor: "#D9D9D9", height: "409px", position: "absolute", width: "0.125rem"}}></div>
+      <div style={{backgroundColor: "#D9D9D9", height: "405px", position: "absolute", width: "0.125rem"}}></div>
+      <div style={{height: "31px", position: "absolute", width: "325px"}}>
+        <div style={{height: "31px", position: "absolute", width: "325px"}}>
+          <div style={{height: "1.5rem", position: "absolute", width: "1.5rem"}}>
+            <div style={{height: "1.5rem", position: "absolute", width: "1.5rem"}}>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+              <div style={{backgroundColor: "#000", height: "3px", position: "absolute", width: "3px"}}></div>
+            </div>
+          </div>
+          <p style={{fontSize: "1.5rem", height: "31px", position: "absolute", width: "295px"}}>
+            Participate in Competitions
+          </p>
+        </div>
+      </div>
+      <div style={{height: "714px", position: "absolute", width: "100%"}}>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderBottomColor: "#000", borderBottomStyle: "solid", borderBottomWidth: "1px", borderTopColor: "#000", borderTopStyle: "solid", borderTopWidth: "1px", display: "flex", flexDirection: "column", justifyContent: "center", paddingBottom: "1px", paddingLeft: "54px", paddingRight: "3.5rem", paddingTop: "1px", position: "absolute", width: "100%"}}>
+          <div style={{borderLeftColor: "#000", borderLeftStyle: "solid", borderLeftWidth: "1px", borderRightColor: "#000", borderRightStyle: "solid", borderRightWidth: "1px", height: "55px", width: "100%"}}></div>
+        </div>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderBottomColor: "#000", borderBottomStyle: "solid", borderBottomWidth: "1px", borderTopColor: "#000", borderTopStyle: "solid", borderTopWidth: "1px", display: "flex", flexDirection: "column", height: "601px", justifyContent: "center", paddingBottom: "1px", paddingLeft: "3.5rem", paddingRight: "3.5rem", paddingTop: "1px", position: "absolute", width: "100%"}}>
+          <div style={{alignItems: "flex-start", borderLeftColor: "#000", borderLeftStyle: "solid", borderLeftWidth: "1px", borderRightColor: "#000", borderRightStyle: "solid", borderRightWidth: "1px", display: "flex", flexDirection: "column", flexShrink: 0, height: "600px", paddingRight: "1px", width: "100%"}}>
+            <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column", justifyContent: "center", width: "100%"}}>
+              <img
+                src="/Backgroundborder.png"
+                style={{borderColor: "#000", borderStyle: "solid", borderWidth: "1px", height: "602px", maxWidth: "none", overflow: "hidden", width: "1088px"}}
+                alt="Background+Border"
+              />
+            </div>
+          </div>
+        </div>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderBottomColor: "#000", borderBottomStyle: "solid", borderBottomWidth: "1px", borderTopColor: "#000", borderTopStyle: "solid", borderTopWidth: "1px", display: "flex", flexDirection: "column", justifyContent: "center", paddingBottom: "1px", paddingLeft: "54px", paddingRight: "3.5rem", paddingTop: "1px", position: "absolute", width: "100%"}}>
+          <div style={{alignItems: "center", borderLeftColor: "#000", borderLeftStyle: "solid", borderLeftWidth: "1px", borderRightColor: "#000", borderRightStyle: "solid", borderRightWidth: "1px", display: "flex", gap: "0.125rem", height: "55px", paddingBottom: "0rem", paddingLeft: "18px", paddingRight: "468px", paddingTop: "0rem", width: "100%"}}>
+            <p style={{fontSize: "21px", fontWeight: 500, height: "63px", width: "586px"}}>
+              © 2026 Synthica. All rights reserved. Platform developed with{" "}
+            </p>
+            <div style={{height: "0.875rem", position: "relative", width: "0.875rem"}}>
+              <div style={{height: "0.875rem", position: "absolute", width: "0.875rem"}}>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+                <div style={{backgroundColor: "#FFF", height: "0.125rem", position: "absolute", width: "0.125rem"}}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{alignItems: "flex-start", height: "124px", position: "absolute"}}>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderColor: "#E7E7E7", borderStyle: "solid", borderWidth: "1px", display: "flex", flexDirection: "column", height: "124px", overflow: "hidden", position: "absolute", width: "344px"}}>
+          <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column", flexShrink: 0, height: "72px", width: "339px"}}>
+            <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column"}}>
+              <div style={{alignItems: "center", backgroundColor: "#D2E4F8", display: "flex", height: "2rem", justifyContent: "center", width: "2rem"}}>
+                <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "1.25rem", justifyContent: "center", overflow: "hidden", width: "1.25rem"}}>
+                  <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "0.625rem", justifyContent: "center", overflow: "hidden", width: "0.875rem"}}>
+                    <svg
+                      width="14"
+                      height="10"
+                      viewBox="0 0 14 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{flexShrink: 0, height: "0.625rem", overflow: "hidden", position: "relative", width: "0.875rem"}}
+                    >
+                      <g clipPath="url(#clip0_152_687)">
+                        <path
+                          d="M1 5.23529L4.84 9L13 1"
+                          stroke="#244A73"
+                          strokeWidth="1.5"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_152_687">
+                          <rect width="14" height="10" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div style={{alignItems: "center", display: "flex", height: "1.25rem", paddingBottom: "0.125rem", paddingLeft: "0rem", paddingRight: "175px", paddingTop: "0rem", width: "339px"}}>
+                <p style={{fontSize: "1.25rem", height: "1.25rem", lineHeight: "1.25rem", width: "164px"}}>
+                  Zero money spent
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderColor: "#E7E7E7", borderStyle: "solid", borderWidth: "1px", display: "flex", flexDirection: "column", height: "124px", overflow: "hidden", position: "absolute", width: "360px"}}>
+          <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column", width: "290px"}}>
+            <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column", width: "100%"}}>
+              <div style={{alignItems: "center", backgroundColor: "#D2E4F8", display: "flex", height: "2rem", justifyContent: "center", paddingBottom: "0.375rem", paddingLeft: "0.375rem", paddingRight: "0.375rem", paddingTop: "0.375rem", width: "2rem"}}>
+                <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "1.25rem", justifyContent: "center", overflow: "hidden", width: "1.25rem"}}>
+                  <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "0.625rem", justifyContent: "center", overflow: "hidden", width: "0.875rem"}}>
+                    <svg
+                      width="14"
+                      height="10"
+                      viewBox="0 0 14 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{flexShrink: 0, height: "0.625rem", overflow: "hidden", position: "relative", width: "0.875rem"}}
+                    >
+                      <g clipPath="url(#clip0_152_698)">
+                        <path
+                          d="M1 5.23529L4.84 9L13 1"
+                          stroke="#244A73"
+                          strokeWidth="1.5"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_152_698">
+                          <rect width="14" height="10" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <button style={{alignItems: "center", display: "flex", height: "1.25rem", justifyContent: "center", paddingBottom: "0.125rem", width: "100%"}}>
+                <p style={{fontSize: "1.25rem", height: "1.25rem", lineHeight: "1.25rem", width: "290px"}}>
+                  Open to all high school students
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style={{alignItems: "flex-start", backgroundColor: "#FFF", borderColor: "#E7E7E7", borderStyle: "solid", borderWidth: "1px", display: "flex", flexDirection: "column", overflow: "hidden", position: "absolute", width: "360px"}}>
+          <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column", height: "72px", width: "304px"}}>
+            <div style={{alignItems: "flex-start", display: "flex", flexDirection: "column"}}>
+              <div style={{alignItems: "center", backgroundColor: "#D2E4F8", display: "flex", height: "2rem", justifyContent: "center", width: "2rem"}}>
+                <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "1.25rem", justifyContent: "center", overflow: "hidden", width: "1.25rem"}}>
+                  <div style={{alignItems: "center", display: "flex", flexShrink: 0, height: "0.625rem", justifyContent: "center", overflow: "hidden", width: "0.875rem"}}>
+                    <svg
+                      width="14"
+                      height="10"
+                      viewBox="0 0 14 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{flexShrink: 0, height: "0.625rem", overflow: "hidden", position: "relative", width: "0.875rem"}}
+                    >
+                      <g clipPath="url(#clip0_152_709)">
+                        <path
+                          d="M1 5.23529L4.84 9L13 1"
+                          stroke="#244A73"
+                          strokeWidth="1.5"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_152_709">
+                          <rect width="14" height="10" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div style={{alignItems: "center", display: "flex", height: "1.25rem", paddingBottom: "0.125rem", paddingLeft: "0rem", paddingRight: "35px", paddingTop: "0rem", width: "339px"}}>
+                <p style={{fontSize: "1.25rem", height: "1.25rem", lineHeight: "1.25rem", width: "304px"}}>
+                  Research Leadership Opportunity
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style={{background: "linear-gradient(90deg,#B0DBFD0%,#0070C851.44%)", display: "flex", flexDirection: "column", fontSize: "#4B4B4B", height: "58px", justifyContent: "center", position: "absolute", textAlign: "center", width: "724px"}}>
+        Zero cost. Non-selective Program.
+      </p>
+      <div style={{alignItems: "center", backgroundColor: "#FFF", display: "flex", height: "716px", justifyContent: "center", overflow: "hidden", paddingLeft: "0rem", paddingRight: "0rem", position: "absolute", width: "100%"}}>
+        <div style={{flexShrink: 0, height: "632px", position: "relative", width: "100%"}}>
+          <button style={{alignItems: "center", display: "flex", height: "7rem", justifyContent: "center", paddingBottom: "1.5rem", paddingLeft: "263px", paddingRight: "263px", paddingTop: "1.5rem", position: "absolute", width: "100%"}}>
+            <p style={{display: "flex", flexDirection: "column", flexShrink: 0, fontSize: "49px", fontWeight: 500, height: "4rem", justifyContent: "center", textAlign: "center", width: "674px"}}>
+              Frequently Asked Questions
+            </p>
+          </button>
+          <div style={{height: "529px", position: "absolute", width: "1070px"}}>
+            <div style={{alignItems: "flex-end", display: "flex", flexDirection: "column", height: "484px", justifyContent: "flex-end", paddingTop: "0.75rem", position: "absolute", width: "489px"}}>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "relative", width: "489px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "23px", paddingRight: "41px", paddingTop: "0rem", position: "absolute", width: "485px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "206px"}}>
+                    What is Synthica?
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "117px", position: "absolute", width: "489px"}}></div>
+              </div>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "relative", width: "485px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "17px", paddingRight: "39px", paddingTop: "0rem", position: "absolute", width: "481px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "394px"}}>
+                    How much does it cost to join Synthica?
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "122px", position: "absolute", width: "485px"}}></div>
+              </div>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "relative", width: "489px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "1.25rem", paddingRight: "38px", paddingTop: "0rem", position: "absolute", width: "485px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "338px"}}>
+                    How can I join the community?
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "117px", position: "absolute", width: "489px"}}></div>
+              </div>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "relative", width: "489px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "17px", paddingRight: "39px", paddingTop: "0rem", position: "absolute", width: "485px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "373px"}}>
+                    What is the Global Research Challenge?
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "117px", position: "absolute", width: "489px"}}></div>
+              </div>
+            </div>
+            <div style={{alignItems: "flex-end", flexDirection: "column", height: "324px", paddingLeft: "1px", position: "absolute", width: "488px"}}>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "absolute", width: "488px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "26px", paddingRight: "50px", paddingTop: "0rem", position: "absolute", width: "484px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "336px"}}>
+                    Do I need prior research experience?
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "122px", position: "absolute", width: "488px"}}></div>
+              </div>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "absolute", width: "488px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "27px", paddingRight: "50px", paddingTop: "0rem", position: "absolute", width: "484px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "303px"}}>
+                    More faq
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "119px", position: "absolute", width: "488px"}}></div>
+              </div>
+              <div style={{backgroundColor: "#FFF", borderColor: "#D1D1D1", borderRadius: "20px", borderStyle: "solid", borderWidth: "1px", height: "110px", position: "absolute", width: "492px"}}>
+                <div style={{alignItems: "center", height: "30px", paddingBottom: "0rem", paddingLeft: "2rem", paddingRight: "47px", paddingTop: "0rem", position: "absolute", width: "488px"}}>
+                  <p style={{display: "flex", flexDirection: "column", fontSize: "19px", height: "30px", justifyContent: "center", position: "absolute", width: "195px"}}>
+                    more faq
+                  </p>
+                  <div style={{height: "1.5rem", overflow: "hidden", position: "absolute", width: "1.5rem"}}>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.125rem", position: "absolute", width: "0.875rem"}}></div>
+                    <div style={{backgroundColor: "#111", borderRadius: "10px", height: "0.875rem", position: "absolute", width: "0.125rem"}}></div>
+                  </div>
+                </div>
+                <div style={{borderTopColor: "#F4F5F7", borderTopStyle: "solid", borderTopWidth: "1px", height: "121px", position: "absolute", width: "492px"}}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  );
+}

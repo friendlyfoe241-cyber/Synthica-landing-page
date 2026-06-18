@@ -187,13 +187,9 @@ export default function Home() {
         className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute"
         style={{
           left: '197px',
-          top: '1579px',
-          // 1. Tell it to stick natively when reaching 25% height of the screen
           position: 'sticky',
-          // 2. Adjust for layout scaling so it triggers exactly at 1/4th of the viewport height
           top: `${25 / scale}vh`, 
-          // 3. Limit how far it can stick downwards (Start Point + Duration Offset)
-          marginBottom: '-1400px',
+          marginBottom: '-1400px', 
           zIndex: 50,
         }}
       >
@@ -208,7 +204,7 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          4
+        4
         </span>
         {' '}
         simple steps.
@@ -408,9 +404,7 @@ export default function Home() {
         className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute"
         style={{
           left: '197px',
-          top: '1698px',
           position: 'sticky',
-          // Stays perfectly pinned exactly 119px under the title block
           top: `calc(${25 / scale}vh + 119px)`, 
           marginBottom: '-1400px',
           zIndex: 50,

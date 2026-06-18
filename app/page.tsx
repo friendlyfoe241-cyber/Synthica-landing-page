@@ -15,6 +15,7 @@ export default function Home() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [contentHeight, setContentHeight] = useState(0);
+  const [stickyOffset, setStickyOffset] = useState(0);
 
   useLayoutEffect(() => {
     function updateScale() {
@@ -41,6 +42,38 @@ export default function Home() {
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+  function handleScroll() {
+    if (typeof window === "undefined" || scale === 0) return;
+
+    // Calculate where 1/4th of the screen is in terms of design canvas pixels
+    const currentCanvasStickyLine = (window.scrollY + window.innerHeight / 4) / scale;
+
+    // The point at which the section should begin sticking (1579px)
+    const startStickyPoint = 1579;
+    
+    // The total amount of design canvas pixels you want the text to stay sticky for 
+    // (e.g., 1400px comfortably covers the height of your 4 steps)
+    const stickyDuration = 1400; 
+
+    if (currentCanvasStickyLine < startStickyPoint) {
+      // Element hasn't reached 1/4th of the screen yet
+      setStickyOffset(0);
+    } else if (currentCanvasStickyLine > startStickyPoint + stickyDuration) {
+      // Element has completed its sticking duration and scrolls away
+      setStickyOffset(stickyDuration);
+    } else {
+      // Element is actively sticking
+      setStickyOffset(currentCanvasStickyLine - startStickyPoint);
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  // Run once initially to check placement
+  handleScroll(); 
+
+  return () => window.removeEventListener("scroll", handleScroll);}, [scale]);
 
   return (
     <div
@@ -154,7 +187,11 @@ export default function Home() {
         </span>
         .
       </p>
-      <p id="lockable-box" className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
+      <p 
+        id="lockable-box" 
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px]"
+        style={{ top: `${1579 + stickyOffset}px` }}
+      >
         Learn how we work in <br />
         <span
           style={{
@@ -362,7 +399,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px] top-[1698px]">
+      <p 
+        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px]"
+        style={{ top: `${1698 + stickyOffset}px` }}
+      >
         Learn how Synthica works and become a part of us.
       </p>
       <div className="w-10 h-10 absolute left-[647px] top-[1589px]">

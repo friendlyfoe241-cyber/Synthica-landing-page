@@ -15,7 +15,6 @@ export default function Home() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [contentHeight, setContentHeight] = useState(0);
-  const [stickyState, setStickyState] = useState({ isFixed: false, isFinished: false });
 
   useLayoutEffect(() => {
     function updateScale() {
@@ -43,30 +42,30 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
+  const [stickyY, setStickyY] = useState(0);
+
+useEffect(() => {
   function handleScroll() {
     if (typeof window === "undefined" || scale === 0) return;
 
-    // Convert the current 1/4th viewport threshold into design canvas coordinate space
+    // 1. Where is 1/4th of the screen in terms of design canvas pixels?
     const currentCanvasStickyLine = (window.scrollY + window.innerHeight / 4) / scale;
 
+    // 2. Setup your scroll milestone thresholds
     const startStickyPoint = 1579;
-    const stickyDuration = 1400; // Total canvas pixels the section stays pinned for
+    const stickyDuration = 1400; // How long it stays locked before scrolling away
 
     if (currentCanvasStickyLine < startStickyPoint) {
-      // Element hasn't reached the sticking point yet
-      setStickyState({ isFixed: false, isFinished: false });
+      setStickyY(0); // Before sticky zone
     } else if (currentCanvasStickyLine > startStickyPoint + stickyDuration) {
-      // Element has completed its sticky duration and should scroll away
-      setStickyState({ isFixed: false, isFinished: true });
+      setStickyY(stickyDuration); // After sticky zone
     } else {
-      // Element is actively pinned at 1/4th of the viewport
-      setStickyState({ isFixed: true, isFinished: false });
+      setStickyY(currentCanvasStickyLine - startStickyPoint); // Actively sticking
     }
   }
 
-  window.addEventListener("scroll", handleScroll);
-  handleScroll(); 
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 
   return () => window.removeEventListener("scroll", handleScroll);}, [scale]);
 
@@ -184,12 +183,9 @@ export default function Home() {
       </p>
       <p
         id="lockable-box"
-        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute"
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]"
         style={{
-          left: '197px',
-          position: 'sticky',
-          top: `${25 / scale}vh`, 
-          marginBottom: '-1400px', 
+          transform: `translateY(${stickyY}px)`,
           zIndex: 50,
         }}
       >
@@ -401,12 +397,9 @@ export default function Home() {
         </div>
       </div>
       <p
-        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute"
-        style={{
-          left: '197px',
-          position: 'sticky',
-          top: `calc(${25 / scale}vh + 119px)`, 
-          marginBottom: '-1400px',
+        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px] top-[1698px]"
+          style={{
+          transform: `translateY(${stickyY}px)`,
           zIndex: 50,
         }}
       >

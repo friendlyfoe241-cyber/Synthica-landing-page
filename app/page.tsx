@@ -184,20 +184,16 @@ export default function Home() {
       </p>
       <p
         id="lockable-box"
-        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px]"
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute"
         style={{
-          position: stickyState.isFixed ? 'fixed' : 'absolute',
-          // Position horizontally: left absolute position (197px) adjusted by scale
-         left: stickyState.isFixed ? `${197 * scale}px` : '197px',
-          // Handle the 3 layout phases
-          top: stickyState.isFixed
-            ? '25vh' // Exactly 1/4th of the viewport height when fixed
-            : stickyState.isFinished
-           ? `${1579 + 1400}px` // Lock into final scroll position (Start + Duration)
-            : '1579px', // Default starting position
-          // Apply scale matrix transformation while fixed to keep up with your main canvas wrapper
-          transform: stickyState.isFixed ? `scale(${scale})` : 'none',
-          transformOrigin: 'top left',
+          left: '197px',
+          top: '1579px',
+          // 1. Tell it to stick natively when reaching 25% height of the screen
+          position: 'sticky',
+          // 2. Adjust for layout scaling so it triggers exactly at 1/4th of the viewport height
+          top: `${25 / scale}vh`, 
+          // 3. Limit how far it can stick downwards (Start Point + Duration Offset)
+          marginBottom: '-1400px',
           zIndex: 50,
         }}
       >
@@ -409,17 +405,14 @@ export default function Home() {
         </div>
       </div>
       <p
-        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12"
+        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute"
         style={{
-          position: stickyState.isFixed ? 'fixed' : 'absolute',
-          left: stickyState.isFixed ? `${197 * scale}px` : '197px',
-          top: stickyState.isFixed
-            ? `calc(25vh + ${119 * scale}px)` // Pin below Title (119px is the canvas distance difference)
-            : stickyState.isFinished
-            ? `${1698 + 1400}px`
-            : '1698px',
-          transform: stickyState.isFixed ? `scale(${scale})` : 'none',
-          transformOrigin: 'top left',
+          left: '197px',
+          top: '1698px',
+          position: 'sticky',
+          // Stays perfectly pinned exactly 119px under the title block
+          top: `calc(${25 / scale}vh + 119px)`, 
+          marginBottom: '-1400px',
           zIndex: 50,
         }}
       >

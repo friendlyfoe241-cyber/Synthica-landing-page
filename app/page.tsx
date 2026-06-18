@@ -42,6 +42,33 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const [stickyY, setStickyY] = useState(0);
+
+useEffect(() => {
+  function handleScroll() {
+    if (typeof window === "undefined" || scale === 0) return;
+
+    // 1. Where is 1/4th of the screen in terms of design canvas pixels?
+    const currentCanvasStickyLine = (window.scrollY + window.innerHeight / 4) / scale;
+
+    // 2. Setup your scroll milestone thresholds
+    const startStickyPoint = 1579;
+    const stickyDuration = 1400; // How long it stays locked before scrolling away
+
+    if (currentCanvasStickyLine < startStickyPoint) {
+      setStickyY(0); // Before sticky zone
+    } else if (currentCanvasStickyLine > startStickyPoint + stickyDuration) {
+      setStickyY(stickyDuration); // After sticky zone
+    } else {
+      setStickyY(currentCanvasStickyLine - startStickyPoint); // Actively sticking
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);}, [scale]);
+
   return (
     <div
       className="bg-[#FFF] w-full relative overflow-hidden"
@@ -154,7 +181,14 @@ export default function Home() {
         </span>
         .
       </p>
-      <p id="lockable-box" className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]">
+      <p
+        id="lockable-box"
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]"
+        style={{
+          transform: `translateY(${stickyY}px)`,
+          zIndex: 50,
+        }}
+      >
         Learn how we work in <br />
         <span
           style={{
@@ -166,7 +200,7 @@ export default function Home() {
             display: 'inline-block',
           }}
         >
-          4
+        4
         </span>
         {' '}
         simple steps.
@@ -362,7 +396,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px] top-[1698px]">
+      <p
+        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px] top-[1698px]"
+          style={{
+          transform: `translateY(${stickyY}px)`,
+          zIndex: 50,
+        }}
+      >
         Learn how Synthica works and become a part of us.
       </p>
       <div className="w-10 h-10 absolute left-[647px] top-[1589px]">

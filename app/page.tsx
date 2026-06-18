@@ -53,7 +53,7 @@ useEffect(() => {
 
     // 2. Setup your scroll milestone thresholds
     const startStickyPoint = 1579;
-    const stickyDuration = 1400; // How long it stays locked before scrolling away
+    const stickyDuration = 1370; // How long it stays locked before scrolling away
 
     if (currentCanvasStickyLine < startStickyPoint) {
       setStickyY(0); // Before sticky zone

@@ -70,19 +70,19 @@ export default function Home() {
       <div className="w-full h-[264px] absolute left-0 top-[148px] flex flex-col items-center justify-center">
           <p className="text-[#000] font-instrumentSerif text-[80px] h-[105px] text-center">
             Research made approachable for <i>you</i>
-          </h1>
-          <p className="text-sm sm:text-lg md:text-xl lg:text-[25px] text-[#535353] font-googleSansFlex text-center max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-[985px] mb-6 md:mb-8">
+          </p>
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] text-center mt-8">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
-          <button className="relative">
+          <div className="relative mt-8">
             <svg
               width="157"
               height="54"
               viewBox="0 0 157 54"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-32 sm:w-40 md:w-48 lg:w-[157px] h-auto"
+              className="w-[157px] h-[54px]"
             >
               <rect
                 width="156.753"
@@ -91,7 +91,7 @@ export default function Home() {
                 fill="#B1DBFE"
               />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-[#244A73] font-googleSansFlex text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-[#244A73] font-googleSansFlex text-xl absolute inset-0 flex items-center justify-center">
               Join us now
             </p>
           </div>
@@ -897,148 +897,83 @@ export default function Home() {
                     <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
                   </div>
                 </div>
+                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
               </div>
-            </div>
-
-            {/* Image and Stats */}
-            <div className="lg:col-span-2 order-1 lg:order-2 space-y-6">
-              {/* Image Card */}
-              <div className="rounded-[25px] overflow-hidden shadow-lg">
-                <img src="/Rectangle9.png" alt="Research" className="w-full h-48 sm:h-64 md:h-80 object-cover" />
-              </div>
-
-              {/* Stats Card */}
-              <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] p-6 lg:p-8">
-                <div className="text-center mb-6">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-googleSansFlex font-medium text-[#000]">16000+</span>
-                  <p className="text-[#535353] font-googleSansFlex mt-2">Researchers as members of Synthica worldwide</p>
-                </div>
-
-                {/* Progress Bars */}
-                <div className="space-y-3">
-                  <div className="flex flex-wrap gap-2">
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Community</div>
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Opportunities</div>
-                    <div className="h-8 lg:h-[33px] rounded-[50px] bg-[#DCEBFA] px-3 flex items-center text-xs sm:text-sm text-[#244A73]">Competitions</div>
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[485px] h-[110px] relative">
+                <div className="inline-flex pt-0 pr-[39px] pb-0 pl-[17px] items-center gap-[7px] w-[481px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[394px] h-[30px] absolute left-[17px] top-0">
+                    How much does it cost to join Synthica?
+                  </p>
+                  <div className="w-6 h-6 absolute left-[418px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
                   </div>
                 </div>
+                <div className="border-t border-t-[#F4F5F7] w-[485px] h-[122px] absolute left-0 -top-3"></div>
+              </div>
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
+                <div className="inline-flex pt-0 pr-[38px] pb-0 pl-5 items-center gap-[65px] w-[485px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[338px] h-[30px] absolute left-5 top-0">
+                    How can I join the community?
+                  </p>
+                  <div className="w-6 h-6 absolute left-[423px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
+                  </div>
+                </div>
+                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
+              </div>
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[489px] h-[110px] relative">
+                <div className="inline-flex pt-0 pr-[39px] pb-0 pl-[17px] items-center gap-8 w-[485px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[373px] h-[30px] absolute left-[17px] top-0">
+                    What is the Global Research Challenge?
+                  </p>
+                  <div className="w-6 h-6 absolute left-[422px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
+                  </div>
+                </div>
+                <div className="border-t border-t-[#F4F5F7] w-[489px] h-[117px] absolute left-0 -top-[7px]"></div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-googleSansFlex bg-gradient-to-r from-[#B0DBFD] to-[#0070C8] bg-clip-text text-transparent">
-            Zero cost. Non-selective Program.
-          </h2>
-        </div>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Feature 1 */}
-          <div className="flex p-6 lg:p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF]">
-            <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.23529L4.84 9L13 1" stroke="#244A73" strokeWidth="1.5"/>
-              </svg>
+            <div className="inline-flex pl-px flex-col items-end gap-4 w-[488px] h-[324px] absolute left-[536px] top-[60px]">
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[488px] h-[110px] absolute left-[5px] -top-[34px]">
+                <div className="inline-flex pt-0 pr-[50px] pb-0 pl-[26px] items-center gap-[47px] w-[484px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[336px] h-[30px] absolute left-[26px] top-0">
+                    Do I need prior research experience?
+                  </p>
+                  <div className="w-6 h-6 absolute left-[410px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
+                  </div>
+                </div>
+                <div className="border-t border-t-[#F4F5F7] w-[488px] h-[122px] absolute -left-[13px] -top-3"></div>
+              </div>
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[488px] h-[110px] absolute left-[5px] top-[92px]">
+                <div className="inline-flex pt-0 pr-[50px] pb-0 pl-[27px] items-center gap-[79px] w-[484px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[303px] h-[30px] absolute left-[27px] top-0">
+                    More faq
+                  </p>
+                  <div className="w-6 h-6 absolute left-[410px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
+                  </div>
+                </div>
+                <div className="border-t border-t-[#F4F5F7] w-[488px] h-[119px] absolute left-0 -top-[9px]"></div>
+              </div>
+              <div className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] w-[492px] h-[110px] absolute left-px top-[218px]">
+                <div className="inline-flex pt-0 pr-[47px] pb-0 pl-8 items-center gap-[189px] w-[488px] h-[30px] absolute left-1 top-10">
+                  <p className="flex flex-col justify-center text-[#1E1E1E] font-googleSansFlex text-[19px] leading-[30px] w-[195px] h-[30px] absolute left-8 top-0">
+                    more faq
+                  </p>
+                  <div className="w-6 h-6 absolute left-[417px] top-[3px] overflow-hidden">
+                    <div className="rounded-[10px] bg-[#111] w-3.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                    <div className="rounded-[10px] bg-[#111] w-0.5 h-3.5 absolute left-[11px] top-[5px]"></div>
+                  </div>
+                </div>
+                <div className="border-t border-t-[#F4F5F7] w-[492px] h-[121px] absolute left-0 -top-[11px]"></div>
+              </div>
             </div>
-            <h3 className="text-[#131313] font-googleSansFlex text-lg lg:text-xl">Zero money spent</h3>
-            <p className="text-[#535353] text-sm">All programs are completely free</p>
-          </div>
-
-          {/* Feature 2 */}
-          <div className="flex p-6 lg:p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF]">
-            <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.23529L4.84 9L13 1" stroke="#244A73" strokeWidth="1.5"/>
-              </svg>
-            </div>
-            <h3 className="text-[#131313] font-googleSansFlex text-lg lg:text-xl">Open to all high school students</h3>
-            <p className="text-[#535353] text-sm">No prerequisites required</p>
-          </div>
-
-          {/* Feature 3 */}
-          <div className="flex p-6 lg:p-7 flex-col items-start gap-2.5 rounded-xl border border-[#E7E7E7] bg-[#FFF] md:col-span-2 lg:col-span-1">
-            <div className="flex p-1.5 justify-center items-center rounded bg-[#D2E4F8] w-8 h-8">
-              <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.23529L4.84 9L13 1" stroke="#244A73" strokeWidth="1.5"/>
-              </svg>
-            </div>
-            <h3 className="text-[#131313] font-googleSansFlex text-lg lg:text-xl">Research Leadership Opportunity</h3>
-            <p className="text-[#535353] text-sm">Lead your own research projects</p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[49px] font-googleSansFlex font-medium text-[#000] text-center mb-8 lg:mb-12">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-4">
-            <details className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] overflow-hidden">
-              <summary className="p-4 lg:p-6 cursor-pointer flex items-center justify-between">
-                <span className="text-[#1E1E1E] font-googleSansFlex">What is Synthica?</span>
-                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-              </summary>
-              <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-[#F4F5F7]">
-                <p className="text-[#535353]">Synthica is a platform that helps high school students start their research careers through workshops, mentorship, and competitions.</p>
-              </div>
-            </details>
-
-            <details className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] overflow-hidden">
-              <summary className="p-4 lg:p-6 cursor-pointer flex items-center justify-between">
-                <span className="text-[#1E1E1E] font-googleSansFlex">How much does it cost to join Synthica?</span>
-                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-              </summary>
-              <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-[#F4F5F7]">
-                <p className="text-[#535353]">Nothing! All Synthica programs are completely free for high school students.</p>
-              </div>
-            </details>
-
-            <details className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] overflow-hidden">
-              <summary className="p-4 lg:p-6 cursor-pointer flex items-center justify-between">
-                <span className="text-[#1E1E1E] font-googleSansFlex">How can I join the community?</span>
-                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-              </summary>
-              <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-[#F4F5F7]">
-                <p className="text-[#535353]">Simply sign up on our website and you'll gain immediate access to all community resources and events.</p>
-              </div>
-            </details>
-
-            <details className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] overflow-hidden">
-              <summary className="p-4 lg:p-6 cursor-pointer flex items-center justify-between">
-                <span className="text-[#1E1E1E] font-googleSansFlex">What is the Global Research Challenge?</span>
-                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-              </summary>
-              <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-[#F4F5F7]">
-                <p className="text-[#535353]">Our annual competition where students showcase their research projects and compete for recognition and prizes.</p>
-              </div>
-            </details>
-
-            <details className="rounded-[20px] border border-[#D1D1D1] bg-[#FFF] overflow-hidden">
-              <summary className="p-4 lg:p-6 cursor-pointer flex items-center justify-between">
-                <span className="text-[#1E1E1E] font-googleSansFlex">Do I need prior research experience?</span>
-                <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-              </summary>
-              <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-[#F4F5F7]">
-                <p className="text-[#535353]">Not at all! We welcome students of all experience levels and provide guidance from beginner to advanced.</p>
-              </div>
-            </details>
           </div>
         </div>
       </div>

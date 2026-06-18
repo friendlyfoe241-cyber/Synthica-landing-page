@@ -15,7 +15,7 @@ export default function Home() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [contentHeight, setContentHeight] = useState(0);
-  const [stickyOffset, setStickyOffset] = useState(0);
+  const [stickyState, setStickyState] = useState({ isFixed: false, isFinished: false });
 
   useLayoutEffect(() => {
     function updateScale() {
@@ -47,30 +47,25 @@ export default function Home() {
   function handleScroll() {
     if (typeof window === "undefined" || scale === 0) return;
 
-    // Calculate where 1/4th of the screen is in terms of design canvas pixels
+    // Convert the current 1/4th viewport threshold into design canvas coordinate space
     const currentCanvasStickyLine = (window.scrollY + window.innerHeight / 4) / scale;
 
-    // The point at which the section should begin sticking (1579px)
     const startStickyPoint = 1579;
-    
-    // The total amount of design canvas pixels you want the text to stay sticky for 
-    // (e.g., 1400px comfortably covers the height of your 4 steps)
-    const stickyDuration = 1400; 
+    const stickyDuration = 1400; // Total canvas pixels the section stays pinned for
 
     if (currentCanvasStickyLine < startStickyPoint) {
-      // Element hasn't reached 1/4th of the screen yet
-      setStickyOffset(0);
+      // Element hasn't reached the sticking point yet
+      setStickyState({ isFixed: false, isFinished: false });
     } else if (currentCanvasStickyLine > startStickyPoint + stickyDuration) {
-      // Element has completed its sticking duration and scrolls away
-      setStickyOffset(stickyDuration);
+      // Element has completed its sticky duration and should scroll away
+      setStickyState({ isFixed: false, isFinished: true });
     } else {
-      // Element is actively sticking
-      setStickyOffset(currentCanvasStickyLine - startStickyPoint);
+      // Element is actively pinned at 1/4th of the viewport
+      setStickyState({ isFixed: true, isFinished: false });
     }
   }
 
   window.addEventListener("scroll", handleScroll);
-  // Run once initially to check placement
   handleScroll(); 
 
   return () => window.removeEventListener("scroll", handleScroll);}, [scale]);
@@ -187,10 +182,24 @@ export default function Home() {
         </span>
         .
       </p>
-      <p 
-        id="lockable-box" 
-        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px] absolute left-[197px]"
-        style={{ top: `${1579 + stickyOffset}px` }}
+      <p
+        id="lockable-box"
+        className="text-[#000] font-googleSansFlex text-[40px] font-medium w-[450px] h-[111px]"
+        style={{
+          position: stickyState.isFixed ? 'fixed' : 'absolute',
+          // Position horizontally: left absolute position (197px) adjusted by scale
+         left: stickyState.isFixed ? `${197 * scale}px` : '197px',
+          // Handle the 3 layout phases
+          top: stickyState.isFixed
+            ? '25vh' // Exactly 1/4th of the viewport height when fixed
+            : stickyState.isFinished
+           ? `${1579 + 1400}px` // Lock into final scroll position (Start + Duration)
+            : '1579px', // Default starting position
+          // Apply scale matrix transformation while fixed to keep up with your main canvas wrapper
+          transform: stickyState.isFixed ? `scale(${scale})` : 'none',
+          transformOrigin: 'top left',
+          zIndex: 50,
+        }}
       >
         Learn how we work in <br />
         <span
@@ -399,9 +408,20 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <p 
-        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-[197px]"
-        style={{ top: `${1698 + stickyOffset}px` }}
+      <p
+        className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12"
+        style={{
+          position: stickyState.isFixed ? 'fixed' : 'absolute',
+          left: stickyState.isFixed ? `${197 * scale}px` : '197px',
+          top: stickyState.isFixed
+            ? `calc(25vh + ${119 * scale}px)` // Pin below Title (119px is the canvas distance difference)
+            : stickyState.isFinished
+            ? `${1698 + 1400}px`
+            : '1698px',
+          transform: stickyState.isFixed ? `scale(${scale})` : 'none',
+          transformOrigin: 'top left',
+          zIndex: 50,
+        }}
       >
         Learn how Synthica works and become a part of us.
       </p>

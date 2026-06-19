@@ -204,7 +204,7 @@ useEffect(() => {
       >
         <div className="relative" style={bx('top left')}>
           <p className="text-[#000] font-googleSansFlex font-medium text-[40px] w-[450px] h-[111px]">
-            Learn how we work <br />in
+            Learn how we work <br />in {' '}
             <span
               style={{
                 background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -215,7 +215,6 @@ useEffect(() => {
                 display: 'inline-block',
               }}
             >
-            {' '}
             4
             </span>
             {' '}

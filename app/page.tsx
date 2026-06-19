@@ -44,14 +44,18 @@ export default function Home() {
 
   const [stickyY, setStickyY] = useState(0);
 
-  // ── Fluid Typography Scale ───────────────────────────────────────────────
-  // The canvas already scales every element uniformly at (window.innerWidth / 1440).
-  // Text should resist that shrink – it scales at the SQUARE ROOT of the canvas ratio,
-  // so on a 390 px viewport (scale ≈ 0.27) text is ~1.9× larger relative to
-  // images and layout containers, keeping headings legible without touching positions.
-  // Usage: replace a Tailwind text-[Xpx] class with  style={tf(X)}  (or merge with
-  // the element's existing style prop using  style={{ ...tf(X), ...otherStyles }}  ).
-  const tf = (px: number) => ({ fontSize: `${px / Math.sqrt(scale || 1)}px` });
+  // ── Fluid Typography Scale (power = 0.85) ───────────────────────────────
+  // The canvas scales every element at (window.innerWidth / 1440).
+  // • tf(px)  – text scales at scale^0.85 instead of scale^1.
+  //             At 1000 px (scale≈0.69) text is only ~6% larger than canvas;
+  //             at 390 px (scale≈0.27) text is ~22% larger – more legible.
+  //             Formula inside canvas: designPx / scale^0.15, so rendered = designPx × scale^0.85.
+  // • bx(origin) – apply to wrapper BOXES (nav pills, button) so they expand
+  //             by the same counter-factor and text stays contained inside them.
+  //             Text inside a bx() container should use original Tailwind sizes (no tf).
+  const fluidC = 1 / Math.pow(scale || 1, 0.15);           // counter-factor ≈ 1.06 at 1000 px
+  const tf = (px: number) => ({ fontSize: `${px * fluidC}px` });
+  const bx = (origin = 'top left') => ({ transform: `scale(${fluidC})`, transformOrigin: origin });
 
 
 useEffect(() => {
@@ -105,10 +109,11 @@ useEffect(() => {
         alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
       />
       <div className="w-full h-[264px] absolute left-0 top-[148px] flex flex-col items-center justify-center">
-          <p className="text-[#000] font-instrumentSerif h-[105px] text-center" style={tf(80)}>
+        <div className="flex flex-col items-center" style={bx('center')}>
+          <p className="text-[#000] font-instrumentSerif text-[80px] h-[105px] text-center">
             Research made approachable for <i>you</i>
           </p>
-          <p className="text-[#535353] font-googleSansFlex w-[985px] h-[67px] text-center mt-8" style={tf(25)}>
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] text-center mt-8">
             Synthica creates a playground for high school students to conduct
             research and participate in competitions regardless of their levels.
           </p>
@@ -128,14 +133,15 @@ useEffect(() => {
                 fill="#B1DBFE"
               />
             </svg>
-            <p className="text-[#244A73] font-googleSansFlex absolute inset-0 flex items-center justify-center" style={tf(20)}>
+            <p className="text-[#244A73] font-googleSansFlex text-xl absolute inset-0 flex items-center justify-center">
               Join us now
             </p>
           </div>
         </div>
-      <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]"></div>
-      <div className="w-[140px] h-[42px] absolute left-[42px] top-14">
-        <p className="text-[#000] font-googleSansFlex w-[89px] h-[30px] absolute left-[51px] top-[9px]" style={tf(20)}>
+        </div>
+      <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]" style={bx()}></div>
+      <div className="w-[140px] h-[42px] absolute left-[42px] top-14" style={bx()}>
+        <p className="text-[#000] font-googleSansFlex text-xl w-[89px] h-[30px] absolute left-[51px] top-[9px]">
           Synthica
         </p>
         <img
@@ -144,22 +150,22 @@ useEffect(() => {
           alt="image 2"
         />
       </div>
-      <div className="w-[457px] h-[60px] absolute right-7 top-[47px]">
+      <div className="w-[457px] h-[60px] absolute right-7 top-[47px]" style={bx('top right')}>
         <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-0 top-0"></div>
         <div className="w-[416px] h-[25px] absolute left-[25px] top-[19px]">
-          <p className="text-[#4B4B4B] font-googleSansFlex w-[52px] h-[25px] absolute left-0 top-0" style={tf(18)}>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">
             Home
           </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex w-[53px] h-[25px] absolute left-[68px] top-0" style={tf(18)}>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[53px] h-[25px] absolute left-[68px] top-0">
             About
           </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex w-[65px] h-[25px] absolute left-[136px] top-0" style={tf(18)}>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[65px] h-[25px] absolute left-[136px] top-0">
             Journal
           </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex w-[74px] h-[25px] absolute left-[216px] top-0" style={tf(18)}>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[74px] h-[25px] absolute left-[216px] top-0">
             Program
           </p>
-          <p className="text-[#4B4B4B] font-googleSansFlex w-[110px] h-[25px] absolute left-[306px] top-0" style={tf(18)}>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[110px] h-[25px] absolute left-[306px] top-0">
             Work with us
           </p>
         </div>
@@ -191,27 +197,34 @@ useEffect(() => {
         </span>
         .
       </p>
-      <p
+      <div
         id="lockable-box"
-        className="text-[#000] font-googleSansFlex font-medium w-[450px] h-[111px] absolute left-[197px] top-[1579px]"
-        style={{ ...tf(40), transform: `translateY(${stickyY}px)`, zIndex: 50 }}
+        className="absolute left-[197px] top-[1579px]"
+        style={{ transform: `translateY(${stickyY}px)`, zIndex: 50 }}
       >
-        Learn how we work in <br />
-        <span
-          style={{
-            background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            color: 'transparent',
-            WebkitTextFillColor: 'transparent',
-            display: 'inline-block',
-          }}
-        >
-        4
-        </span>
-        {' '}
-        simple steps.
-      </p>
+        <div className="relative" style={bx('top left')}>
+          <p className="text-[#000] font-googleSansFlex font-medium text-[40px] w-[450px] h-[111px]">
+            Learn how we work in <br />
+            <span
+              style={{
+                background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent',
+                WebkitTextFillColor: 'transparent',
+                display: 'inline-block',
+              }}
+            >
+            4
+            </span>
+            {' '}
+            simple steps.
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[398px] h-12 absolute left-0 top-[119px]">
+            Learn how Synthica works and become a part of us.
+          </p>
+        </div>
+      </div>
       <div className="rounded-[50px] bg-[#F4F5F7] w-[1073px] h-[581px] absolute left-[197px] top-[908px]"></div>
       <div className="rounded-[25px] bg-[#FFF] w-[390px] h-[509px] absolute left-[236px] top-[944px]"></div>
       <div className="rounded-[25px] border border-[#DCEBFA] bg-[#EAF4FF] w-[580px] h-[284px] absolute left-[651px] top-[1169px]"></div>
@@ -220,11 +233,11 @@ useEffect(() => {
         className="rounded-[25px] w-[580px] h-[204px] absolute left-[651px] top-[944px] max-w-none"
         alt="Rectangle 9"
       />
-      <div className="w-[424px] h-[72px] absolute left-[729px] top-[1010px]">
-        <p className="text-[#000] font-googleSansFlex font-medium w-[142px] h-[52px] absolute left-[140px] top-0" style={tf(40)}>
+      <div className="w-[424px] h-[72px] absolute left-[729px] top-[1010px]" style={bx('top left')}>
+        <p className="text-[#000] font-googleSansFlex font-medium text-[40px] w-[142px] h-[52px] absolute left-[140px] top-0">
           16000+
         </p>
-        <p className="text-[#000] font-googleSansFlex w-[424px] h-[25px] absolute -left-0 top-12" style={tf(19)}>
+        <p className="text-[#000] font-googleSansFlex text-[19px] w-[424px] h-[25px] absolute -left-0 top-12">
           Researchers as members of Synthica worldwide
         </p>
       </div>
@@ -269,7 +282,7 @@ useEffect(() => {
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[134px] h-[33px] absolute left-[793px] top-[1248px]"></div>
       <div className="rounded-[50px] border border-[#DCEBFA] bg-[#D2E4F8] w-[145px] h-[33px] absolute left-[936px] top-[1248px]"></div>
       <div className="rounded-[50px] bg-[#DCEBFA] w-[140px] h-[33px] absolute left-[1090px] top-[1248px]"></div>
-      <div className="w-[98px] h-[19px] absolute left-[811px] top-[1255px]">
+      <div className="w-[98px] h-[19px] absolute left-[811px] top-[1255px]" style={bx('left center')}>
         <div className="w-[13px] h-[13px] absolute left-0 top-[3px]">
           <div className="w-[13px] h-[13px] absolute left-0 top-0">
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
@@ -318,12 +331,12 @@ useEffect(() => {
             <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[7px]"></div>
           </div>
         </div>
-        <p className="text-[#244A73] font-googleSansFlex font-medium w-[81px] h-[19px] absolute left-[17px] top-0" style={tf(14)}>
+        <p className="text-[#244A73] font-googleSansFlex font-medium text-sm w-[81px] h-[19px] absolute left-[17px] top-0">
           Community
         </p>
       </div>
-      <div className="w-[114px] h-[19px] absolute left-[954px] top-[1255px]">
-        <p className="text-[#244A73] font-googleSansFlex font-medium w-[97px] h-[19px] absolute left-[17px] top-0" style={tf(14)}>
+      <div className="w-[114px] h-[19px] absolute left-[954px] top-[1255px]" style={bx('left center')}>
+        <p className="text-[#244A73] font-googleSansFlex font-medium text-sm w-[97px] h-[19px] absolute left-[17px] top-0">
           Opportunities
         </p>
         <div className="w-[13px] h-[13px] absolute -left-0 top-[3px]">
@@ -358,8 +371,8 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <div className="w-[111px] h-[19px] absolute left-[903px] top-[1301px]">
-        <p className="text-[#244A73] font-googleSansFlex font-medium w-[94px] h-[19px] absolute left-[17px] -top-0" style={tf(14)}>
+      <div className="w-[111px] h-[19px] absolute left-[903px] top-[1301px]" style={bx('left center')}>
+        <p className="text-[#244A73] font-googleSansFlex font-medium text-sm w-[94px] h-[19px] absolute left-[17px] -top-0">
           Competitions
         </p>
         <div className="w-[13px] h-[13px] absolute -left-0 top-[3px]">
@@ -403,33 +416,27 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <p
-        className="text-[#4B4B4B] font-googleSansFlex w-[398px] h-12 absolute left-[197px] top-[1698px]"
-        style={{ ...tf(24), transform: `translateY(${stickyY}px)`, zIndex: 50 }}
-      >
-        Learn how Synthica works and become a part of us.
-      </p>
-      <div className="w-10 h-10 absolute left-[647px] top-[1589px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[1589px]" style={bx('center')}>
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex w-2.5 h-6 absolute left-[14px] top-[5px] text-center" style={tf(24)}>
+        <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-[14px] top-[5px] text-center">
           1
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[647px] top-[2047px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2047px]" style={bx('center')}>
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex w-2.5 h-6 absolute left-[13px] top-[5px] text-center" style={tf(24)}>
+        <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-[13px] top-[5px] text-center">
           2
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[647px] top-[2506px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2506px]" style={bx('center')}>
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 -top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex w-2.5 h-6 absolute left-[13px] top-[5px] text-center" style={tf(24)}>
+        <p className="text-[#FFF] font-googleSansFlex text-2xl w-2.5 h-6 absolute left-[13px] top-[5px] text-center">
           3
         </p>
       </div>
-      <div className="w-10 h-10 absolute left-[647px] top-[2965px]">
+      <div className="w-10 h-10 absolute left-[647px] top-[2965px]" style={bx('center')}>
         <div className="rounded-[50px] bg-[#244A73] w-10 h-10 absolute -left-0 top-0"></div>
-        <p className="text-[#FFF] font-googleSansFlex w-3 h-6 absolute left-[13px] top-[5px] text-center" style={tf(24)}>
+        <p className="text-[#FFF] font-googleSansFlex text-2xl w-3 h-6 absolute left-[13px] top-[5px] text-center">
           4
         </p>
       </div>
@@ -456,8 +463,8 @@ useEffect(() => {
           Become part of our global network of student researchers by joining
           our Discord server and connecting with peers.
         </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[359px] h-[31px] absolute left-[104px] top-[328px]">
+        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]" style={bx('left center')}></div>
+        <div className="w-[359px] h-[31px] absolute left-[104px] top-[328px]" style={bx('left center')}>
           <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
             <div className="w-6 h-6 absolute left-0 top-0">
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
@@ -504,7 +511,7 @@ useEffect(() => {
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex w-[526px] h-[31px] absolute left-[33px] -top-0" style={tf(24)}>
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[526px] h-[31px] absolute left-[33px] -top-0">
             Join our Research Community
           </p>
         </div>
@@ -532,8 +539,8 @@ useEffect(() => {
           Access our high-quality research curriculum and learn the foundations
           of academic research at your own pace.
         </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[398px] h-[31px] absolute left-[84px] top-[328px]">
+        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]" style={bx('left center')}></div>
+        <div className="w-[398px] h-[31px] absolute left-[84px] top-[328px]" style={bx('left center')}>
           <div className="w-6 h-6 absolute -left-0 top-[3px] overflow-hidden">
             <div className="w-6 h-6 absolute left-0 top-0">
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
@@ -582,7 +589,7 @@ useEffect(() => {
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[21px]"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex w-[565px] h-[31px] absolute left-[33px] -top-0" style={tf(24)}>
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[565px] h-[31px] absolute left-[33px] -top-0">
             Learn from our Expert Curriculum
           </p>
         </div>
@@ -610,8 +617,8 @@ useEffect(() => {
           Apply what you've learned to create your own original research
           project, with guidance from our community resources.
         </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
-        <div className="w-[565px] h-[31px] absolute left-[93px] top-[328px]">
+        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]" style={bx('left center')}></div>
+        <div className="w-[565px] h-[31px] absolute left-[93px] top-[328px]" style={bx('left center')}>
           <div className="w-6 h-6 absolute left-0 top-[3px] overflow-hidden">
             <div className="w-[18px] h-6 absolute left-[3px] top-0">
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
@@ -643,7 +650,7 @@ useEffect(() => {
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex w-[526px] h-[31px] absolute left-[33px] top-0" style={tf(24)}>
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[526px] h-[31px] absolute left-[33px] top-0">
             Develop your Research Project
           </p>
         </div>
@@ -671,12 +678,12 @@ useEffect(() => {
           Showcase your findings at our international research competitions and
           earn recognition for your work.
         </p>
-        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]"></div>
+        <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[482px] h-[72px] absolute left-[43px] top-[307px]" style={bx('left center')}></div>
       </div>
       <div className="bg-[#D9D9D9] w-0.5 h-[412px] absolute left-[666px] top-[1631px]"></div>
       <div className="bg-[#D9D9D9] w-0.5 h-[409px] absolute left-[666px] top-[2092px]"></div>
       <div className="bg-[#D9D9D9] w-0.5 h-[405px] absolute left-[666px] top-[2553px]"></div>
-      <div className="w-[325px] h-[31px] absolute left-[845px] top-[3285px]">
+      <div className="w-[325px] h-[31px] absolute left-[845px] top-[3285px]" style={bx('left center')}>
         <div className="w-[325px] h-[31px] absolute -left-0 -top-0">
           <div className="w-6 h-6 absolute -left-0 top-[3px]">
             <div className="w-6 h-6 absolute left-0 top-0">
@@ -702,7 +709,7 @@ useEffect(() => {
               <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
             </div>
           </div>
-          <p className="text-[#000] font-googleSansFlex w-[495px] h-[31px] absolute left-[31px] -top-0" style={tf(24)}>
+          <p className="text-[#000] font-googleSansFlex text-2xl w-[495px] h-[31px] absolute left-[31px] -top-0">
             Participate in Competitions
           </p>
         </div>

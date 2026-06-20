@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import MobileLanding from "./components/MobileLanding";
 
 // Design canvas width this layout was built for (every absolute px value
 // inside is authored against this exact frame width, confirmed against the
@@ -84,10 +85,14 @@ useEffect(() => {
   return () => window.removeEventListener("scroll", handleScroll);}, [scale]);
 
   return (
-    <div
-      className="bg-[#FFF] w-full relative overflow-hidden"
-      style={{ height: contentHeight ? contentHeight * scale : undefined }}
-    >
+    <>
+      <div className="md:hidden">
+        <MobileLanding />
+      </div>
+      <div
+        className="bg-[#FFF] w-full relative overflow-hidden hidden md:block"
+        style={{ height: contentHeight ? contentHeight * scale : undefined }}
+      >
       <div
         ref={contentRef}
         className="bg-[#FFF] relative"
@@ -204,7 +209,7 @@ useEffect(() => {
       >
         <div className="relative" style={bx('top left')}>
           <p className="text-[#000] font-googleSansFlex font-medium text-[40px] w-[450px] h-[111px]">
-            Learn how we work <br />in {' '}
+            Learn how we work in <br />
             <span
               style={{
                 background: 'linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%)',
@@ -1030,5 +1035,6 @@ useEffect(() => {
       </div>
       </div>
     </div>
+    </>
   );
 }

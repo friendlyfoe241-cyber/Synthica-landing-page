@@ -4,6 +4,7 @@
 Plain HTML/CSS/JS conversion of a Figma landing page design (Figma file `dVuj5lq49hRuKHXxiGIEZu`, node `29:97`). Previously a Next.js/React/TSX project; converted to static `index.html` + `styles.css` + `script.js`.
 
 ## Architecture
+- **Static site (no build)**: plain `index.html` + `styles.css` + `script.js` + `public/` images. `vercel.json` deploys as a no-build static site (`framework: null`, `outputDirectory: "."`) so files are served from the repo root. **Important:** do NOT re-add Next.js scaffolding (package.json/next.config.mjs/app/) — Vercel will detect it and serve the wrong (broken) app.
 - **Fixed 1200px canvas**: All elements use absolute positioning at exact Figma pixel coordinates (Figma frame origin offset: `ox=-3674, oy=-845` to convert Figma absoluteBoundingBox → canvas coords).
 - **Responsive scaling**: `script.js` scales the 1200px `.canvas` to fit any viewport via CSS transform.
 - **Fonts**: Google Fonts (Inter, Instrument Serif). The Figma design uses "Google Sans Flex" (proprietary, unavailable) — `Google Sans Flex` is listed first in font-family stacks with sans-serif fallback.

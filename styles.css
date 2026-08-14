@@ -247,7 +247,7 @@ body{
 .test-divider-2{position:absolute;left:0;top:5199px;width:1200px;height:1px;background:#000;}
 .test-divider-3{position:absolute;left:0;top:5255px;width:1200px;height:1px;background:#000;}
 .testimonials-bg{
-  position:absolute;left:56px;top:4599px;width:1088px;height:600px;
+  position:absolute;left:56px;top:4589px;width:1098px;height:615px;
   background:url('public/testimonial-bg.png') center/cover no-repeat;
   border:1px solid #000;box-sizing:border-box;
 }
@@ -290,10 +290,10 @@ body{
 .tname{left:29px;top:201px;width:97px;height:24px;}
 .trole{left:29px;top:225px;width:97px;height:24px;}
 .tfig-2 .tname{top:189px;} .tfig-2 .trole{top:213px;}
-.tname2{left:84px;}
-.trole2{left:84px;}
-.tfig-4 .tname2{top:11px;width:116.23px;height:24px;}
-.tfig-4 .trole2{top:35px;width:116.23px;height:24px;}
+.tname2{left:130px;}
+.trole2{left:130px;}
+.tfig-4 .tname2{top:100px;width:146.23px;height:24px;}
+.tfig-4 .trole2{top:120px;width:116.23px;height:24px;}
 .tfig-4 .trole2-gray{color:#4B4B4B;}
 .tfig-5 .tname2{top:274px;width:95.4px;height:24px;}
 .tfig-5 .trole2{top:298px;width:95.4px;height:24px;}

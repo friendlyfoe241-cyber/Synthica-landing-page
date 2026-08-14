@@ -1,0 +1,550 @@
+export default function About() {
+  return (
+    <div className="bg-[#FFF] min-w-screen min-h-screen">
+      <img
+        src="/ChatgptImageJun19202611_43_49Pm1.png"
+        className="w-full h-[555px] absolute left-0 top-[227px] max-w-none"
+        alt="ChatGPT Image Jun 19, 2026, 11_43_49 PM 1"
+      />
+      <img
+        src="/ChatgptImageJun12202609_19_24Pmphotoroom1.png"
+        className="w-full h-[302px] absolute left-0 top-0 max-w-none"
+        alt="ChatGPT Image Jun 12, 2026, 09_19_24 PM-Photoroom 1"
+      />
+      <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[175px] h-[60px] absolute left-7 top-[47px]"></div>
+      <div className="w-[140px] h-[42px] absolute left-[42px] top-14">
+        <p className="text-[#000] font-googleSansFlex text-xl w-[89px] h-[30px] absolute left-[51px] top-[9px]">
+          Synthica
+        </p>
+        <img
+          src="/Image2.png"
+          className="rounded-[20px] w-[42px] h-[42px] absolute -left-0 -top-0 max-w-none"
+          alt="image 2"
+        />
+      </div>
+      <div className="w-[457px] h-[60px] absolute left-[716px] top-[47px]">
+        <div className="rounded-[20px] bg-[rgba(188,188,188,0.10)] w-[457px] h-[60px] absolute left-0 top-0"></div>
+        <div className="w-[416px] h-[25px] absolute left-6 top-[19px]">
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[52px] h-[25px] absolute left-0 top-0">
+            Home
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[53px] h-[25px] absolute left-[68px] top-0">
+            About
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[65px] h-[25px] absolute left-[136px] top-0">
+            Journal
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[74px] h-[25px] absolute left-[216px] top-0">
+            Program
+          </p>
+          <p className="text-[#4B4B4B] font-googleSansFlex text-lg w-[110px] h-[25px] absolute left-[306px] top-0">
+            Work with us
+          </p>
+        </div>
+      </div>
+      <div className="w-full h-[430px] absolute left-0 top-[1449px] overflow-hidden">
+        <div className="w-full h-[350px] absolute left-0 top-px overflow-hidden">
+          <div className="w-[278px] h-[350px] absolute left-0 top-0 overflow-hidden">
+            <div className="border-r border-r-[#D4DDF0] border-b border-b-[#D4DDF0] w-[278px] h-[350px] absolute left-0 top-0"></div>
+            <img
+              src="/Jrpcseavnrggmr66ykiuxtrz4opng.png"
+              className="w-[278px] h-[350px] absolute left-0 top-0 overflow-hidden max-w-none"
+              alt="jrPcsEAVNRGGmr66ykiuXTrz4o.png"
+            />
+            <p className="text-[#00081A] font-googleSansFlex text-lg font-semibold leading-[22.4px] w-28 h-[45px] absolute left-6 top-[13px] tracking-[-0.0178em]">
+              Accessibility
+            </p>
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-sm font-medium leading-[19.6px] w-60 h-[78px] absolute left-6 top-[42px] tracking-[-0.02em]">
+              Free, high-quality research education for all students, regardless
+              of their financial situation or geographic location.
+            </p>
+          </div>
+          <div className="w-72 h-[350px] absolute left-[277px] top-0 overflow-hidden">
+            <div className="border-r border-r-[#D4DDF0] border-b border-b-[#D4DDF0] w-72 h-[350px] absolute left-0 top-0"></div>
+            <img
+              src="/Reo18vmkmpk9llqdzpvqn1mv98png.png"
+              className="w-72 h-[350px] absolute left-0 top-0 overflow-hidden max-w-none"
+              alt="reO18vmKmpk9LLqdzpvqN1mv98.png"
+            />
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-lg font-semibold leading-[22.4px] w-[94px] h-5 absolute left-6 top-[25px] tracking-[-0.0178em]">
+              Excellence
+            </p>
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-sm font-medium leading-[19.6px] w-[261px] h-[81px] absolute left-6 top-[39px] tracking-[-0.02em]">
+              Curriculum reviewed by top university researchers ensuring
+              academic rigor and real-world relevance.
+            </p>
+          </div>
+          <div className="w-[318px] h-[350px] absolute left-[565px] top-0 overflow-hidden">
+            <div className="border-r border-r-[#D4DDF0] border-b border-b-[#D4DDF0] w-[318px] h-[350px] absolute left-0 top-0"></div>
+            <img
+              src="/Ioh79rajou8maw7qkkh6fg8lzupng.png"
+              className="w-[318px] h-[350px] absolute left-0 top-0 overflow-hidden max-w-none"
+              alt="IoH79RAjou8maw7qKkH6Fg8LZU.png"
+            />
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-lg font-semibold leading-[22.4px] w-[119px] h-5 absolute left-6 top-[25px] tracking-[-0.0178em]">
+              Community
+            </p>
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-sm font-medium leading-[19.6px] w-[269px] h-[58px] absolute left-6 top-[45px] tracking-[-0.02em]">
+              Building a supportive global network of student researchers,
+              mentors, and academic professionals.
+            </p>
+          </div>
+          <div className="w-[319px] h-[350px] absolute left-[882px] top-0 overflow-hidden">
+            <img
+              src="/Qukilrwp8h1enjeflougeon4atqpng.png"
+              className="w-[394px] h-[350px] absolute -left-[75px] top-0 overflow-hidden max-w-none"
+              alt="QUkilrwp8H1ENjefLOUGeON4AtQ.png"
+            />
+            <div className="border-b border-b-[#D4DDF0] w-[319px] h-[350px] absolute left-0 top-0"></div>
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-lg font-semibold leading-[22.4px] w-[145px] h-5 absolute left-6 top-[15px] tracking-[-0.0178em]">
+              Innovation
+            </p>
+            <p className="flex flex-col justify-center text-[#00081A] font-googleSansFlex text-sm font-medium leading-[19.6px] w-[258px] h-14 absolute left-6 top-[43px] tracking-[-0.02em]">
+              Encouraging creative thinking and novel approaches to solving
+              real-world problems through research.
+            </p>
+          </div>
+        </div>
+        <div className="border-r border-r-[#D4DDF0] border-b border-b-[#D4DDF0] border-l border-l-[#D4DDF0] w-full h-[351px] absolute left-0 top-0"></div>
+      </div>
+      <p className="text-[#000] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD49.52%,#0070C8100%] w-[731px] h-[50px] absolute left-[235px] top-[811px] text-center">
+        Making Research Accessible to Everyone
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C851.44%] w-[293px] h-[50px] absolute left-[454px] top-[1380px] text-center">
+        Our Core Values
+      </p>
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[1144px] h-[60px] absolute left-7 top-[891px] text-center">
+        At Synthica, we believe that every high school student deserves the
+        opportunity to explore the world of academic research, regardless of
+        their background or resources.
+      </p>
+      <div className="bg-[#D9D9D9] w-12 h-7 absolute left-[6676px] top-[2369px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[1144px] h-[269px] absolute left-7 top-[1943px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[1144px] h-[269px] absolute left-7 top-[1946px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-7 top-[2243px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-[417px] top-[2243px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-[805px] top-[2243px]"></div>
+      <img
+        src="/Image11.png"
+        className="rounded-[500px] w-[190px] h-[190px] absolute left-20 top-[1983px] max-w-none"
+        alt="image 11"
+      />
+      <p className="text-[#000] font-googleSansFlex text-[50px] w-[234px] h-[63px] absolute left-[301px] top-[2025px] text-center">
+        Quang Bui
+      </p>
+      <p className="text-[#4B4B4B] font-googleSansFlex text-[34px] w-[535px] h-[43px] absolute left-[301px] top-[2088px]">
+        Founder &amp; Executive Director
+      </p>
+      <div className="w-[50px] h-[50px] absolute left-[1061px] top-[1983px] overflow-hidden">
+        <svg
+          width="7"
+          height="7"
+          viewBox="0 0 7 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-1.5 h-1.5 absolute left-2.5 top-2.5 "
+        >
+          <path
+            d="M3.125 6.25C4.8509 6.25 6.25 4.8509 6.25 3.125C6.25 1.3991 4.8509 0 3.125 0C1.3991 0 0 1.3991 0 3.125C0 4.8509 1.3991 6.25 3.125 6.25Z"
+            fill="#244A73"
+          />
+        </svg>
+        <svg
+          width="7"
+          height="21"
+          viewBox="0 0 7 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-1.5 h-[21px] absolute left-2.5 top-[19px] "
+        >
+          <path
+            d="M0 2.08333C0 0.93275 0.93275 0 2.08333 0H4.16667C5.31725 0 6.25 0.932729 6.25 2.08333V18.75C6.25 19.9006 5.31725 20.8333 4.16667 20.8333H2.08333C0.93275 20.8333 0 19.9006 0 18.75V2.08333Z"
+            fill="#244A73"
+          />
+        </svg>
+        <svg
+          width="19"
+          height="21"
+          viewBox="0 0 19 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[19px] h-[21px] absolute left-[21px] top-[19px] "
+        >
+          <path
+            d="M2.08333 20.8333H4.16667C5.31729 20.8333 6.25 19.9006 6.25 18.75V9.375C6.25 6.25 12.5 4.16667 12.5 8.33333V18.7508C12.5 19.9015 13.4327 20.8333 14.5833 20.8333H16.6667C17.8173 20.8333 18.75 19.9006 18.75 18.75V6.25C18.75 2.08333 15.625 0 11.4583 0C7.29167 0 6.25 3.125 6.25 3.125V2.08333C6.25 0.932729 5.31729 0 4.16667 0H2.08333C0.932708 0 0 0.93275 0 2.08333V18.75C0 19.9006 0.932708 20.8333 2.08333 20.8333Z"
+            fill="#244A73"
+          />
+        </svg>
+        <svg
+          width="46"
+          height="46"
+          viewBox="0 0 46 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[46px] h-[46px] absolute left-0.5 top-0.5 "
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M39.5833 0C43.0352 0 45.8333 2.79823 45.8333 6.25V39.5833C45.8333 43.0352 43.0352 45.8333 39.5833 45.8333H6.25C2.79823 45.8333 0 43.0352 0 39.5833V6.25C0 2.79823 2.79823 0 6.25 0H39.5833ZM39.5833 4.16667C40.734 4.16667 41.6667 5.09942 41.6667 6.25V39.5833C41.6667 40.734 40.734 41.6667 39.5833 41.6667H6.25C5.09942 41.6667 4.16667 40.734 4.16667 39.5833V6.25C4.16667 5.09942 5.09942 4.16667 6.25 4.16667H39.5833Z"
+            fill="#244A73"
+          />
+        </svg>
+      </div>
+      <div className="w-[257px] h-[179px] absolute left-[83px] top-[2285px]">
+        <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-4 top-[106px] text-center">
+          Tiffany Angelie
+        </p>
+        <img
+          src="/Image12.png"
+          className="rounded-[50px] w-[100px] h-[100px] absolute left-[78px] top-0 max-w-none"
+          alt="image 12"
+        />
+        <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-0 top-[149px] text-center">
+          Chief Marketing Officer
+        </p>
+      </div>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[488px] top-[2391px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image13.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[550px] top-[2285px] max-w-none"
+        alt="image 13"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[472px] top-[2434px] text-center">
+        Chief Marketing Officer
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[876px] top-[2391px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image14.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[938px] top-[2285px] max-w-none"
+        alt="image 14"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[860px] top-[2434px] text-center">
+        Chief Marketing Officer
+      </p>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-7 top-[2624px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-[417px] top-[2624px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-[805px] top-[2624px]"></div>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[99px] top-[2772px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image15.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[161px] top-[2666px] max-w-none"
+        alt="image 15"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[83px] top-[2815px] text-center">
+        Chief Marketing Officer
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[488px] top-[2772px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image16.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[550px] top-[2666px] max-w-none"
+        alt="image 16"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[472px] top-[2815px] text-center">
+        Chief Marketing Officer
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[876px] top-[2772px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image17.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[938px] top-[2666px] max-w-none"
+        alt="image 17"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[860px] top-[2815px] text-center">
+        Chief Marketing Officer
+      </p>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-7 top-[2921px]"></div>
+      <div className="rounded-[22px] bg-[#F4F5F7] w-[367px] h-[269px] absolute left-[417px] top-[2921px]"></div>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[99px] top-[3069px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image18.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[161px] top-[2963px] max-w-none"
+        alt="image 18"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[83px] top-[3112px] text-center">
+        Chief Marketing Officer
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[34px] w-[225px] h-[43px] absolute left-[488px] top-[3069px] text-center">
+        Tiffany Angelie
+      </p>
+      <img
+        src="/Image19.png"
+        className="rounded-[50px] w-[100px] h-[100px] absolute left-[550px] top-[2963px] max-w-none"
+        alt="image 19"
+      />
+      <p className="text-[#4B4B4B] font-googleSansFlex text-2xl w-[257px] h-[30px] absolute left-[472px] top-[3112px] text-center">
+        Chief Marketing Officer
+      </p>
+      <div className="flex flex-col justify-center items-start w-full h-[715px] absolute left-0 top-[3265px]">
+        <div className="flex pt-px pr-14 pb-px pl-[54px] flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full">
+          <div className="border-r border-r-[#000] border-l border-l-[#000] w-full h-[55px]"></div>
+        </div>
+        <div className="flex py-px px-14 flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full h-[601px]">
+          <div className="flex pr-px flex-col items-start border-r border-r-[#000] border-l border-l-[#000] w-full h-[600px]">
+            <div className="flex flex-col justify-center items-start w-full">
+              <img
+                src="/Backgroundborder.png"
+                className="border border-[#000] w-[1088px] h-[602px] overflow-hidden max-w-none"
+                alt="Background+Border"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex pt-px pr-14 pb-px pl-[54px] flex-col justify-center items-start border-t border-t-[#000] border-b border-b-[#000] bg-[#FFF] w-full">
+          <div className="flex pt-0 pr-[470px] pb-0 pl-[18px] items-center gap-0.5 border-r border-r-[#000] border-l border-l-[#000] w-full h-[55px]">
+            <p className="text-[#000] font-googleSansFlex text-[21px] font-medium leading-[62.4px] w-[586px] h-[63px]">
+              © 2026 Synthica. All rights reserved. Platform developed with{" "}
+            </p>
+            <div className="w-3.5 h-3.5 relative">
+              <div className="w-3.5 h-3.5 absolute left-0 top-0">
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0 top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[9px] top-[11px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-[11px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[5px] top-3"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-0.5 top-0"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[11px] top-0"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-1 top-[11px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[7px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[9px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-[11px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-[7px] top-3"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-0.5"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-1"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[5px]"></div>
+                <div className="bg-[#FFF] w-0.5 h-0.5 absolute left-3 top-[7px]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-[790px] h-[340px] absolute left-[217px] top-[990px]">
+        <div className="w-[283px] h-[108px] absolute left-[507px] top-[194px]">
+          <div className="rounded-[30px] bg-[rgba(255,255,255,0.20)] shadow-[02px2px0rgba(0,0,0,0.25)] w-[259px] h-[72px] absolute left-0 top-9"></div>
+          <div className="w-[221px] h-[87px] absolute left-[62px] top-0">
+            <div className="w-[221px] h-[87px] absolute -left-0 -top-0">
+              <div className="w-6 h-6 absolute left-0 top-0">
+                <div className="w-6 h-6 absolute left-0 top-0">
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[18px]"></div>
+                </div>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-2xl w-[189px] h-[31px] absolute left-8 top-14">
+                25+ Partners
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="w-[300px] h-[108px] absolute left-0 top-[84px]">
+          <div className="rounded-[30px] bg-[#FFF] shadow-[02px2px0rgba(0,0,0,0.25)] w-[300px] h-[72px] absolute left-0 top-9"></div>
+          <div className="w-60 h-[87px] absolute left-[30px] top-0">
+            <div className="w-60 h-[87px] absolute -left-0 top-0">
+              <div className="w-6 h-6 absolute left-0 top-0">
+                <div className="w-6 h-6 absolute left-0 top-0">
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[3px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[15px]"></div>
+                </div>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-2xl w-52 h-[31px] absolute left-8 top-14">
+                100+ Projects
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/Image10.png"
+          className="w-[340px] h-[340px] absolute left-[213px] top-0 max-w-none"
+          alt="image 10"
+        />
+        <div className="w-[300px] h-[108px] absolute left-4 top-[223px]">
+          <div className="rounded-[30px] bg-[rgba(255,255,255,0.20)] shadow-[02px2px0rgba(0,0,0,0.25)] w-[300px] h-[72px] absolute left-0 top-9"></div>
+          <div className="w-[184px] h-[87px] absolute left-[58px] top-0">
+            <div className="w-[184px] h-[87px] absolute left-0 top-0">
+              <div className="w-[184px] h-[87px] absolute left-0 top-0">
+                <div className="w-6 h-6 absolute left-0 top-0 overflow-hidden">
+                  <div className="w-6 h-6 absolute left-0 top-0">
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-0"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-0"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[3px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[3px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[3px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[3px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[3px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[18px] top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[21px] top-1.5"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-[9px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[15px] top-[9px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-3"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-1.5 top-3"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[15px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[18px]"></div>
+                    <div className="bg-[#FFF] w-[3px] h-[3px] absolute left-0 top-[21px]"></div>
+                  </div>
+                </div>
+                <p className="text-[#000] font-googleSansFlex text-2xl w-[152px] h-[31px] absolute left-8 top-14">
+                  93+ Countries
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[300px] h-[72px] absolute left-[483px] top-[71px]">
+          <div className="rounded-[30px] bg-[rgba(255,255,255,0.20)] shadow-[02px2px0rgba(0,0,0,0.25)] w-[300px] h-[72px] absolute left-0 top-0"></div>
+          <div className="w-[239px] h-[31px] absolute left-[31px] top-5">
+            <div className="w-[239px] h-[31px] absolute -left-0 top-0">
+              <div className="w-6 h-6 absolute -left-0 top-[3px]">
+                <div className="w-6 h-6 absolute left-0 top-0">
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-0 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[3px] top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-1.5 top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[9px] top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-0"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-3 top-3"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-1.5"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[15px] top-[15px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[9px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[18px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[18px] top-[21px]"></div>
+                  <div className="bg-[#000] w-[3px] h-[3px] absolute left-[21px] top-[9px]"></div>
+                </div>
+              </div>
+              <p className="text-[#000] font-googleSansFlex text-2xl w-52 h-[31px] absolute left-[31px] top-0">
+                1600+ Researchers
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-[186px] absolute left-0 top-[238px]">
+        <div className="w-full h-[186px] absolute left-0 top-0">
+          <p className="text-[#000] font-instrumentSerif text-[80px] w-full h-[105px] absolute left-0 top-0 text-center">
+            About Synthica
+          </p>
+          <p className="text-[#535353] font-googleSansFlex text-[25px] w-[985px] h-[67px] absolute left-[117px] top-[119px] text-center">
+            Empowering the next generation of researchers through accessible
+            education and global opportunities.
+          </p>
+        </div>
+      </div>
+      <p className="text-[#000] font-googleSansFlex text-[40px] w-[1120px] h-[50px] absolute left-10 top-[2558px] text-center">
+        Expertise Team
+      </p>
+      <p className="text-[#000] font-googleSansFlex text-[40px] bg-linear-[90deg,#B0DBFD0%,#0070C8100%] w-[1120px] h-[50px] absolute left-10 top-[1871px] text-center">
+        Meet the People Behind Synthica
+      </p>
+    </div>
+  );
+}

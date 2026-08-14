@@ -33,6 +33,14 @@ The design source is Figma file `dVuj5lq49hRuKHXxiGIEZu`, node `29:97` (token pr
 - Final mean diff: ~6.37 (all remaining diff is font glyph anti-aliasing: headless Chromium renders Inter ~38% lighter than Figma's Type-3 rasterizer at 15px; Google Sans Flex unavailable).
 - All structural elements (backgrounds, card colors, borders, positions, divider lines) verified exact match.
 
+## SEO / GEO Assets
+- `robots.txt` — allows all crawlers incl. AI/LLM bots (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.) + points to sitemap.
+- `sitemap.xml` — 5 URLs (/, /about, /program, /journal, /work-with-us) with image extension.
+- `llms.txt` — plain-English summary for LLM crawlers (GEO). Links to pages + robots/sitemap.
+- `site.webmanifest` — PWA manifest (name, icons from /public/logo.png).
+- Each `.html` `<head>` has: title, meta description/keywords, robots directives, canonical, OG + Twitter cards, favicon/manifest links, and page-appropriate JSON-LD (Organization, WebSite, FAQPage on index; AboutPage on about; EducationalOrganization on program; CollectionPage on journal; WebPage on work-with-us).
+- Canonical domain placeholder is `https://synthica.org` — replace globally (robots.txt, sitemap.xml, llms.txt, all HTML canonical/OG/Twitter/JSON-LD) once the real domain is known.
+
 ## Gotchas / Learnings
 - Figma "Background+Border" frames have a 1px black INSIDE stroke that renders as full-width black lines OVER their children in the PDF export. The testimonials section has divider lines at y=4597 (2px), y=5199 (1px), y=5255 (1px) drawn over the testimonial cards — implemented as explicit `.test-divider*` divs placed last in HTML (highest z-order).
 - Testimonial figure cards have `border-radius:28px; border:1px solid #000`.

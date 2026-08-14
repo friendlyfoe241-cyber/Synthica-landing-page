@@ -1,0 +1,41 @@
+# Synthica
+
+> Synthica is a free, non-selective research community that gives high school students a playground to conduct original research and participate in international competitions, regardless of their background, experience, or resources.
+
+Synthica helps high school students start and grow a research career with a zero-cost, non-selective program. Members join a global network of student researchers, learn the foundations of academic research from an expert curriculum, build their own original research projects, and showcase their findings at international research competitions.
+
+## Key facts
+
+- **Audience:** high school students worldwide
+- **Cost:** free / zero cost
+- **Selectivity:** non-selective — open to all high school students
+- **Community:** 1600+ researchers as members across the world
+- **Outcomes:** original student research projects and international research competition participation
+
+## How it works (4 steps)
+
+1. Join the global student research community (Discord).
+2. Learn research foundations from the expert curriculum at your own pace.
+3. Develop your own original research project with community guidance.
+4. Participate in international research competitions and showcase your work.
+
+## Core values
+
+- Accessibility — every high school student deserves the opportunity to explore academic research.
+- Excellence — a curriculum reviewed by top university researchers.
+- Community — a global, peer-driven network of student researchers.
+- Innovation — original student research and competition opportunities.
+
+## Pages
+
+- [Home](https://synthica.org/): Research made approachable for you.
+- [About](https://synthica.org/about): About Synthica, mission, values, and the team.
+- [Program](https://synthica.org/program): The zero-cost, non-selective research program.
+- [Journal](https://synthica.org/journal): Synthica journal and publications.
+- [Work with us](https://synthica.org/work-with-us): Opportunities to get involved or partner with Synthica.
+
+## Optional
+
+- [llms.txt](https://synthica.org/llms.txt)
+- [robots.txt](https://synthica.org/robots.txt)
+- [sitemap.xml](https://synthica.org/sitemap.xml)

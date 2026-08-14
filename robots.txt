@@ -1,0 +1,59 @@
+# Synthica — robots.txt
+# https://synthica.org
+
+# Allow all crawlers (including AI/LLM crawlers) full access.
+User-agent: *
+Allow: /
+
+# Explicitly welcome common AI/LLM crawlers so site content can be
+# surfaced in generative search and answer engines (GEO).
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://synthica.org/sitemap.xml

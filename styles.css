@@ -287,8 +287,8 @@ body{
 .trole,.trole2{
   position:absolute;font-family:'Inter',sans-serif;font-weight:400;font-size:15.125px;color:#000;line-height:24px;
 }
-.tname{left:29px;top:201px;width:97px;height:24px;}
-.trole{left:29px;top:225px;width:97px;height:24px;}
+.tname{left:29px;top:201px;width:197px;height:24px;}
+.trole{left:29px;top:225px;width:197px;height:24px;}
 .tfig-2 .tname{top:189px;} .tfig-2 .trole{top:213px;}
 .tname2{left:130px;}
 .trole2{left:130px;}

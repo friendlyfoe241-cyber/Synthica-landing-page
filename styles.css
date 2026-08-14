@@ -151,8 +151,8 @@ body{
 }
 
 /* step number circles + vertical connector */
-.step-line{position:absolute;left:497.6px;top:1589px;width:2px;height:2531px;background:#DCEBFA;}
-.step-num{position:absolute;left:496.7px;width:40.1px;height:40.1px;}
+.step-line{position:absolute;left:515.6px;top:1599px;width:2px;height:1401px;background:#DCEBFA; z-index: 1;}
+.step-num{position:absolute;left:496.7px;width:40.1px;height:40.1px;z-index: 2;}
 .step-num-1{top:1589px;}
 .step-num-2{top:2047.3px;}
 .step-num-3{top:2505.8px;}
@@ -221,9 +221,10 @@ body{
 .faq-r1{top:0;width:488px;} .faq-r2{top:126px;width:485px;} .faq-r3{top:252px;width:492px;}
 .faq-item-row{position:absolute;left:17px;top:40px;height:30px;width:485px;display:flex;align-items:center;}
 .faq-l1 .faq-item-row{left:23px;}
+.faq-l2 .faq-item-row{left:21px;}
 .faq-l3 .faq-item-row{left:20px;}
 .faq-l4 .faq-item-row{left:17px;}
-.faq-r1 .faq-item-row{left:26px;width:484px;}
+.faq-r1 .faq-item-row{left:18px;width:484px;}
 .faq-r2 .faq-item-row{left:17px;width:481px;}
 .faq-r3 .faq-item-row{left:8px;width:488px;}
 .faq-item-row p{
@@ -231,7 +232,7 @@ body{
   white-space:nowrap;
 }
 .faq-plus{
-  position:absolute;right:0;top:3px;width:24px;height:24px;flex:none;
+  position:absolute;right:40px;top:3px;width:24px;height:24px;flex:none;
 }
 .faq-plus::before,.faq-plus::after{content:"";position:absolute;background:#111;border-radius:10px;}
 .faq-plus::before{left:5px;top:11px;width:14px;height:2px;}

@@ -196,7 +196,7 @@ body{
   font-family:'Google Sans Flex',sans-serif;font-weight:400;font-size:42px;color:#4B4B4B;line-height:57.6px;
 }
 .feature-cards{position:absolute;left:28px;top:3580px;width:1144px;height:124px;}
-.fc{position:absolute;top:0;height:124px;background:#FFF;border-radius:12px;}
+.fc{position:absolute;top:0;height:124px;background:#FFF;border-radius:12px;border:1px solid #E5E5E5;}
 .fc-1{left:0;width:344px;}
 .fc-2{left:384px;width:360px;}
 .fc-3{left:784px;width:360px;}

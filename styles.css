@@ -132,7 +132,15 @@ body{
 .taglabel-3{left:768.4px;top:1301px;width:111px;}
 .tagicon{width:13.16px;height:13.16px;object-fit:contain;margin-right:6px;}
 
-/* ===================== STEP INTRO ===================== */
+/* ===================== STEP INTRO (sticky/pinned) =====================
+   The step-intro-sticky wrapper lives inside .canvas at top:0 (so children
+   keep their absolute design coords). JS pins it to the top portion of the
+   viewport while the step cards scroll by, by applying a counter-translate
+   that cancels out the page scroll within the pin range. */
+.step-intro-sticky{
+  position:absolute;left:0;top:0;width:1200px;height:5256px;pointer-events:none;z-index:5;
+}
+
 .step-title{
   position:absolute;left:67px;top:1589px;width:450px;height:101px;
   font-family:'Google Sans Flex',sans-serif;font-weight:400;font-size:40px;color:#000;line-height:50.08px;

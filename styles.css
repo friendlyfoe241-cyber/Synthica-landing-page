@@ -70,7 +70,10 @@ body{
 }
 
 /* ============================ NAV ============================ */
-.nav-brand-bg{position:absolute;left:28px;top:47px;width:175px;height:60px;background:rgba(187,187,187,0.10);border-radius:20px;}
+.nav-brand-bg{position:absolute;left:28px;top:47px;width:175px;height:60px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  background:rgba(187,187,187,0.10);border-radius:20px;}
 .nav-brand{position:absolute;left:42px;top:56px;width:140px;height:42px;}
 .nav-brand-text{
   position:absolute;left:51px;top:9px;width:89px;height:30px;
@@ -79,7 +82,9 @@ body{
 .nav-brand-logo{position:absolute;left:0;top:0;width:42.25px;height:42.25px;border-radius:20px;object-fit:cover;}
 
 .nav-links{position:absolute;left:715px;top:47px;width:457px;height:60px;}
-.nav-links-bg{position:absolute;left:0;top:0;width:457px;height:60px;background:rgba(187,187,187,0.10);border-radius:20px;}
+.nav-links-bg{position:absolute;left:0;top:0;width:457px;height:60px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);background:rgba(187,187,187,0.10);border-radius:20px;}
 .nav-links-row{position:absolute;left:25px;top:19px;width:416px;height:25px;display:flex;}
 .nav-links-row p{
   position:absolute;top:0;height:25px;

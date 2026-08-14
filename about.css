@@ -3,6 +3,10 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 
+:root{
+  --grad: linear-gradient(90deg, #B0DBFD 0%, #0070C8 100%);
+}
+
 body{
   background:#FFF;
   font-family:'Google Sans Flex','Inter',sans-serif;
@@ -13,6 +17,14 @@ body{
   position:relative;
   width:100%;
   margin:0 auto;
+}
+
+.grad-text{
+  background:var(--grad);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
 }
 
 .canvas{
@@ -31,7 +43,7 @@ body{
   max-width:none; object-fit:fill;
 }
 .ab-bg-mid{
-  position:absolute; left:0; top:227px;
+  position:absolute; left:0; top:207px;
   width:1200px; height:555px;
   max-width:none; object-fit:fill;
 }
@@ -40,6 +52,8 @@ body{
 .ab-logo-pill{
   position:absolute; left:28px; top:47px;
   width:175px; height:60px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   background:rgba(188,188,188,0.10);
   border-radius:20px;
 }
@@ -63,6 +77,8 @@ body{
 .ab-nav-pill{
   position:absolute; left:716px; top:47px;
   width:457px; height:60px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   background:rgba(188,188,188,0.10);
   border-radius:20px;
 }
@@ -81,7 +97,7 @@ body{
 
 /* ===== ABOUT SYNTHICA TITLE ===== */
 .ab-title-section{
-  position:absolute; left:0; top:238px;
+  position:absolute; left:0; top:208px;
   width:1200px; height:186px;
 }
 .ab-title{
@@ -104,7 +120,7 @@ body{
 
 /* ===== MAKING RESEARCH ACCESSIBLE ===== */
 .ab-research-heading{
-  position:absolute; left:235px; top:811px;
+  position:absolute; left:235px; top:795px;
   width:731px; height:50px;
   font-size:40px;
   color:#000;
@@ -112,7 +128,7 @@ body{
   line-height:50px;
 }
 .ab-research-desc{
-  position:absolute; left:28px; top:891px;
+  position:absolute; left:28px; top:870px;
   width:1144px; height:60px;
   font-size:24px;
   color:#4B4B4B;
@@ -122,26 +138,30 @@ body{
 
 /* ===== STATS SECTION ===== */
 .ab-stats{
-  position:absolute; left:217px; top:990px;
+  position:absolute; left:217px; top:960px;
   width:790px; height:340px;
 }
 
 /* 1600+ Researchers (top-right pill) */
 .ab-stat-1600{
-  position:absolute; left:483px; top:71px;
+  position:absolute; left:473px; top:64px;
   width:300px; height:72px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   background:rgba(255,255,255,0.20);
   border-radius:30px;
-  box-shadow:2px 2px 0 rgba(0,0,0,0.25);
+  box-shadow:2px 2px 0 rgba(0,0,0,0.45);
+  z-index: 2;
 }
 .ab-stat-1600-content{
-  position:absolute; left:483px; top:74px;
+  position:absolute; left:503px; top:85px;
   width:239px; height:31px;
+  z-index: 2;
 }
 .ab-stat-icon-1600{
   position:absolute; left:0; top:3px;
   width:24px; height:24px;
-  background:url('public/icon-heart.png') center/contain no-repeat;
+  background:url('public/1600-pic.png') center/contain no-repeat;
 }
 .ab-stat-text-1600{
   position:absolute; left:31px; top:0;
@@ -156,20 +176,20 @@ body{
 .ab-stat-100{
   position:absolute; left:0; top:93px;
   width:300px; height:72px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   background:#FFF;
   border-radius:30px;
-  box-shadow:2px 2px 0 rgba(0,0,0,0.25);
+  box-shadow:2px 2px 0 rgba(0,0,0,0.45);
 }
 .ab-stat-100-content{
-  position:absolute; left:30px; top:84px;
+  position:absolute; left:30px; top:64px;
   width:240px; height:87px;
 }
 .ab-stat-icon-100{
-  position:absolute; left:0; top:0;
+  position:absolute; left:-10; top:60px;
   width:24px; height:24px;
-  background:#000;
-  -webkit-mask:url('public/icon-book.png') center/contain no-repeat;
-  mask:url('public/icon-book.png') center/contain no-repeat;
+  background:url('public/100-pic.png') center/contain no-repeat;
 }
 .ab-stat-text-100{
   position:absolute; left:32px; top:56px;
@@ -186,26 +206,27 @@ body{
   width:340px; height:340px;
   max-width:none;
   object-fit:contain;
+  z-index: 1;
 }
 
 /* 25+ Partners (top-right pill) */
 .ab-stat-25{
-  position:absolute; left:507px; top:275px;
+  position:absolute; left:507px; top:225px;
   width:259px; height:72px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   background:rgba(255,255,255,0.20);
   border-radius:30px;
-  box-shadow:2px 2px 0 rgba(0,0,0,0.25);
+  box-shadow:2px 2px 0 rgba(0,0,0,0.45);
 }
 .ab-stat-25-content{
   position:absolute; left:569px; top:194px;
   width:221px; height:87px;
 }
 .ab-stat-icon-25{
-  position:absolute; left:0; top:0;
+  position:absolute; left:0; top:60px;
   width:24px; height:24px;
-  background:#000;
-  -webkit-mask:url('public/icon-cup.png') center/contain no-repeat;
-  mask:url('public/icon-cup.png') center/contain no-repeat;
+  background:url('public/25-pic.png') center/contain no-repeat;
 }
 .ab-stat-text-25{
   position:absolute; left:32px; top:56px;
@@ -218,22 +239,25 @@ body{
 
 /* 93+ Countries (bottom-left pill) */
 .ab-stat-93{
-  position:absolute; left:4px; top:304px;
+  position:absolute; left:4px; top:258px;
   width:300px; height:72px;
-  background:rgba(255,255,255,0.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background:rgba(255,255,255,0.10);
   border-radius:30px;
-  box-shadow:2px 2px 0 rgba(0,0,0,0.25);
+  box-shadow:2px 2px 0 rgba(0,0,0,0.45);
+  z-index: 2;
 }
 .ab-stat-93-content{
   position:absolute; left:62px; top:223px;
   width:184px; height:87px;
+  z-index: 2;
 }
 .ab-stat-icon-93{
-  position:absolute; left:0; top:0;
+  position:absolute; left:0; top:60px;
   width:24px; height:24px;
   background:#FFF;
-  border:1px solid #000;
-  border-radius:3px;
+  background:url('public/93-pic.png') center/contain no-repeat;
 }
 .ab-stat-text-93{
   position:absolute; left:32px; top:56px;
@@ -314,13 +338,13 @@ body{
   letter-spacing:-0.02em;
 }
 .ab-value-title-1{ left:24px; top:13px; width:112px; height:45px; }
-.ab-value-desc-1{ left:24px; top:42px; width:240px; height:78px; }
-.ab-value-title-2{ left:24px; top:25px; width:94px; height:20px; }
-.ab-value-desc-2{ left:24px; top:39px; width:261px; height:81px; }
-.ab-value-title-3{ left:24px; top:25px; width:119px; height:20px; }
-.ab-value-desc-3{ left:24px; top:45px; width:269px; height:58px; }
-.ab-value-title-4{ left:24px; top:15px; width:145px; height:20px; }
-.ab-value-desc-4{ left:24px; top:43px; width:258px; height:56px; }
+.ab-value-desc-1{ left:24px; top:40px; width:240px; height:78px; }
+.ab-value-title-2{ left:24px; top:13px; width:94px; height:20px; }
+.ab-value-desc-2{ left:24px; top:40px; width:261px; height:81px; }
+.ab-value-title-3{ left:24px; top:13px; width:119px; height:20px; }
+.ab-value-desc-3{ left:24px; top:40px; width:269px; height:58px; }
+.ab-value-title-4{ left:24px; top:13px; width:145px; height:20px; }
+.ab-value-desc-4{ left:24px; top:40px; width:258px; height:56px; }
 
 /* ===== MEET THE PEOPLE ===== */
 .ab-meet-heading{

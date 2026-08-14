@@ -3,6 +3,10 @@
   "framework": null,
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/about", "destination": "/about.html" }
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/journal", "destination": "/journal.html" },
+    { "source": "/program", "destination": "/program.html" },
+    { "source": "/work-with-us", "destination": "/work-with-us.html" }
   ]
 }
